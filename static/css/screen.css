@@ -107,7 +107,7 @@ body {
 /* line 26, ../sass/screen.sass */
 input[type=text] {
   background-color: #c1c1c1;
-  color: #adadad;
+  color: #868686;
   border: None;
   width: 340px;
 }
@@ -115,7 +115,7 @@ input[type=text] {
 /* line 32, ../sass/screen.sass */
 textarea {
   background-color: #c1c1c1;
-  color: #adadad;
+  color: #868686;
   border: None;
   width: 340px;
   height: 70px;
@@ -201,17 +201,22 @@ ul#cat-menu li {
 }
 
 /* line 68, ../sass/screen.sass */
+#footer {
+  color: #646362;
+}
+
+/* line 71, ../sass/screen.sass */
 #logo-img {
   position: absolute;
   top: 680px;
 }
 
-/* line 72, ../sass/screen.sass */
+/* line 75, ../sass/screen.sass */
 #ten-pixels-padder {
   padding: 10px;
 }
 
-/* line 75, ../sass/screen.sass */
+/* line 78, ../sass/screen.sass */
 #doi-unu {
   display: block;
   width: 340px;
@@ -221,7 +226,7 @@ ul#cat-menu li {
   top: 340px;
 }
 
-/* line 83, ../sass/screen.sass */
+/* line 86, ../sass/screen.sass */
 #doi-doi {
   display: block;
   width: 340px;
@@ -231,7 +236,7 @@ ul#cat-menu li {
   top: 340px;
 }
 
-/* line 91, ../sass/screen.sass */
+/* line 94, ../sass/screen.sass */
 #doi-trei {
   display: block;
   width: 340px;
@@ -241,7 +246,7 @@ ul#cat-menu li {
   top: 340px;
 }
 
-/* line 99, ../sass/screen.sass */
+/* line 102, ../sass/screen.sass */
 #doi-patru {
   display: block;
   position: absolute;
@@ -251,37 +256,37 @@ ul#cat-menu li {
   top: 340px;
 }
 
-/* line 107, ../sass/screen.sass */
+/* line 110, ../sass/screen.sass */
 .text-right {
   text-align: right;
 }
 
-/* line 110, ../sass/screen.sass */
+/* line 113, ../sass/screen.sass */
 .right {
   float: right;
 }
 
-/* line 113, ../sass/screen.sass */
+/* line 116, ../sass/screen.sass */
 .contact {
   display: block;
   width: 340px;
   height: 340px;
   padding-top: 154.545px;
 }
-/* line 118, ../sass/screen.sass */
+/* line 121, ../sass/screen.sass */
 .contact div {
   margin-bottom: 10px;
 }
 
-/* line 121, ../sass/screen.sass */
+/* line 124, ../sass/screen.sass */
 #trimite input {
   background-color: #a5132a;
-  color: #adadad;
+  color: #303030;
   border: None;
   float: right;
 }
 
-/* line 127, ../sass/screen.sass */
+/* line 130, ../sass/screen.sass */
 div.flash {
   font-weight: bold;
   display: none;
