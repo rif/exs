@@ -50,11 +50,17 @@ db.define_table('category',
                 format='%(name)s'
 )
 
+db.define_table('project',
+    Field('category', db.category),
+    Field('name'),
+    Field('description', 'text', represent=lambda d: MARKMIN(d)),
+)
+
 db.define_table('picture',
-                Field('category', db.category),
+                Field('project', db.project),
                 Field('image', 'upload'),
                 Field('title'),
-                Field('description', 'text'),
+                Field('description', 'text', represent=lambda d: MARKMIN(d)),
                 Field('tags', 'list:string'),
                 auth.signature,
                 format='%(title)s'
