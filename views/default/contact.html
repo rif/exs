@@ -1,0 +1,25 @@
+
+{{extend 'layout.html'}}
+<div id="doi-trei" class="text-right">
+  <div id="ten-pixels-padder">
+  S.C.EX STUDIO S.R.L.<br />
+  A: 300273 Timisoara<br />
+  str. dr. Ioan Muresan<br />
+  95 Sc. A ap. 3<br />
+  <br />
+  T: +40 720 035 092<br /> 
+  F: +40 356 815 835<br />
+  </div>
+</div>
+
+<div id="doi-patru">
+  <div class="contact">
+  {{=form.custom.begin}}
+  <div>{{=form.custom.widget.name}}</div>
+  <div>{{=form.custom.widget.companie}}</div>
+  <div>{{=form.custom.widget.email}}</div>
+  <div>{{=form.custom.widget.mesaj}}</div>
+  <div id="trimite">{{=form.custom.submit}}</div>
+  {{=form.custom.end}}
+  </div>
+</div>

@@ -10,60 +10,57 @@
 #########################################################################
 
 def index():
-    """
-    example action using the internationalization operator T and flash
-    rendered by views/default/index.html or views/generic.html
-    """
-    return dict(message=T('Hello World'))
+    response.menu = [
+    (T('HOME'), False, A('HOME',_href= URL('default','index'),_class='active'), []),
+    (T('DESPRE NOI'), False, URL('default','despre_noi'), []),
+    (T('PROIECTE'), False, URL('default','proiecte'), []),
+    (T('CONTACT'), False, URL('default','contact'), [])
+    ]
+    return locals()
+
+def despre_noi():
+    response.menu = [
+    (T('HOME'), False, URL('default','index'), []),
+    (T('DESPRE NOI'), False, A('DESPRE_NOI',_href= URL('default','despre_noi'),_class='active'), []),
+    (T('PROIECTE'), False, URL('default','proiecte'), []),
+    (T('CONTACT'), False, URL('default','contact'), [])
+    ]
+    return locals()
+
+def proiecte():
+    response.menu = [
+    (T('HOME'), False, URL('default','index'), []),
+    (T('DESPRE NOI'), False, URL('default','despre_noi'), []),
+    (T('PROIECTE'), False, A('PROIECTE',_href= URL('default','proicte'),_class='active'), []),
+    (T('CONTACT'), False, URL('default','contact'), [])
+    ]
+    return locals()
+
+def contact():
+    response.menu = [
+    (T('HOME'), False, URL('default','index'), []),
+    (T('DESPRE NOI'), False, URL('default','despre_noi'), []),
+    (T('PROIECTE'), False, URL('default','proiecte'), []),
+    (T('CONTACT'), False, A('CONTACT',_href= URL('default','contact'),_class='active'), [])
+    ]
+    form = SQLFORM.factory(
+        Field('name', requires=IS_NOT_EMPTY(), default='Nume'),
+        Field('companie', default='Companie (optional)'),
+        Field('email', requires=IS_NOT_EMPTY(), default='Adresa ta de email'),
+        Field('mesaj', 'text', requires=IS_NOT_EMPTY(), default='Mesaj'),
+        submit_button='Trimite')
+    if form.accepts(request.vars, session):
+        response.flash = 'form accepted'
+        session.your_name = form.vars.your_name
+        session.filename = form.vars.your_image
+    elif form.errors:
+        response.flash = 'form has errors'
+    return locals()
+
 
 def user():
-    """
-    exposes:
-    http://..../[app]/default/user/login
-    http://..../[app]/default/user/logout
-    http://..../[app]/default/user/register
-    http://..../[app]/default/user/profile
-    http://..../[app]/default/user/retrieve_password
-    http://..../[app]/default/user/change_password
-    use @auth.requires_login()
-        @auth.requires_membership('group name')
-        @auth.requires_permission('read','table name',record_id)
-    to decorate functions that need access control
-    """
     return dict(form=auth())
 
-
 def download():
-    """
-    allows downloading of uploaded files
-    http://..../[app]/default/download/[filename]
-    """
     return response.download(request,db)
 
-
-def call():
-    """
-    exposes services. for example:
-    http://..../[app]/default/call/jsonrpc
-    decorate with @services.jsonrpc the functions to expose
-    supports xml, json, xmlrpc, jsonrpc, amfrpc, rss, csv
-    """
-    return service()
-
-
-@auth.requires_signature()
-def data():
-    """
-    http://..../[app]/default/data/tables
-    http://..../[app]/default/data/create/[table]
-    http://..../[app]/default/data/read/[table]/[id]
-    http://..../[app]/default/data/update/[table]/[id]
-    http://..../[app]/default/data/delete/[table]/[id[
-    http://..../[app]/default/data/select/[table]
-    http://..../[app]/default/data/search/[table]
-    but URLs bust be signed, i.e. linked with
-      A('table',_href=URL('data/tables',user_signature=True))
-    or with the signed load operator
-      LOAD('default','data.load',args='tables',ajax=True,user_signature=True)
-    """
-    return dict(form=crud())
