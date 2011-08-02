@@ -1,0 +1,19 @@
+from fabric.api import hosts, prompt, sudo, run, local, cd
+
+def ci():
+    """Commit localy using mercurial"""
+    comment = prompt('Commit comment: ', default='another commit from fabric')
+    local('hg ci -m "%s"' % comment)
+    local('hg push')
+
+@hosts('avocado')
+def deploy():
+    'Deploy the app to the target environment'
+    local('hg push')
+    with cd('../www-data/web2py/applications/exs/'):
+        sudo('hg pul -uv')
+
+@hosts('avocado')
+def reload():
+    'fires an apache graceful reload'
+    sudo('apachectl graceful')
