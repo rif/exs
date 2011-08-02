@@ -12,7 +12,7 @@ response.meta.author = 'Radu Fericean'
 response.meta.description = 'EXStudio website'
 response.meta.keywords = 'aritecture, design, interior, exterior'
 response.meta.generator = 'Web2py Enterprise Framework'
-response.meta.copyright = 'Copyright 2011'
+
 
 
 response.menu = [
