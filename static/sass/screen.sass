@@ -15,29 +15,12 @@ $square_side: 340px
 $light-grey: #adadad
 $red:  #a5132a
 
-div.flash
-	font-weight: bold
-	display: none
-	position: fixed
-	padding: 10px
-	top: 40px
-	right: 10px
-	min-width: 280px
-	opacity: 0.85
-	margin: 0px 0px 10px 10px
-	color: #fff
-	vertical-align: middle
-	cursor: pointer
-	background: #000
-	border: 2px solid #fff
-	-moz-border-radius: 5px
-	-webkit-border-radius: 5px
-	z-index: 2
+*
+	font-family: Arial
+	font-size: 11px
 
 body
 	background-image: url("../images/patrat.png")
-	font-family: Arial
-	font-size: 11px
 	color: $light-grey
 
 input[type=text]
@@ -67,11 +50,22 @@ ul.menu
 		list-style-type: none
 
 .small
-	font-size: 90%
+	font-size: 80%
 
 #logo-img
 	position: absolute
 	top: ($square_side*2)
+
+#ten-pixels-padder
+	padding: 10px
+
+#doi-doi
+	display: block
+	width: $square_side
+	height: $square_side
+	position: absolute
+	left: ($square_side)
+	top: ($square_side)
 
 #doi-trei
 	display: block
@@ -80,9 +74,6 @@ ul.menu
 	position: absolute
 	left: ($square_side*2)
 	top: ($square_side)
-
-#ten-pixels-padder
-	padding: 10px
 
 #doi-patru
 	display: block
@@ -100,10 +91,9 @@ ul.menu
 
 .contact
 	display: block
-	
 	width: $square_side
 	height: $square_side
-	bottom: -1px
+	padding-top: ($square_side/2.5)
 	div
 		margin-bottom: 10px
 
@@ -112,3 +102,22 @@ ul.menu
 	color: $light-grey
 	border: None
 	float: right
+
+div.flash
+	font-weight: bold
+	display: none
+	position: fixed
+	padding: 10px
+	top: 40px
+	right: 10px
+	min-width: 280px
+	opacity: 0.85
+	margin: 0px 0px 10px 10px
+	color: #fff
+	vertical-align: middle
+	cursor: pointer
+	background: #000
+	border: 2px solid #fff
+	-moz-border-radius: 5px
+	-webkit-border-radius: 5px
+	z-index: 2
