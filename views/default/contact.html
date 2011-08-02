@@ -13,13 +13,25 @@
 </div>
 
 <div id="doi-patru">
-  <div class="contact">
+  <div id="contact">
   {{=form.custom.begin}}
-  <div>{{=form.custom.widget.name}}</div>
-  <div>{{=form.custom.widget.companie}}</div>
-  <div>{{=form.custom.widget.email}}</div>
-  <div>{{=form.custom.widget.mesaj}}</div>
+  <div class="clearme">{{=form.custom.widget.name}}</div>
+  <div class="clearme">{{=form.custom.widget.companie}}</div>
+  <div class="clearme">{{=form.custom.widget.email}}</div>
+  <div class="clearme">{{=form.custom.widget.mesaj}}</div>
   <div id="trimite">{{=form.custom.submit}}</div>
   {{=form.custom.end}}
   </div>
 </div>
+
+<script type="text/javascript">
+    $(".clearme>input, .clearme>textarea").focus(function(){
+    if(this.value == this.defaultValue){
+        this.value = "";
+    }
+    }).blur(function(){
+    if(!this.value.length) {
+        this.value = this.defaultValue;
+    }
+    });
+</script>
