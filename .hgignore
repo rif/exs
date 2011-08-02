@@ -8,3 +8,5 @@ databases/*
 sessions/*
 errors/*
 .DS_Store
+uploads/
+static/.sass-cache/
