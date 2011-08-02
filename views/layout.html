@@ -58,6 +58,13 @@
       <div id="page"> <!-- Here my central body -->	  
 	{{=MENU(response.menu,_class='menu')}}
 	<img id="logo-img" src="{{=URL('static', 'images/logo_exs.png')}}" _alt="logo exs"/>
+	<div id="doi-unu">
+	  <ul id="cat-menu">
+	  {{for cat in db(db.category).select(orderby='order_index'):}}
+	  <li><a href="{{=URL('proiecte')}}">{{=cat.name.upper()}}</a></li>
+	  {{pass}}
+	  </ul>
+	</div>
 	<!-- content -->
 	<div id="content">
 	  {{include}}	

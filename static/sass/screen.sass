@@ -17,7 +17,7 @@ $red:  #a5132a
 
 *
 	font-family: Arial
-	font-size: 11px
+	font-size: 10px
 
 body
 	background-image: url("../images/patrat.png")
@@ -49,6 +49,19 @@ ul.menu
 		background: url('../images/sageata_gri.png') no-repeat 2px 1px
 		list-style-type: none
 
+ul#cat-menu
+	padding-top: 50px
+	a
+		+link-colors($light-grey, #6c6c6c, $red, $light-grey,  #6c6c6c)
+		text-decoration: None
+	a.active
+		color: $red
+	li
+		padding-bottom: ($square_side/12)
+		padding-left: 14px
+		background: url('../images/sageata_rosie.png') no-repeat 2px 1px
+		list-style-type: none
+
 .small
 	font-size: 80%
 
@@ -58,6 +71,14 @@ ul.menu
 
 #ten-pixels-padder
 	padding: 10px
+
+#doi-unu
+	display: block
+	width: $square_side
+	height: $square_side
+	position: absolute
+	left: 0px
+	top: ($square_side)
 
 #doi-doi
 	display: block
@@ -93,7 +114,7 @@ ul.menu
 	display: block
 	width: $square_side
 	height: $square_side
-	padding-top: ($square_side/2.5)
+	padding-top: ($square_side/2.2)
 	div
 		margin-bottom: 10px
 
