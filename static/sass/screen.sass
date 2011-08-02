@@ -1,27 +1,23 @@
-/*
-  Welcome to Compass.
-  In this file you should write your main styles. (or centralize your imports)
-  Import this file using the following HTML or equivalent:
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-
 @import compass/reset
 @import "compass/typography/links/link-colors"
 @import "compass/layout/sticky-footer"
 @import "compass/typography/lists/bullets"
+@import "compass/css3/border-radius"
+@import "compass/css3/opacity"
+@import "compass/css3/text-shadow"
 
 +sticky-footer(20px, "#container", "#root-footer", "#footer")
 
 $square_side: 340px
 $light-grey: #adadad
 $red:  #a5132a
-
-*
-	font-family: Arial
-	font-size: 10px
+	
 
 body
 	background-image: url("../images/patrat.png")
 	color: $light-grey
+	font-size: 10px
+	font-family: Arial
 
 input[type=text]
 	background-color: #c1c1c1
@@ -135,13 +131,12 @@ div.flash
 	top: 40px
 	right: 10px
 	min-width: 280px
-	opacity: 0.85
 	margin: 0px 0px 10px 10px
 	color: #fff
 	vertical-align: middle
 	cursor: pointer
 	background: #000
 	border: 2px solid #fff
-	-moz-border-radius: 5px
-	-webkit-border-radius: 5px
+	+opacity(0.85)
+	+border-radius
 	z-index: 2
