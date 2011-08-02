@@ -1,7 +1,3 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /* line 17, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -92,19 +88,15 @@ html, body {
   height: 20px;
 }
 
-/* line 18, ../sass/screen.sass */
-* {
-  font-family: Arial;
-  font-size: 10px;
-}
-
-/* line 22, ../sass/screen.sass */
+/* line 16, ../sass/screen.sass */
 body {
   background-image: url("../images/patrat.png");
   color: #adadad;
+  font-size: 10px;
+  font-family: Arial;
 }
 
-/* line 26, ../sass/screen.sass */
+/* line 22, ../sass/screen.sass */
 input[type=text] {
   background-color: #c1c1c1;
   color: #868686;
@@ -112,7 +104,7 @@ input[type=text] {
   width: 340px;
 }
 
-/* line 32, ../sass/screen.sass */
+/* line 28, ../sass/screen.sass */
 textarea {
   background-color: #c1c1c1;
   color: #868686;
@@ -121,11 +113,11 @@ textarea {
   height: 70px;
 }
 
-/* line 39, ../sass/screen.sass */
+/* line 35, ../sass/screen.sass */
 ul.menu {
   padding-top: 50px;
 }
-/* line 41, ../sass/screen.sass */
+/* line 37, ../sass/screen.sass */
 ul.menu a {
   color: #adadad;
   text-decoration: None;
@@ -146,11 +138,11 @@ ul.menu a:hover {
 ul.menu a:active {
   color: #a5132a;
 }
-/* line 44, ../sass/screen.sass */
+/* line 40, ../sass/screen.sass */
 ul.menu a.active {
   color: #a5132a;
 }
-/* line 46, ../sass/screen.sass */
+/* line 42, ../sass/screen.sass */
 ul.menu li {
   padding-bottom: 28.333px;
   padding-left: 14px;
@@ -158,11 +150,11 @@ ul.menu li {
   list-style-type: none;
 }
 
-/* line 52, ../sass/screen.sass */
+/* line 48, ../sass/screen.sass */
 ul#cat-menu {
   padding-top: 50px;
 }
-/* line 54, ../sass/screen.sass */
+/* line 50, ../sass/screen.sass */
 ul#cat-menu a {
   color: #adadad;
   text-decoration: None;
@@ -183,11 +175,11 @@ ul#cat-menu a:hover {
 ul#cat-menu a:active {
   color: #a5132a;
 }
-/* line 57, ../sass/screen.sass */
+/* line 53, ../sass/screen.sass */
 ul#cat-menu a.active {
   color: #a5132a;
 }
-/* line 59, ../sass/screen.sass */
+/* line 55, ../sass/screen.sass */
 ul#cat-menu li {
   padding-bottom: 28.333px;
   padding-left: 14px;
@@ -195,28 +187,28 @@ ul#cat-menu li {
   list-style-type: none;
 }
 
-/* line 65, ../sass/screen.sass */
+/* line 61, ../sass/screen.sass */
 .small {
   font-size: 80%;
 }
 
-/* line 68, ../sass/screen.sass */
+/* line 64, ../sass/screen.sass */
 #footer {
   color: #646362;
 }
 
-/* line 71, ../sass/screen.sass */
+/* line 67, ../sass/screen.sass */
 #logo-img {
   position: absolute;
   top: 680px;
 }
 
-/* line 75, ../sass/screen.sass */
+/* line 71, ../sass/screen.sass */
 #ten-pixels-padder {
   padding: 10px;
 }
 
-/* line 78, ../sass/screen.sass */
+/* line 74, ../sass/screen.sass */
 #doi-unu {
   display: block;
   width: 340px;
@@ -226,7 +218,7 @@ ul#cat-menu li {
   top: 340px;
 }
 
-/* line 86, ../sass/screen.sass */
+/* line 82, ../sass/screen.sass */
 #doi-doi {
   display: block;
   width: 340px;
@@ -236,7 +228,7 @@ ul#cat-menu li {
   top: 340px;
 }
 
-/* line 94, ../sass/screen.sass */
+/* line 90, ../sass/screen.sass */
 #doi-trei {
   display: block;
   width: 340px;
@@ -246,7 +238,7 @@ ul#cat-menu li {
   top: 340px;
 }
 
-/* line 102, ../sass/screen.sass */
+/* line 98, ../sass/screen.sass */
 #doi-patru {
   display: block;
   position: absolute;
@@ -256,29 +248,29 @@ ul#cat-menu li {
   top: 340px;
 }
 
-/* line 110, ../sass/screen.sass */
+/* line 106, ../sass/screen.sass */
 .text-right {
   text-align: right;
 }
 
-/* line 113, ../sass/screen.sass */
+/* line 109, ../sass/screen.sass */
 .right {
   float: right;
 }
 
-/* line 116, ../sass/screen.sass */
+/* line 112, ../sass/screen.sass */
 .contact {
   display: block;
   width: 340px;
   height: 340px;
   padding-top: 154.545px;
 }
-/* line 121, ../sass/screen.sass */
+/* line 117, ../sass/screen.sass */
 .contact div {
   margin-bottom: 10px;
 }
 
-/* line 124, ../sass/screen.sass */
+/* line 120, ../sass/screen.sass */
 #trimite input {
   background-color: #a5132a;
   color: #303030;
@@ -286,7 +278,7 @@ ul#cat-menu li {
   float: right;
 }
 
-/* line 130, ../sass/screen.sass */
+/* line 126, ../sass/screen.sass */
 div.flash {
   font-weight: bold;
   display: none;
@@ -295,14 +287,19 @@ div.flash {
   top: 40px;
   right: 10px;
   min-width: 280px;
-  opacity: 0.85;
   margin: 0px 0px 10px 10px;
   color: white;
   vertical-align: middle;
   cursor: pointer;
   background: black;
   border: 2px solid white;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+  opacity: 0.85;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
   z-index: 2;
 }
