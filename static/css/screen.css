@@ -95,7 +95,7 @@ html, body {
 /* line 18, ../sass/screen.sass */
 * {
   font-family: Arial;
-  font-size: 11px;
+  font-size: 10px;
 }
 
 /* line 22, ../sass/screen.sass */
@@ -159,22 +159,69 @@ ul.menu li {
 }
 
 /* line 52, ../sass/screen.sass */
+ul#cat-menu {
+  padding-top: 50px;
+}
+/* line 54, ../sass/screen.sass */
+ul#cat-menu a {
+  color: #adadad;
+  text-decoration: None;
+}
+/* line 18, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+ul#cat-menu a:visited {
+  color: #adadad;
+}
+/* line 21, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+ul#cat-menu a:focus {
+  color: #6c6c6c;
+}
+/* line 24, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+ul#cat-menu a:hover {
+  color: #6c6c6c;
+}
+/* line 27, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+ul#cat-menu a:active {
+  color: #a5132a;
+}
+/* line 57, ../sass/screen.sass */
+ul#cat-menu a.active {
+  color: #a5132a;
+}
+/* line 59, ../sass/screen.sass */
+ul#cat-menu li {
+  padding-bottom: 28.333px;
+  padding-left: 14px;
+  background: url("../images/sageata_rosie.png") no-repeat 2px 1px;
+  list-style-type: none;
+}
+
+/* line 65, ../sass/screen.sass */
 .small {
   font-size: 80%;
 }
 
-/* line 55, ../sass/screen.sass */
+/* line 68, ../sass/screen.sass */
 #logo-img {
   position: absolute;
   top: 680px;
 }
 
-/* line 59, ../sass/screen.sass */
+/* line 72, ../sass/screen.sass */
 #ten-pixels-padder {
   padding: 10px;
 }
 
-/* line 62, ../sass/screen.sass */
+/* line 75, ../sass/screen.sass */
+#doi-unu {
+  display: block;
+  width: 340px;
+  height: 340px;
+  position: absolute;
+  left: 0px;
+  top: 340px;
+}
+
+/* line 83, ../sass/screen.sass */
 #doi-doi {
   display: block;
   width: 340px;
@@ -184,7 +231,7 @@ ul.menu li {
   top: 340px;
 }
 
-/* line 70, ../sass/screen.sass */
+/* line 91, ../sass/screen.sass */
 #doi-trei {
   display: block;
   width: 340px;
@@ -194,7 +241,7 @@ ul.menu li {
   top: 340px;
 }
 
-/* line 78, ../sass/screen.sass */
+/* line 99, ../sass/screen.sass */
 #doi-patru {
   display: block;
   position: absolute;
@@ -204,29 +251,29 @@ ul.menu li {
   top: 340px;
 }
 
-/* line 86, ../sass/screen.sass */
+/* line 107, ../sass/screen.sass */
 .text-right {
   text-align: right;
 }
 
-/* line 89, ../sass/screen.sass */
+/* line 110, ../sass/screen.sass */
 .right {
   float: right;
 }
 
-/* line 92, ../sass/screen.sass */
+/* line 113, ../sass/screen.sass */
 .contact {
   display: block;
   width: 340px;
   height: 340px;
-  padding-top: 136px;
+  padding-top: 154.545px;
 }
-/* line 97, ../sass/screen.sass */
+/* line 118, ../sass/screen.sass */
 .contact div {
   margin-bottom: 10px;
 }
 
-/* line 100, ../sass/screen.sass */
+/* line 121, ../sass/screen.sass */
 #trimite input {
   background-color: #a5132a;
   color: #adadad;
@@ -234,7 +281,7 @@ ul.menu li {
   float: right;
 }
 
-/* line 106, ../sass/screen.sass */
+/* line 127, ../sass/screen.sass */
 div.flash {
   font-weight: bold;
   display: none;
