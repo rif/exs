@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-# this file is released under public domain and you can use without limitations
-
-#########################################################################
-## This scaffolding model makes your app work on Google App Engine too
-#########################################################################
 
 if request.env.web2py_runtime_gae:            # if running on Google App Engine
     db = DAL('google:datastore')              # connect to Google BigTable
@@ -28,9 +23,9 @@ crud = Crud(db)                                # for CRUD helpers using auth
 service = Service()                            # for json, xml, jsonrpc, xmlrpc, amfrpc
 plugins = PluginManager()                      # for configuring plugins
 
-mail.settings.server = 'logging' or 'smtp.gmail.com:587'  # your SMTP server
-mail.settings.sender = 'you@gmail.com'         # your email
-mail.settings.login = 'username:password'      # your credentials or None
+mail.settings.server = 'smtp.gmail.com:587'  # your SMTP server
+mail.settings.sender = 'ustest@gmail.com'         # your email
+mail.settings.login = 'ustest:greta.1'      # your credentials or None
 
 auth.settings.hmac_key = 'sha512:e68b4107-4595-4284-9cd1-ef04a2ed3205'   # before define_tables()
 auth.define_tables()                           # creates all needed tables
@@ -55,16 +50,25 @@ db.define_table('project',
     Field('name'),
     Field('description', 'text', represent=lambda d: MARKMIN(d)),
     Field('year', 'integer'),
+    Field('representative', 'boolean', comment='Will be displayed on the home page'),
     auth.signature,
     format='%(name)s'
 )
+
+db.define_table('tag',
+    Field('name'),
+    format='%(name)s'
+ )
 
 db.define_table('picture',
                 Field('project', db.project),
                 Field('image', 'upload'),
                 Field('title'),
                 Field('description', 'text', represent=lambda d: MARKMIN(d)),
-                Field('tags', 'list:string'),
+                Field('tags', 'list:reference tag'),
+                Field('representative', 'boolean', comment='Will be display as cover for project'),
                 auth.signature,
                 format='%(title)s'
 )
+
+a0,a1 = request.args(0), request.args(1)

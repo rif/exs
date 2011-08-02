@@ -62,6 +62,15 @@
 	  <ul id="cat-menu">
 	  {{for cat in db(db.category).select(orderby='order_index'):}}
 	  <li><a href="{{=URL('proiecte')}}">{{=cat.name.upper()}}</a></li>
+	  <ul>
+		  {{for p in cat.project.select():}}
+			{{for pic in p.picture.select():}}
+				{{for t in pic.tags:}}
+		    		<li>{{=db.tag(t).name}}</li>
+		    	{{pass}}
+		    {{pass}}
+		  {{pass}}
+      </ul>
 	  {{pass}}
 	  </ul>
 	</div>
