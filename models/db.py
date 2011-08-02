@@ -54,6 +54,9 @@ db.define_table('project',
     Field('category', db.category),
     Field('name'),
     Field('description', 'text', represent=lambda d: MARKMIN(d)),
+    Field('year', 'integer'),
+    auth.signature,
+    format='%(name)s'
 )
 
 db.define_table('picture',
