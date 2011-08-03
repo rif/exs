@@ -6,14 +6,14 @@ def ci():
     local('hg ci -m "%s"' % comment)
     local('hg push')
 
-@hosts('avocado')
+@hosts('rif@avocadosoft.ro:22011')
 def deploy():
     'Deploy the app to the target environment'
-    local('hg push')
+    #local('hg push')
     with cd('../www-data/web2py/applications/exs/'):
-        sudo('hg pul -uv')
+        run('hg pul -uv')
 
-@hosts('avocado')
+@hosts('rif@avocadosoft.ro:22011')
 def reload():
     'fires an apache graceful reload'
     sudo('apachectl graceful')
