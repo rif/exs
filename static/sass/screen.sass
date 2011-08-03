@@ -8,24 +8,24 @@
 
 +sticky-footer(20px, "#container", "#root-footer", "#footer")
 
-$square_side: 340px
-$background-image: "../images/patrat_340.png"
+$square_side: 300px
+$background-image: "../images/patrat_300.png"
 $padding-contact: ($square_side/2.4)
 
-@media screen and (max-width: 1024px)
-    $square_side: 250px
-    $background-image: "../images/patrat_250.png"
-    $padding-contact: ($square_side/4.9)
+@media media screen and (max-width: 1024px)
+  $square_side: 250px
+  $background-image: "../images/patrat_250.png"
+  $padding-contact: ($square_side/4.9)
 
-@media screen and (min-width: 1025px) and (max-width: 1280px)
-    $square_side: 300px
-    $background-image: "../images/patrat_300.png"
-    $padding-contact: ($square_side/2.95)
+@media only screen and (min-width: 1025px) and (max-width: 1280px)
+  $square_side: 300px
+  $background-image: "../images/patrat_300.png"
+  $padding-contact: ($square_side/2.95)
 
-@media screen and (min-width: 1281px)
-    $square_side: 340px
-    $background-image: "../images/patrat_340.png"
-    $padding-contact: ($square_side/2.4)
+@media only screen and (min-width: 1281px)
+  $square_side: 340px
+  $background-image: "../images/patrat_340.png"
+  $padding-contact: ($square_side/2.4)
 
 $light-grey: #adadad
 $red:  #a5132a
@@ -33,159 +33,159 @@ $font-family: Arial
 $font-size: 12px
     
 body
-    background-image: url($background-image)
-    color: $light-grey
+  background-image: url($background-image)
+  color: $light-grey
 
 input[type=text]
-    background-color: #c1c1c1
-    color: #646362
-    border: None
-    padding-right: 0
-    width: ($square_side - 2)
-    height: 19px
-    font-size: $font-size
-    font-family: $font-family
+  background-color: #c1c1c1
+  color: #646362
+  border: None
+  padding-right: 0
+  width: ($square_side - 2)
+  height: 19px
+  font-size: $font-size
+  font-family: $font-family
     
 input[type=submit]
-    margin-right: 1
+  margin-right: 1
         
 textarea
-    background-color: #c1c1c1
-    color: #646362
-    border: None
-    width: ($square_side - 2)
-    padding: 0
-    height: 70px
-    font-size: $font-size
-    font-family: $font-family
+  background-color: #c1c1c1
+  color: #646362
+  border: None
+  width: ($square_side - 2)
+  padding: 0
+  height: 70px
+  font-size: $font-size
+  font-family: $font-family
 
 ul.menu
-    padding-top: 50px
-    a
-        +link-colors($light-grey, #6c6c6c, $red, $light-grey,  #6c6c6c)
-        text-decoration: None
-        font-size: $font-size
-        font-family: $font-family
-    a.active
-        color: $red
-    li
-        padding-bottom: ($square_side/12)
-        padding-left: 14px
-        background: url('../images/sageata_gri.png') no-repeat 2px 4px
-        list-style-type: none
+  padding-top: 50px
+  a
+    +link-colors($light-grey, #6c6c6c, $red, $light-grey,  #6c6c6c)
+    text-decoration: None
+    font-size: $font-size
+    font-family: $font-family
+  a.active
+    color: $red
+  li
+    padding-bottom: ($square_side/12)
+    padding-left: 14px
+    background: url('../images/sageata_gri.png') no-repeat 2px 4px
+    list-style-type: none
 
 ul#cat-menu
-    padding-top: 50px
-    a
-        +link-colors($light-grey, #6c6c6c, $red, $light-grey,  #6c6c6c)
-        text-decoration: None
-        font-size: $font-size
-        font-family: $font-family
-    a.active
-        color: $red
-    >li
-        padding-left: 14px
-        background: url('../images/sageata_rosie.png') no-repeat 2px 5px
-        list-style-type: none
+  padding-top: 50px
+  a
+    +link-colors($light-grey, #6c6c6c, $red, $light-grey,  #6c6c6c)
+    text-decoration: None
+    font-size: $font-size
+    font-family: $font-family
+  a.active
+    color: $red
+  >li
+    padding-left: 14px
+    background: url('../images/sageata_rosie.png') no-repeat 2px 5px
+    list-style-type: none
 
 .small
-    font-size: 80%
+  font-size: 80%
 
 #footer
-    color: #646362
-    font-size: 9px
-    font-family: $font-family
+  color: #646362
+  font-size: 9px
+  font-family: $font-family
 
 #logo-img
-    position: absolute
-    top: ($square_side*2)
+  position: absolute
+  top: ($square_side*2)
 
 #ten-pixels-padder
-    padding: 10px
+  padding: 10px
 
 div.address
-    font-size: $font-size
-    font-family: $font-family
-    p
-        line-height: 1.2em
+  font-size: $font-size
+  font-family: $font-family
+  p
+    line-height: 1.2em
 
 #doi-unu
-    display: block
-    width: $square_side
-    height: $square_side
-    position: absolute
-    left: 0px
-    top: ($square_side)
+  display: block
+  width: $square_side
+  height: $square_side
+  position: absolute
+  left: 0px
+  top: ($square_side)
 
 #doi-doi
-    display: block
-    width: $square_side
-    height: $square_side
-    position: absolute
-    left: ($square_side)
-    top: ($square_side)
+  display: block
+  width: $square_side
+  height: $square_side
+  position: absolute
+  left: ($square_side)
+  top: ($square_side)
 
 #doi-trei
-    display: block
-    width: $square_side
-    height: $square_side
-    position: absolute
-    left: ($square_side*2)
-    top: ($square_side)
+  display: block
+  width: $square_side
+  height: $square_side
+  position: absolute
+  left: ($square_side*2)
+  top: ($square_side)
 
 #doi-patru
-    display: block
-    position: absolute
-    width: $square_side
-    height: $square_side	
-    left: ($square_side*3)
-    top: $square_side
+  display: block
+  position: absolute
+  width: $square_side
+  height: $square_side	
+  left: ($square_side*3)
+  top: $square_side
 
 .text-right
-    text-align: right
-
+  text-align: right
+      
 .right
-    float: right
+  float: right
 
 #contact
-    display: block
-    width: ($square_side)
-    height: ($square_side)
-    padding-top: $padding-contact
-    font-size: $font-size
-    font-family: $font-family
-    div
-        margin-bottom: 10px
+  display: block
+  width: ($square_side)
+  height: ($square_side)
+  padding-top: $padding-contact
+  font-size: $font-size
+  font-family: $font-family
+  div
+    margin-bottom: 10px
 
 div#trimite
-    margin: 0
-    input
-        background-color: $red
-        color: #303030
-        border: None
-        float: right
-        cursor: pointer
+  margin: 0
+  input
+    background-color: $red
+    color: #303030
+    border: None
+    float: right
+    cursor: pointer
         
 
 div.flash
-    font-weight: bold
-    display: none
-    position: fixed
-    padding: 10px
-    top: 40px
-    right: 10px
-    min-width: 280px
-    margin: 0px 0px 10px 10px
-    color: #fff
-    vertical-align: middle
-    cursor: pointer
-    background: #000
-    border: 2px solid #fff
-    +opacity(0.85)
-    +border-radius
-    z-index: 2
+  font-weight: bold
+  display: none
+  position: fixed
+  padding: 10px
+  top: 40px
+  right: 10px
+  min-width: 280px
+  margin: 0px 0px 10px 10px
+  color: #fff
+  vertical-align: middle
+  cursor: pointer
+  background: #000
+  border: 2px solid #fff
+  +opacity(0.85)
+  +border-radius
+  z-index: 2
 
 .square-image 
-    width: ($square_side - 1)
-    height: ($square_side - 1)
+  width: ($square_side - 1)
+  height: ($square_side - 1)
 
