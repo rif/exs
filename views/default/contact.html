@@ -25,6 +25,8 @@
 </div>
 
 <script type="text/javascript">
+$(function(){
+
     $(".clearme>input, .clearme>textarea").focus(function(){
     if(this.value == this.defaultValue){
         this.value = "";
@@ -34,4 +36,7 @@
         this.value = this.defaultValue;
     }
     });
+		$("a:contains('CONTACT')").addClass("active");
+});
+
 </script>

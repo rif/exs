@@ -1,39 +1,15 @@
 # -*- coding: utf-8 -*-
 
 def index():
-    response.menu = [
-    (T('HOME'), False, A('HOME',_href= URL('default','index'),_class='active'), []),
-    (T('DESPRE NOI'), False, URL('default','despre_noi'), []),
-    (T('PROIECTE'), False, URL('default','proiecte'), []),
-    (T('CONTACT'), False, URL('default','contact'), [])
-    ]
     return locals()
 
 def despre_noi():
-    response.menu = [
-    (T('HOME'), False, URL('default','index'), []),
-    (T('DESPRE NOI'), False, A('DESPRE_NOI',_href= URL('default','despre_noi'),_class='active'), []),
-    (T('PROIECTE'), False, URL('default','proiecte'), []),
-    (T('CONTACT'), False, URL('default','contact'), [])
-    ]
     return locals()
 
 def proiecte():
-    response.menu = [
-    (T('HOME'), False, URL('default','index'), []),
-    (T('DESPRE NOI'), False, URL('default','despre_noi'), []),
-    (T('PROIECTE'), False, A('PROIECTE',_href= URL('default','proicte'),_class='active'), []),
-    (T('CONTACT'), False, URL('default','contact'), [])
-    ]
     return locals()
 
 def contact():
-    response.menu = [
-    (T('HOME'), False, URL('default','index'), []),
-    (T('DESPRE NOI'), False, URL('default','despre_noi'), []),
-    (T('PROIECTE'), False, URL('default','proiecte'), []),
-    (T('CONTACT'), False, A('CONTACT',_href= URL('default','contact'),_class='active'), [])
-    ]
     form = SQLFORM.factory(
         Field('nume', requires=IS_NOT_EMPTY(), default='Nume'),
         Field('companie', default='Companie (optional)'),
