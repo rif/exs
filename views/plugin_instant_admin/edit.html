@@ -35,6 +35,22 @@
         </div>
 
         {{=form}}
+
     </div> <!-- End of inner -->
 </div> <!-- End of content -->
+{{end}}
+
+{{block additional-js}}
+    <script>
+        jQuery(document).ready(function() {
+            jQuery('.w2p_fw').addClass("field");
+            jQuery('.date').addClass("hasDatepicker");
+        });
+    </script>
+
+    <script>
+    jQuery(document).ready(function($){
+      jQuery(".date").datetimepicker({"timepicker":{"amPmText":["",""],"minuteText":"Minute","value":"10:25","showPeriod":false,"hourText":"Hour"},"datepicker":{"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"firstDay":1,"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dateFormat":"MM dd, yy","value":"July 15, 2011","dayNamesMin":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"]}});
+    });
+    </script>
 {{end}}
