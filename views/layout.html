@@ -71,16 +71,15 @@
 	<div id="doi-unu">
 	  <ul id="cat-menu">
 	  {{for cat in db(db.category).select(orderby='order_index'):}}
-	  <li><a href="{{=URL('proiecte')}}">{{=cat.name.upper()}}</a></li>
-	  <ul>
+	  <li class="principal"><a href="{{=URL('proiecte')}}">{{=cat.name.upper()}}</a></li>
+
 		  {{for p in cat.project.select():}}
 			{{for pic in p.picture.select():}}
 				{{for t in pic.tags:}}
-		    		<li>{{=db.tag(t).name}}</li>
+		    		<li class="secundar">{{=db.tag(t).name}}</li>
 		    	{{pass}}
 		    {{pass}}
 		  {{pass}}
-      </ul>
 	  {{pass}}
 	  </ul>
 	</div>
