@@ -43,19 +43,14 @@
   <![endif]-->
     {{include 'web2py_ajax.html'}}
     <script type="text/javascript">
-	   $(document).ready(function() {
 			if ((screen.width < 1024)) {
 				$("link[rel=stylesheet]:not(:first)").attr({href : "{{=URL('static', 'css/screen_min.css')}}"});
-				console.log('min screen');
 			}
 			else  if ((screen.width > 1024) && (screen.width < 1400)) {
 				$("link[rel=stylesheet]:not(:first)").attr({href : "{{=URL('static', 'css/screen_med.css')}}"});
-				console.log('med screen');
 			} else {
 				$("link[rel=stylesheet]:not(:first)").attr({href : "{{=URL('static', 'css/screen_max.css')}}"});
-				console.log('max screen');
 			}
-		});
 	   </script>
   </head>
   
