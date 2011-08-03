@@ -8,17 +8,11 @@
 
 +sticky-footer(20px, "#container", "#root-footer", "#footer")
 
-$square_side_min: 250px
-$background-image_min: "../images/patrat_250.png"
-$padding-contact_min: ($square_side_min/4.9)
+$square_side: 300px
+$background-image: "../images/patrat_300.png"
+$padding-contact: ($square_side/2.4)
 
-$square_side_med: 300px
-$background-image_med: "../images/patrat_300.png"
-$padding-contact_med: ($square_side_med/2.95)
 
-$square_side_max: 340px
-$background-image_max: "../images/patrat_340.png"
-$padding-contact_max: ($square_side_max/2.4)
 
 $light-grey: #adadad
 $red:  #a5132a
@@ -26,12 +20,7 @@ $font-family: Arial
 $font-size: 12px
     
 body
-  @media screen and (max-width: 1024)
-    background-image: url($background-image_min)
-  @media screen and (min-width: 1025) and (max-width: 1280)
-    background-image: url($background-image_med)
-  @media screen and (min-width: 1281)
-    background-image: url($background-image_max)
+  background-image: url($background-image)
   color: $light-grey
 
 input[type=text]
@@ -39,12 +28,7 @@ input[type=text]
   color: #646362
   border: None
   padding-right: 0
-  @media screen and (max-width: 1024)
-    width: ($square_side_min - 2)
-  @media screen and (min-width: 1025) and (max-width: 1280)
-    width: ($square_side_med - 2)
-  @media screen and (min-width: 1281)
-    width: ($square_side_max - 2)
+  width: ($square_side - 2)
   height: 19px
   font-size: $font-size
   font-family: $font-family
@@ -56,12 +40,7 @@ textarea
   background-color: #c1c1c1
   color: #646362
   border: None
-  @media screen and (max-width: 1024)
-    width: ($square_side_min - 2)
-  @media screen and (min-width: 1025) and (max-width: 1280)
-    width: ($square_side_med - 2)
-  @media screen and (min-width: 1281)
-    width: ($square_side_max - 2)
+  width: ($square_side - 2)
   padding: 0
   height: 70px
   font-size: $font-size
@@ -77,12 +56,7 @@ ul.menu
   a.active
     color: $red
   li
-    @media screen and (max-width: 1024)
-      padding-bottom: ($square_side_min/12)
-    @media screen and (min-width: 1025) and (max-width: 1280)
-      padding-bottom: ($square_side_med/12)
-    @media screen and (min-width: 1281)
-      padding-bottom: ($square_side_max/12)
+    padding-bottom: ($square_side/12)
     padding-left: 14px
     background: url('../images/sageata_gri.png') no-repeat 2px 4px
     list-style-type: none
@@ -111,12 +85,7 @@ ul#cat-menu
 
 #logo-img
   position: absolute
-  @media screen and (max-width: 1024)
-    top: ($square_side_min*2)
-  @media screen and (min-width: 1025) and (max-width: 1280)
-    top: ($square_side_med*2)
-  @media screen and (min-width: 1281)
-    top: ($square_side_max*2)
+  top: ($square_side*2)
 
 #ten-pixels-padder
   padding: 10px
@@ -129,78 +98,35 @@ div.address
 
 #doi-unu
   display: block
-  @media screen and (max-width: 1024)
-    width: $square_side_min
-    height: $square_side_min
-    top: $square_side_min
-  @media screen and (min-width: 1025) and (max-width: 1280)
-    width: $square_side_med
-    height: $square_side_med
-    top: $square_side_med
-  @media screen and (min-width: 1281)
-    width: $square_side_max
-    height: $square_side_max
-    top: $square_side_max
+  width: $square_side
+  height: $square_side
   position: absolute
   left: 0px
+  top: ($square_side)
 
 #doi-doi
   display: block
+  width: $square_side
+  height: $square_side
   position: absolute
-  @media screen and (max-width: 1024)
-    width: $square_side_min
-    height: $square_side_min
-    left: $square_side_min
-    top: $square_side_min
-  @media screen and (min-width: 1025) and (max-width: 1280)
-    width: $square_side_med
-    height: $square_side_med
-    left: $square_side_med
-    top: $square_side_med
-  @media screen and (min-width: 1281)
-    width: $square_side_max
-    height: $square_side_max
-    left: $square_side_max
-    top: $square_side_max
+  left: ($square_side)
+  top: ($square_side)
 
 #doi-trei
   display: block
+  width: $square_side
+  height: $square_side
   position: absolute
-  @media screen and (max-width: 1024)
-    width: $square_side_min
-    height: $square_side_min
-    left: ($square_side_min*2)
-    top: $square_side_min
-  @media screen and (min-width: 1025) and (max-width: 1280)
-    width: $square_side_med
-    height: $square_side_med
-    left: ($square_side_med*2)
-    top: $square_side_med
-  @media screen and (min-width: 1281)
-    width: $square_side_max
-    height: $square_side_max
-    left: ($square_side_max*2)
-    top: $square_side_max
+  left: ($square_side*2)
+  top: ($square_side)
 
 #doi-patru
   display: block
   position: absolute
-  @media screen and (max-width: 1024)
-    width: $square_side_min
-    height: $square_side_min	
-    left: ($square_side_min*3)
-    top: $square_side_min
-  @media screen and (min-width: 1025) and (max-width: 1280)
-    width: $square_side_med
-    height: $square_side_med	
-    left: ($square_side_med*3)
-    top: $square_side_med
-  @media screen and (min-width: 1281)
-    width: $square_side_max
-    height: $square_side_max	
-    left: ($square_side_max*3)
-    top: $square_side_max
-  
+  width: $square_side
+  height: $square_side	
+  left: ($square_side*3)
+  top: $square_side
 
 .text-right
   text-align: right
@@ -209,19 +135,10 @@ div.address
   float: right
 
 #contact
-  display: block  
-  @media screen and (max-width: 1024)
-    width: $square_side_min
-    height: $square_side_min
-    padding-top: $padding-contact_min
-  @media screen and (min-width: 1025) and (max-width: 1280)
-    width: $square_side_med
-    height: $square_side_med
-    padding-top: $padding-contact_med
-  @media screen and (min-width: 1281)
-    width: $square_side_max
-    height: $square_side_max
-    padding-top: $padding-contact_max  
+  display: block
+  width: ($square_side)
+  height: ($square_side)
+  padding-top: $padding-contact
   font-size: $font-size
   font-family: $font-family
   div
@@ -256,15 +173,6 @@ div.flash
   z-index: 2
 
 .square-image 
-  @media screen and (max-width: 1024)
-    width: ($square_side_min - 1)
-    height: ($square_side_min - 1)
-  @media screen and (min-width: 1025) and (max-width: 1280)
-    width: ($square_side_med - 1)
-    height: ($square_side_med - 1)
-  @media screen and (min-width: 1281)
-    width: ($square_side_max - 1)
-    height: ($square_side_max - 1)
-
-  
+  width: ($square_side - 1)
+  height: ($square_side - 1)
 
