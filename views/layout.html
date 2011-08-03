@@ -36,12 +36,27 @@
     
     <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
     <script src="{{=URL('static','js/modernizr-1.7.min.js')}}"></script>
-    <link href="{{=URL('static','css/screen.css')}}" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!--link href="{{=URL('static','css/screen.css')}}" media="screen, projection" rel="stylesheet" type="text/css" /-->
     <link href="{{=URL('static','css/print.css')}}" media="print" rel="stylesheet" type="text/css" />
   <!--[if IE]>
       <link href="{{=URL('static','css/ie.css')}}" media="screen, projection" rel="stylesheet" type="text/css" />
   <![endif]-->
     {{include 'web2py_ajax.html'}}
+    <script type="text/javascript">
+	   $(document).ready(function() {
+			if ((screen.width < 1024)) {
+				$("link[rel=stylesheet]:not(:first)").attr({href : "{{=URL('static', 'css/screen_min.css')}}"});
+				console.log('min screen');
+			}
+			else  if ((screen.width > 1024) && (screen.width < 1400)) {
+				$("link[rel=stylesheet]:not(:first)").attr({href : "{{=URL('static', 'css/screen_med.css')}}"});
+				console.log('med screen');
+			} else {
+				$("link[rel=stylesheet]:not(:first)").attr({href : "{{=URL('static', 'css/screen_max.css')}}"});
+				console.log('max screen');
+			}
+		});
+	   </script>
   </head>
   
   <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->	
