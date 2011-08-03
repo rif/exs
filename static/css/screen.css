@@ -88,13 +88,13 @@ html, body {
   height: 20px;
 }
 
-/* line 22, ../sass/screen.sass */
+/* line 36, ../sass/screen.sass */
 body {
   background-image: url("../images/patrat_300.png");
   color: #adadad;
 }
 
-/* line 26, ../sass/screen.sass */
+/* line 40, ../sass/screen.sass */
 input[type=text] {
   background-color: #c1c1c1;
   color: #646362;
@@ -106,12 +106,12 @@ input[type=text] {
   font-family: Arial;
 }
 
-/* line 36, ../sass/screen.sass */
+/* line 50, ../sass/screen.sass */
 input[type=submit] {
   margin-right: 1;
 }
 
-/* line 39, ../sass/screen.sass */
+/* line 53, ../sass/screen.sass */
 textarea {
   background-color: #c1c1c1;
   color: #646362;
@@ -123,11 +123,11 @@ textarea {
   font-family: Arial;
 }
 
-/* line 49, ../sass/screen.sass */
+/* line 63, ../sass/screen.sass */
 ul.menu {
   padding-top: 50px;
 }
-/* line 51, ../sass/screen.sass */
+/* line 65, ../sass/screen.sass */
 ul.menu a {
   color: #adadad;
   text-decoration: None;
@@ -150,11 +150,11 @@ ul.menu a:hover {
 ul.menu a:active {
   color: #a5132a;
 }
-/* line 56, ../sass/screen.sass */
+/* line 70, ../sass/screen.sass */
 ul.menu a.active {
   color: #a5132a;
 }
-/* line 58, ../sass/screen.sass */
+/* line 72, ../sass/screen.sass */
 ul.menu li {
   padding-bottom: 25px;
   padding-left: 14px;
@@ -162,11 +162,11 @@ ul.menu li {
   list-style-type: none;
 }
 
-/* line 64, ../sass/screen.sass */
+/* line 78, ../sass/screen.sass */
 ul#cat-menu {
   padding-top: 50px;
 }
-/* line 66, ../sass/screen.sass */
+/* line 80, ../sass/screen.sass */
 ul#cat-menu a {
   color: #adadad;
   text-decoration: None;
@@ -189,51 +189,51 @@ ul#cat-menu a:hover {
 ul#cat-menu a:active {
   color: #a5132a;
 }
-/* line 71, ../sass/screen.sass */
+/* line 85, ../sass/screen.sass */
 ul#cat-menu a.active {
   color: #a5132a;
 }
-/* line 73, ../sass/screen.sass */
+/* line 87, ../sass/screen.sass */
 ul#cat-menu > li {
   padding-left: 14px;
   background: url("../images/sageata_rosie.png") no-repeat 2px 5px;
   list-style-type: none;
 }
 
-/* line 78, ../sass/screen.sass */
+/* line 92, ../sass/screen.sass */
 .small {
   font-size: 80%;
 }
 
-/* line 81, ../sass/screen.sass */
+/* line 95, ../sass/screen.sass */
 #footer {
   color: #646362;
   font-size: 9px;
   font-family: Arial;
 }
 
-/* line 86, ../sass/screen.sass */
+/* line 100, ../sass/screen.sass */
 #logo-img {
   position: absolute;
   top: 600px;
 }
 
-/* line 90, ../sass/screen.sass */
+/* line 104, ../sass/screen.sass */
 #ten-pixels-padder {
   padding: 10px;
 }
 
-/* line 93, ../sass/screen.sass */
+/* line 107, ../sass/screen.sass */
 div.address {
   font-size: 12px;
   font-family: Arial;
 }
-/* line 96, ../sass/screen.sass */
+/* line 110, ../sass/screen.sass */
 div.address p {
   line-height: 1.2em;
 }
 
-/* line 99, ../sass/screen.sass */
+/* line 113, ../sass/screen.sass */
 #doi-unu {
   display: block;
   width: 300px;
@@ -243,7 +243,7 @@ div.address p {
   top: 300px;
 }
 
-/* line 107, ../sass/screen.sass */
+/* line 121, ../sass/screen.sass */
 #doi-doi {
   display: block;
   width: 300px;
@@ -253,7 +253,7 @@ div.address p {
   top: 300px;
 }
 
-/* line 115, ../sass/screen.sass */
+/* line 129, ../sass/screen.sass */
 #doi-trei {
   display: block;
   width: 300px;
@@ -263,7 +263,7 @@ div.address p {
   top: 300px;
 }
 
-/* line 123, ../sass/screen.sass */
+/* line 137, ../sass/screen.sass */
 #doi-patru {
   display: block;
   position: absolute;
@@ -273,35 +273,35 @@ div.address p {
   top: 300px;
 }
 
-/* line 131, ../sass/screen.sass */
+/* line 145, ../sass/screen.sass */
 .text-right {
   text-align: right;
 }
 
-/* line 134, ../sass/screen.sass */
+/* line 148, ../sass/screen.sass */
 .right {
   float: right;
 }
 
-/* line 137, ../sass/screen.sass */
+/* line 151, ../sass/screen.sass */
 #contact {
   display: block;
   width: 300px;
   height: 300px;
-  padding-top: 125px;
+  padding-top: 101.695px;
   font-size: 12px;
   font-family: Arial;
 }
-/* line 144, ../sass/screen.sass */
+/* line 158, ../sass/screen.sass */
 #contact div {
   margin-bottom: 10px;
 }
 
-/* line 147, ../sass/screen.sass */
+/* line 161, ../sass/screen.sass */
 div#trimite {
   margin: 0;
 }
-/* line 149, ../sass/screen.sass */
+/* line 163, ../sass/screen.sass */
 div#trimite input {
   background-color: #a5132a;
   color: #303030;
@@ -310,7 +310,7 @@ div#trimite input {
   cursor: pointer;
 }
 
-/* line 157, ../sass/screen.sass */
+/* line 171, ../sass/screen.sass */
 div.flash {
   font-weight: bold;
   display: none;
@@ -336,7 +336,7 @@ div.flash {
   z-index: 2;
 }
 
-/* line 175, ../sass/screen.sass */
+/* line 189, ../sass/screen.sass */
 .square-image {
   width: 299px;
   height: 299px;
