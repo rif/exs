@@ -8,5 +8,14 @@
 <script type="text/javascript">
 	$(function(){
 		$("a:contains('HOME')").addClass("active");
+		$('img.prj-img[title]').qtip({
+			style: {name: 'dark'},
+			position: {
+    		 	corner: {
+         			target: 'topLeft',
+         			tooltip: 'topLeft'
+      			}
+   			}
+		});
 		});
 </script>
