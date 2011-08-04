@@ -72,4 +72,13 @@ db.define_table('picture',
                 format='%(title)s'
 )
 
+def get_tags(cat):
+    s = set()
+    for p in cat.project.select():
+        if p.tags:
+            for tag in p.tags:
+                tag = db.tag(tag)
+                s.add((tag.id, tag.name))
+    return s
+
 a0,a1 = request.args(0), request.args(1)
