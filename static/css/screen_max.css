@@ -1,4 +1,4 @@
-/* line 17, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,55 +20,55 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 20, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 20, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
   line-height: 1;
 }
 
-/* line 22, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 24, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 26, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 28, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 101, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 101, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 30, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 114, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 114, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
-/* line 10, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+/* line 10, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
 html, body {
   height: 100%;
 }
 
-/* line 12, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+/* line 12, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
 #container {
   clear: both;
   min-height: 100%;
@@ -76,25 +76,25 @@ html, body {
   height: 100%;
   margin-bottom: -20px;
 }
-/* line 18, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+/* line 18, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
 #container #root-footer {
   height: 20px;
 }
 
-/* line 20, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+/* line 20, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
 #footer {
   clear: both;
   position: relative;
   height: 20px;
 }
 
-/* line 17, ../sass/_base.sass */
+/* line 17, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 body {
   background-image: url("../images/patrat_340.png");
   color: #adadad;
 }
 
-/* line 21, ../sass/_base.sass */
+/* line 21, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 input[type=text] {
   background-color: #c1c1c1;
   color: #646362;
@@ -106,12 +106,12 @@ input[type=text] {
   font-family: Arial;
 }
 
-/* line 31, ../sass/_base.sass */
+/* line 31, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 input[type=submit] {
   margin-right: 1;
 }
 
-/* line 34, ../sass/_base.sass */
+/* line 34, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 textarea {
   background-color: #c1c1c1;
   color: #646362;
@@ -123,38 +123,38 @@ textarea {
   font-family: Arial;
 }
 
-/* line 44, ../sass/_base.sass */
+/* line 44, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 ul.menu {
   padding-top: 50px;
 }
-/* line 46, ../sass/_base.sass */
+/* line 46, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 ul.menu a {
   color: #adadad;
   text-decoration: None;
   font-size: 12px;
   font-family: Arial;
 }
-/* line 18, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 18, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 ul.menu a:visited {
   color: #adadad;
 }
-/* line 21, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 21, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 ul.menu a:focus {
   color: #6c6c6c;
 }
-/* line 24, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 24, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 ul.menu a:hover {
   color: #6c6c6c;
 }
-/* line 27, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 27, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 ul.menu a:active {
   color: #a5132a;
 }
-/* line 51, ../sass/_base.sass */
+/* line 51, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 ul.menu a.active {
   color: #a5132a;
 }
-/* line 53, ../sass/_base.sass */
+/* line 53, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 ul.menu li {
   padding-bottom: 28.333px;
   padding-left: 14px;
@@ -162,78 +162,78 @@ ul.menu li {
   list-style-type: none;
 }
 
-/* line 59, ../sass/_base.sass */
+/* line 59, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 ul#cat-menu {
   padding-top: 50px;
 }
-/* line 61, ../sass/_base.sass */
+/* line 61, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 ul#cat-menu a {
   color: #adadad;
   text-decoration: None;
   font-size: 12px;
   font-family: Arial;
 }
-/* line 18, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 18, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 ul#cat-menu a:visited {
   color: #adadad;
 }
-/* line 21, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 21, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 ul#cat-menu a:focus {
   color: #6c6c6c;
 }
-/* line 24, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 24, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 ul#cat-menu a:hover {
   color: #6c6c6c;
 }
-/* line 27, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+/* line 27, /usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 ul#cat-menu a:active {
   color: #a5132a;
 }
-/* line 66, ../sass/_base.sass */
+/* line 66, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 ul#cat-menu a.active {
   color: #a5132a;
 }
-/* line 68, ../sass/_base.sass */
-ul#cat-menu > li.principal {
+/* line 68, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
+ul#cat-menu li.principal {
   padding-left: 14px;
   background: url("../images/sageata_rosie.png") no-repeat 2px 5px;
   list-style-type: none;
 }
 
-/* line 73, ../sass/_base.sass */
+/* line 73, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 .small {
   font-size: 80%;
 }
 
-/* line 76, ../sass/_base.sass */
+/* line 76, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 #footer {
   color: #646362;
   font-size: 9px;
   font-family: Arial;
 }
 
-/* line 81, ../sass/_base.sass */
+/* line 81, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 #logo-img {
   position: absolute;
   top: 680px;
 }
 
-/* line 85, ../sass/_base.sass */
+/* line 85, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 #ten-pixels-padder {
   padding: 10px;
 }
 
-/* line 88, ../sass/_base.sass */
+/* line 88, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 div.address {
   font-size: 12px;
   font-family: Arial;
 }
-/* line 91, ../sass/_base.sass */
+/* line 91, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 div.address p {
   line-height: 1.2em;
 }
 
-/* line 94, ../sass/_base.sass */
+/* line 94, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 #doi-unu {
   display: block;
   width: 340px;
@@ -243,7 +243,7 @@ div.address p {
   top: 340px;
 }
 
-/* line 102, ../sass/_base.sass */
+/* line 102, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 #doi-doi {
   display: block;
   width: 340px;
@@ -253,7 +253,7 @@ div.address p {
   top: 340px;
 }
 
-/* line 110, ../sass/_base.sass */
+/* line 110, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 #doi-trei {
   display: block;
   width: 340px;
@@ -263,7 +263,7 @@ div.address p {
   top: 340px;
 }
 
-/* line 118, ../sass/_base.sass */
+/* line 118, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 #doi-patru {
   display: block;
   position: absolute;
@@ -273,17 +273,17 @@ div.address p {
   top: 340px;
 }
 
-/* line 126, ../sass/_base.sass */
+/* line 126, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 .text-right {
   text-align: right;
 }
 
-/* line 129, ../sass/_base.sass */
+/* line 129, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 .right {
   float: right;
 }
 
-/* line 132, ../sass/_base.sass */
+/* line 132, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 #contact {
   display: block;
   width: 340px;
@@ -292,16 +292,16 @@ div.address p {
   font-size: 12px;
   font-family: Arial;
 }
-/* line 139, ../sass/_base.sass */
+/* line 139, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 #contact div {
   margin-bottom: 10px;
 }
 
-/* line 142, ../sass/_base.sass */
+/* line 142, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 div#trimite {
   margin: 0;
 }
-/* line 144, ../sass/_base.sass */
+/* line 144, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 div#trimite input {
   background-color: #a5132a;
   color: #303030;
@@ -310,7 +310,7 @@ div#trimite input {
   cursor: pointer;
 }
 
-/* line 152, ../sass/_base.sass */
+/* line 152, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 div.flash {
   font-weight: bold;
   display: none;
@@ -336,7 +336,7 @@ div.flash {
   z-index: 2;
 }
 
-/* line 170, ../sass/_base.sass */
+/* line 170, /home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass */
 .square-image {
   width: 339px;
   height: 339px;
