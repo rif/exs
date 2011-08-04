@@ -394,3 +394,22 @@ div.flash {
   position: relative;
   left: -38px;
 }
+
+/* line 182, ../sass/_base.sass */
+#year1, #year2 {
+  position: absolute;
+  right: 0px;
+  height: 338px;
+  background-image: url("../images/dot.png");
+  background-repeat: repeat-y;
+}
+
+/* line 190, ../sass/_base.sass */
+#year1 {
+  top: 340px;
+}
+
+/* line 193, ../sass/_base.sass */
+#year2 {
+  top: 680px;
+}

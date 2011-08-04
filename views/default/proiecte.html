@@ -19,8 +19,30 @@
 {{pass}}
 </div>
 
+<div id="year1">
+{{if len(years)>0:}}
+{{=years[0]}}
+{{pass}}
+</div>
+
+<div id="year2">
+{{if len(years)>1:}}
+{{=years[1]}}
+{{pass}}
+</div>
+
+
 <script type="text/javascript">
 	$(function(){
 		$("a:contains('PROIECTE')").addClass("active");
+		$('img.prj-img[title]').qtip({
+			style: {name: 'dark'},
+			position: {
+    		 	corner: {
+         			target: 'topLeft',
+         			tooltip: 'topLeft'
+      			}
+   			}
+		});
 		});
 </script>
