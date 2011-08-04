@@ -1,7 +1,22 @@
 {{extend 'layout.html'}}
-<div id="doi-trei">
-<h1>This is the default/despre_noi.html template</h1>
-{{=BEAUTIFY(response._vars)}}
+
+{{for i,div in enumerate(divs):}}
+{{if i==items_per_page: break}}
+{{=div}}
+{{pass}}
+
+<div id="doi-cinci">
+{{if page:}}
+<a href="{{=URL(args=[page-1])}}"><img id="prev" src="{{=URL('static', 'images/buton_sus.png')}}" alt="prev" /></a>
+{{else:}}
+<img id="prev" src="{{=URL('static', 'images/buton_sus_inactiv.png')}}" alt="prev" />
+{{pass}}
+
+{{if len(divs)>items_per_page:}}
+<a href="{{=URL(args=[page+1])}}"><img id="next" src="{{=URL('static', 'images/buton_jos.png')}}" alt="next" /></a>
+{{else:}}
+<img id="next" src="{{=URL('static', 'images/buton_jos_inactiv.png')}}" alt="next" />
+{{pass}}
 </div>
 
 <script type="text/javascript">
