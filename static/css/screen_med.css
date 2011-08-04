@@ -377,7 +377,7 @@ div.flash {
 }
 
 /* line 169, ../sass/_base.sass */
-.square-image {
+.prj-img {
   width: 299px;
   height: 299px;
 }
@@ -402,14 +402,16 @@ div.flash {
   height: 298px;
   background-image: url("../images/dot.png");
   background-repeat: repeat-y;
+  font-size: 12px;
+  font-family: Arial;
 }
 
-/* line 190, ../sass/_base.sass */
+/* line 192, ../sass/_base.sass */
 #year1 {
   top: 300px;
 }
 
-/* line 193, ../sass/_base.sass */
+/* line 195, ../sass/_base.sass */
 #year2 {
   top: 600px;
 }
