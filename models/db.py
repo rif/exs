@@ -61,7 +61,6 @@ db.define_table('project',
     format='%(name)s'
 )
 
-
 db.define_table('picture',
                 Field('project', db.project),
                 Field('image', 'upload'),
