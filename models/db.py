@@ -45,27 +45,28 @@ db.define_table('category',
                 format='%(name)s'
 )
 
+db.define_table('tag',
+    Field('name'),
+    format='%(name)s'
+ )
+
 db.define_table('project',
     Field('category', db.category),
     Field('name'),
     Field('description', 'text', represent=lambda d: MARKMIN(d)),
     Field('year', 'integer'),
     Field('representative', 'boolean', comment='Will be displayed on the home page'),
+    Field('tags', 'list:reference tag'),
     auth.signature,
     format='%(name)s'
 )
 
-db.define_table('tag',
-    Field('name'),
-    format='%(name)s'
- )
 
 db.define_table('picture',
                 Field('project', db.project),
                 Field('image', 'upload'),
                 Field('title'),
                 Field('description', 'text', represent=lambda d: MARKMIN(d)),
-                Field('tags', 'list:reference tag'),
                 Field('representative', 'boolean', comment='Will be display as cover for project'),
                 auth.signature,
                 format='%(title)s'

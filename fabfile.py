@@ -29,4 +29,4 @@ def deploy():
 def reload():
     'fires an apache graceful reload'
     print(green('reloading...'))
-    sudo('apachectl graceful')
+    sudo('service uwsgi-python reload')
