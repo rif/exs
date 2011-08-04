@@ -1,5 +1,6 @@
 from fabric.api import sudo, prompt, run, local, cd
 from fabric.decorators import runs_once, hosts, task
+from fabric.colors import green
 
 @task
 def ci():
@@ -15,6 +16,7 @@ def push():
 @task
 @hosts('rif@avocadosoft.ro:22011')
 def deploy():
+    'triggers hg pul on the server'
     push()
     'Deploy the app to the target environment'
     with cd('../www-data/web2py/applications/exs/'):
