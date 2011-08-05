@@ -1,7 +1,8 @@
 {{extend 'layout.html'}}
 <div id="doi-trei">
-<h1>This is the default/despre_noi.html template</h1>
-{{=BEAUTIFY(response._vars)}}
+	<div id="about_us">
+	{{=MARKMIN(abo.description) if abo else "This is a nice description about us"}}
+	</div>
 </div>
 
 <script type="text/javascript">

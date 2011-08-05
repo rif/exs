@@ -71,6 +71,11 @@ db.define_table('picture',
                 format='%(title)s'
 )
 
+db.define_table('about',
+    Field('email', requires=IS_EMAIL()),
+    Field('description', 'text', represent=lambda d: MARKMIN(d), length=2048, comment="You can use markmin syntax, see here: http://web2py.com/examples/static/markmin.html")
+)
+
 def get_tags(cat):
     s = set()
     for p in cat.project.select():
