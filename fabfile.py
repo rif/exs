@@ -24,6 +24,8 @@ def deploy():
     'Deploy the app to the target environment'
     with cd('../www-data/web2py/applications/exs/'):
         run('hg pul -uv')
+        sudo('chown -R :www-data databases/')
+        sudo('chmod -R g+rw databases/')
 
 @task
 @hosts('rif@avocadosoft.ro:22011')
