@@ -35,6 +35,7 @@
         </div>
 
         {{=form}}
+
     </div> <!-- End of inner -->
 </div> <!-- End of content -->
 {{end}}
