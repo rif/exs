@@ -14,6 +14,7 @@ def index():
     return locals()
 
 def despre_noi():
+    abo = db(db.about).select().first()
     return locals()
 
 def proiecte():
@@ -56,8 +57,9 @@ def contact():
         submit_button='Trimite')
     if form.accepts(request.vars, session):
         response.flash = 'multumim! mesaj trimis!'
-        mail.send('rif@mailinator.com', 'Message de la %s(%s)'%(form.vars.nume, form.vars.companie), form.vars.mesaj + "\nreplay-to: " + form.vars.email)
-
+        abo = db(db.about).select().first()
+        email_to = abo.email if abo else 'exs@mailinator.com'
+        mail.send(email_to, 'Message de la %s(%s)'%(form.vars.nume, form.vars.companie), form.vars.mesaj + "\nreplay-to: " + form.vars.email)
     elif form.errors:
         response.flash = 'formularul contine erori'
     return locals()

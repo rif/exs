@@ -210,30 +210,31 @@ ul#cat-menu li.principal {
   color: #646362;
   font-size: 9px;
   font-family: Arial;
+  z-index: -1;
 }
 
-/* line 81, ../sass/_base.sass */
+/* line 82, ../sass/_base.sass */
 #logo-img {
   position: absolute;
   top: 500px;
 }
 
-/* line 85, ../sass/_base.sass */
+/* line 86, ../sass/_base.sass */
 #ten-pixels-padder {
   padding: 10px;
 }
 
-/* line 88, ../sass/_base.sass */
+/* line 89, ../sass/_base.sass */
 div.address {
   font-size: 12px;
   font-family: Arial;
 }
-/* line 91, ../sass/_base.sass */
+/* line 92, ../sass/_base.sass */
 div.address p {
   line-height: 1.2em;
 }
 
-/* line 102, ../sass/_base.sass */
+/* line 103, ../sass/_base.sass */
 #doi-unu {
   display: block;
   width: 250px;
@@ -243,7 +244,7 @@ div.address p {
   top: 250px;
 }
 
-/* line 105, ../sass/_base.sass */
+/* line 106, ../sass/_base.sass */
 #doi-doi {
   display: block;
   width: 250px;
@@ -253,7 +254,7 @@ div.address p {
   top: 250px;
 }
 
-/* line 108, ../sass/_base.sass */
+/* line 109, ../sass/_base.sass */
 #doi-trei {
   display: block;
   width: 250px;
@@ -263,7 +264,7 @@ div.address p {
   top: 250px;
 }
 
-/* line 111, ../sass/_base.sass */
+/* line 112, ../sass/_base.sass */
 #doi-patru {
   display: block;
   width: 250px;
@@ -273,7 +274,7 @@ div.address p {
   top: 250px;
 }
 
-/* line 114, ../sass/_base.sass */
+/* line 115, ../sass/_base.sass */
 #doi-cinci {
   display: block;
   width: 250px;
@@ -283,7 +284,7 @@ div.address p {
   top: 250px;
 }
 
-/* line 117, ../sass/_base.sass */
+/* line 118, ../sass/_base.sass */
 #trei-doi {
   display: block;
   width: 250px;
@@ -293,7 +294,7 @@ div.address p {
   top: 500px;
 }
 
-/* line 120, ../sass/_base.sass */
+/* line 121, ../sass/_base.sass */
 #trei-trei {
   display: block;
   width: 250px;
@@ -303,7 +304,7 @@ div.address p {
   top: 500px;
 }
 
-/* line 123, ../sass/_base.sass */
+/* line 124, ../sass/_base.sass */
 #trei-patru {
   display: block;
   width: 250px;
@@ -313,17 +314,17 @@ div.address p {
   top: 500px;
 }
 
-/* line 126, ../sass/_base.sass */
+/* line 127, ../sass/_base.sass */
 .text-right {
   text-align: right;
 }
 
-/* line 129, ../sass/_base.sass */
+/* line 130, ../sass/_base.sass */
 .right {
   float: right;
 }
 
-/* line 132, ../sass/_base.sass */
+/* line 133, ../sass/_base.sass */
 #contact {
   display: block;
   width: 250px;
@@ -332,16 +333,16 @@ div.address p {
   font-size: 12px;
   font-family: Arial;
 }
-/* line 139, ../sass/_base.sass */
+/* line 140, ../sass/_base.sass */
 #contact div {
   margin-bottom: 10px;
 }
 
-/* line 142, ../sass/_base.sass */
+/* line 143, ../sass/_base.sass */
 div#trimite {
   margin: 0;
 }
-/* line 144, ../sass/_base.sass */
+/* line 145, ../sass/_base.sass */
 div#trimite input {
   background-color: #a5132a;
   color: #303030;
@@ -350,7 +351,7 @@ div#trimite input {
   cursor: pointer;
 }
 
-/* line 151, ../sass/_base.sass */
+/* line 152, ../sass/_base.sass */
 div.flash {
   font-weight: bold;
   display: none;
@@ -376,26 +377,26 @@ div.flash {
   z-index: 2;
 }
 
-/* line 169, ../sass/_base.sass */
+/* line 170, ../sass/_base.sass */
 .prj-img {
   width: 249px;
   height: 249px;
 }
 
-/* line 173, ../sass/_base.sass */
+/* line 174, ../sass/_base.sass */
 #prev {
   position: relative;
   float: left;
 }
 
-/* line 177, ../sass/_base.sass */
+/* line 178, ../sass/_base.sass */
 #next {
   margin-top: 39px;
   position: relative;
   left: -38px;
 }
 
-/* line 182, ../sass/_base.sass */
+/* line 183, ../sass/_base.sass */
 #year1, #year2 {
   position: absolute;
   right: 0px;
@@ -407,11 +408,21 @@ div.flash {
 }
 
 /* line 192, ../sass/_base.sass */
+#about_us {
+  font-size: 12px;
+  font-family: Arial;
+}
+/* line 195, ../sass/_base.sass */
+#about_us h1 {
+  font-size: 2em;
+}
+
+/* line 199, ../sass/_base.sass */
 #year1 {
   top: 250px;
 }
 
-/* line 195, ../sass/_base.sass */
+/* line 202, ../sass/_base.sass */
 #year2 {
   top: 500px;
 }
