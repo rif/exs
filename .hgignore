@@ -4,7 +4,6 @@ syntax: glob
 *.pyo
 *.bak
 cache/*
-databases/*
 sessions/*
 errors/*
 .DS_Store
