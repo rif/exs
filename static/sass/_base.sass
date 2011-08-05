@@ -15,193 +15,193 @@ $font-family: Arial
 $font-size: 12px
     
 body
-  background-image: url($background-image)
-  color: $light-grey
+    background-image: url($background-image)
+    color: $light-grey
 
 input[type=text]
-  background-color: #c1c1c1
-  color: #646362
-  border: None
-  padding-right: 0
-  width: ($square_side - 2)
-  height: 19px
-  font-size: $font-size
-  font-family: $font-family
+    background-color: #c1c1c1
+    color: #646362
+    border: None
+    padding-right: 0
+    width: ($square_side - 2)
+    height: 19px
+    font-size: $font-size
+    font-family: $font-family
     
 input[type=submit]
-  margin-right: 1
+    margin-right: 1
         
 textarea
-  background-color: #c1c1c1
-  color: #646362
-  border: None
-  width: ($square_side - 2)
-  padding: 0
-  height: 70px
-  font-size: $font-size
-  font-family: $font-family
+    background-color: #c1c1c1
+    color: #646362
+    border: None
+    width: ($square_side - 2)
+    padding: 0
+    height: 70px
+    font-size: $font-size
+    font-family: $font-family
 
 ul.menu
-  padding-top: 50px
-  a
-    +link-colors($light-grey, #6c6c6c, $red, $light-grey,  #6c6c6c)
-    text-decoration: None
-    font-size: $font-size
-    font-family: $font-family
-  a.active
-    color: $red
-  li
-    padding-bottom: ($square_side/12)
-    padding-left: 14px
-    background: url('../images/sageata_gri.png') no-repeat 2px 4px
-    list-style-type: none
+    padding-top: 50px
+    a
+        +link-colors($light-grey, #6c6c6c, $red, $light-grey,  #6c6c6c)
+        text-decoration: None
+        font-size: $font-size
+        font-family: $font-family
+    a.active
+        color: $red
+    li
+        padding-bottom: ($square_side/12)
+        padding-left: 14px
+        background: url('../images/sageata_gri.png') no-repeat 2px 4px
+        list-style-type: none
 
 ul#cat-menu
-  padding-top: 50px
-  a
-    +link-colors($light-grey, #6c6c6c, $red, $light-grey,  #6c6c6c)
-    text-decoration: None
-    font-size: $font-size
-    font-family: $font-family
-  a.active
-    color: $red
-  li.principal
-    padding-left: 14px
-    background: url('../images/sageata_rosie.png') no-repeat 2px 5px
-    list-style-type: none
+    padding-top: 50px
+    a
+        +link-colors($light-grey, #6c6c6c, $red, $light-grey,  #6c6c6c)
+        text-decoration: None
+        font-size: $font-size
+        font-family: $font-family
+    a.active
+        color: $red
+    li.principal
+        padding-left: 14px
+        background: url('../images/sageata_rosie.png') no-repeat 2px 5px
+        list-style-type: none
 
 .small
-  font-size: 80%
+    font-size: 80%
 
 #footer
-  color: #646362
-  font-size: 9px
-  font-family: $font-family
-  z-index: -1
+    color: #646362
+    font-size: 9px
+    font-family: $font-family
+    z-index: -1
 
 #logo-img
-  position: absolute
-  top: ($square_side*2)
+    position: absolute
+    top: ($square_side*2)
 
 #ten-pixels-padder
-  padding: 10px
+    padding: 10px
 
 div.address
-  font-size: $font-size
-  font-family: $font-family
-  p
-    line-height: 1.2em
+    font-size: $font-size
+    font-family: $font-family
+    p
+        line-height: 1.2em
 
 @mixin square($left, $top: 10px)
-  display: block
-  width: $square_side
-  height: $square_side
-  position: absolute
-  left: $left
-  top: $top
+    display: block
+    width: $square_side
+    height: $square_side
+    position: absolute
+    left: $left
+    top: $top
 
 #doi-unu
-  +square(0px, $square_side)
+    +square(0px, $square_side)
 
 #doi-doi
-  +square($square_side, $square_side)
+    +square($square_side, $square_side)
 
 #doi-trei
-  +square($square_side*2, $square_side)
+    +square($square_side*2, $square_side)
 
 #doi-patru
-  +square($square_side*3, $square_side)
+    +square($square_side*3, $square_side)
   
 #doi-cinci
-  +square($square_side*4, $square_side)
+    +square($square_side*4, $square_side)
 
 #trei-doi
-  +square($square_side, $square_side*2)
+    +square($square_side, $square_side*2)
 
 #trei-trei
-  +square($square_side*2, $square_side*2)
+    +square($square_side*2, $square_side*2)
 
 #trei-patru
-  +square($square_side*3, $square_side*2)
+    +square($square_side*3, $square_side*2)
 
 .text-right
-  text-align: right
+    text-align: right
       
 .right
-  float: right
+    float: right
 
 #contact
-  display: block
-  width: ($square_side)
-  height: ($square_side)
-  padding-top: $padding-contact
-  font-size: $font-size
-  font-family: $font-family
-  div
-    margin-bottom: 10px
+    display: block
+    width: ($square_side)
+    height: ($square_side)
+    padding-top: $padding-contact
+    font-size: $font-size
+    font-family: $font-family
+    div
+        margin-bottom: 10px
 
 div#trimite
-  margin: 0
-  input
-    background-color: $red
-    color: #303030
-    border: None
-    float: right
-    cursor: pointer
+    margin: 0
+    input
+        background-color: $red
+        color: #303030
+        border: None
+        float: right
+        cursor: pointer
         
 div.flash
-  font-weight: bold
-  display: none
-  position: fixed
-  padding: 10px
-  top: 40px
-  right: 10px
-  min-width: 280px
-  margin: 0px 0px 10px 10px
-  color: #fff
-  vertical-align: middle
-  cursor: pointer
-  background: #000
-  border: 2px solid #fff
-  +opacity(0.85)
-  +border-radius
-  z-index: 2
+    font-weight: bold
+    display: none
+    position: fixed
+    padding: 10px
+    top: 40px
+    right: 10px
+    min-width: 280px
+    margin: 0px 0px 10px 10px
+    color: #fff
+    vertical-align: middle
+    cursor: pointer
+    background: #000
+    border: 2px solid #fff
+    +opacity(0.85)
+    +border-radius
+    z-index: 2
 
 .prj-img
-  width: ($square_side - 1)
-  height: ($square_side - 1)
+    width: ($square_side - 1)
+    height: ($square_side - 1)
   
 #prev
-  position: relative
-  float: left
+    position: relative
+    float: left
 
 #next
-  margin-top: 39px
-  position: relative
-  left: -38px
-  
-#year1, #year2
-  position: absolute
-  right: 0px
-  height: ($square_side - 2)
-  background-image: url("../images/dot.png")
-  background-repeat: repeat-y
-  font-size: $font-size
-  font-family: $font-family
+    margin-top: 39px
+    position: relative
+    left: -38px
 
 #about_us
-  font-size: $font-size
-  font-family: $font-family
-  h1
-    font-size: 2em
-  ul>li
-    list-style-type: disc
-  ol>li
-    list-style-type: decimal
+    font-size: $font-size
+    font-family: $font-family
+    h1
+        font-size: 2em
+    ul>li
+        list-style-type: disc
+    ol>li
+        list-style-type: decimal
+  
+#year1, #year2
+    position: absolute
+    right: 0px
+    height: ($square_side - 2)
+    background-image: url("../images/dot.png")
+    background-repeat: repeat-y
+    font-size: $font-size
+    font-family: $font-family
+    width: 32px
 
 #year1
-  top: $square_side
+    top: $square_side
 
 #year2
-  top: $square_side*2
-
+    top: $square_side*2

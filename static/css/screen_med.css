@@ -397,6 +397,24 @@ div.flash {
 }
 
 /* line 183, ../sass/_base.sass */
+#about_us {
+  font-size: 12px;
+  font-family: Arial;
+}
+/* line 186, ../sass/_base.sass */
+#about_us h1 {
+  font-size: 2em;
+}
+/* line 188, ../sass/_base.sass */
+#about_us ul > li {
+  list-style-type: disc;
+}
+/* line 190, ../sass/_base.sass */
+#about_us ol > li {
+  list-style-type: decimal;
+}
+
+/* line 193, ../sass/_base.sass */
 #year1, #year2 {
   position: absolute;
   right: 0px;
@@ -405,24 +423,15 @@ div.flash {
   background-repeat: repeat-y;
   font-size: 12px;
   font-family: Arial;
+  width: 32px;
 }
 
-/* line 192, ../sass/_base.sass */
-#about_us {
-  font-size: 12px;
-  font-family: Arial;
-}
-/* line 195, ../sass/_base.sass */
-#about_us h1 {
-  font-size: 2em;
-}
-
-/* line 199, ../sass/_base.sass */
+/* line 203, ../sass/_base.sass */
 #year1 {
   top: 300px;
 }
 
-/* line 202, ../sass/_base.sass */
+/* line 206, ../sass/_base.sass */
 #year2 {
   top: 600px;
 }
