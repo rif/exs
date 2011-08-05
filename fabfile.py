@@ -6,6 +6,7 @@ from fabric.colors import green
 def ci():
     'Commit localy using mercurial'
     comment = prompt('Commit comment: ', default='another commit from fabric')
+    local('compass compile -e production --force static')
     local('hg ci -m "%s"' % comment)
     push()
 
