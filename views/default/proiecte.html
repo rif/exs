@@ -19,17 +19,17 @@
 {{pass}}
 </div>
 
-<div id="year1">
 {{if len(years)>0:}}
+<div id="year1">
 {{=years[0]}}
-{{pass}}
 </div>
+{{pass}}
 
-<div id="year2">
 {{if len(years)>1:}}
-{{=years[1]}}
-{{pass}}
+<div id="year2">
+{{=years[-1]}}
 </div>
+{{pass}}
 
 
 <script type="text/javascript">
