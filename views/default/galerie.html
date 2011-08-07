@@ -1,0 +1,19 @@
+<style type="text/css">
+	#galerie {
+		display: block;
+		width: 700px;
+		height: 700px;
+		background-color: #303030;
+	}
+</style>
+<script type="text/javascript">
+	$(function(){
+		
+	});
+</script>
+<div id="galerie">
+	Pun un mesaj de intampinare aici.
+	{{for pic in pics:}}
+		{{=IMG(_src=URL('download', args=pic.image), _alt=pic.title)}}
+	{{pass}}
+</div>

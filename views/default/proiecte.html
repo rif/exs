@@ -31,7 +31,6 @@
 </div>
 {{pass}}
 
-
 <script type="text/javascript">
 	$(function(){
 		$("a:contains('PROIECTE')").addClass("active");
@@ -43,6 +42,21 @@
          			tooltip: 'topLeft'
       			}
    			}
+		});
+		$("a.galerie").fancybox({
+			'transitionIn'	:	'elastic',
+			'transitionOut'	:	'elastic',
+			'padding'		:	'0',
+			'margin'		:	'0',
+			'opacity'		:	true,
+			'width'			:	'700',
+			'height'		:	'700',
+			'showNavArrows'	:	false,
+			'overlayShow'	:	true,
+			'autoScale'		:	false,
+			'autoDimensions':	false,
+			'overlayColor'	:	'#000',
+			'scrolling'		:	'no'
 		});
 		});
 </script>
