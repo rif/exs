@@ -68,6 +68,10 @@ def galerie():
     pics = db(db.picture.project==a0).select()
     return locals()
 
+def panou():
+    pic = db.picture(a0)
+    return locals()
+
 def user():
     return dict(form=auth())
 
