@@ -209,7 +209,19 @@ div.flash
     top: $square_side*2
 
 #galerie 
-    display: block
-    height: 500px
-    width: 750px
-    background-color: #303030
+    height: $square_side*2
+    width: $square_side*3
+    background-image: url($background-image)
+    #grid 
+        +square(0px, $square_side)
+        img.pic
+            position: relative
+            float: right
+            width: $square_side/4
+            
+#panou
+    position: relative
+    height: $square_side*2
+    width: $square_side*2
+    left: $square_side
+    

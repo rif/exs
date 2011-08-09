@@ -43,20 +43,24 @@
       			}
    			}
 		});
+		var square_side = $("#doi-doi").width();
 		$("a.galerie").fancybox({
 			'transitionIn'	:	'elastic',
 			'transitionOut'	:	'elastic',
 			'padding'		:	'0',
 			'margin'		:	'0',
 			'opacity'		:	true,
-			'width'			:	'750',
-			'height'		:	'500',
+			'width'			:	square_side*3,
+			'height'		:	square_side*2,
 			'showNavArrows'	:	false,
 			'overlayShow'	:	true,
 			'autoScale'		:	false,
 			'autoDimensions':	false,
 			'overlayColor'	:	'#000',
-			'scrolling'		:	'no'
+			'scrolling'		:	'no',
+			'onComplete'	:	function() {
+            	grayscale(document.getElementById("grid"));
+			},
 		});
-		});
+	});
 </script>
