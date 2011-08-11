@@ -18,8 +18,8 @@ def despre_noi():
     return locals()
 
 def proiecte():
-    categoria = db.category(request.vars['cat']) if 'cat' in request.vars else  None
-    tagul = db.tag(request.vars['tag']) if 'tag' in request.vars else  None
+    categoria = db.category(request.vars.cat)
+    tagul = db.tag(request.vars.tag)
     
     if len(request.args): page=int(a0)
     else: page=0
