@@ -6,9 +6,9 @@ def index():
     divs = []
     for i,p in enumerate(proiecte):
         pic = db((db.picture.project==p)&(db.picture.representative==True)).select().first()
-        if not pic: pic = db(db.picture.project==p).select().first() # get the first image
+        if not pic: pic = db(db.picture.project==p).select().first() # get the first thumbnail
         if pic:
-            divs.append(DIV(A(IMG(_src=URL('download', args=pic.image), _alt=p.name +' picture', _title=str(p.year) + ": " + p.description, _class="prj-img"), _href=URL('proiecte')), _id=ids[i]))
+            divs.append(DIV(A(IMG(_src=URL('download', args=pic.thumb), _alt=p.name +' picture', _title=str(p.year) + ": " + p.description, _class="prj-img"), _href=URL('proiecte')), _id=ids[i]))
         else: # if project has no pictures
             divs.append(DIV(A('No picture for project %s' % p.name, _href=URL('proiecte')), _id=ids[i]))
     return locals()
@@ -41,9 +41,9 @@ def proiecte():
     divs = []
     for i,p in enumerate(proiecte):
         pic = db((db.picture.project==p)&(db.picture.representative==True)).select().first()
-        if not pic: pic = db(db.picture.project==p).select().first() # get the first image
+        if not pic: pic = db(db.picture.project==p).select().first() # get the first thumbnail
         if pic:
-            divs.append(DIV(A(IMG(_src=URL('download', args=pic.image), _alt=p.name +' picture', _title=str(p.year) + ": " + p.description, _class="prj-img"), _href=URL('galerie', args=p.id),_class='galerie'), _id=ids[i%items_per_page]))
+            divs.append(DIV(A(IMG(_src=URL('download', args=pic.thumb), _alt=p.name +' picture', _title=str(p.year) + ": " + p.description, _class="prj-img"), _href=URL('galerie', args=p.id),_class='galerie'), _id=ids[i%items_per_page]))
         else: # if project has no pictures
             divs.append(DIV(A('No picture for project %s' % p.name, _href=URL('galerie', args=p.id),_class='galerie'), _id=ids[i%items_per_page]))
     return dict(divs=divs, page=page,items_per_page=items_per_page, years=years)
