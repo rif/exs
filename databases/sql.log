@@ -156,3 +156,5 @@ CREATE TABLE about(
     description TEXT
 );
 success!
+timestamp: 2011-08-11T17:24:48.407455
+ALTER TABLE picture ADD thumb CHAR(512);
