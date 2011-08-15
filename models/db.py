@@ -64,7 +64,7 @@ db.define_table('project',
 db.define_table('picture',
                 Field('project', db.project),
                 Field('image', 'upload'),
-                Field('thumb', 'upload'),
+                Field('thumb', 'upload', compute=lambda r: makeThumbnail(r.image)),
                 Field('title'),
                 Field('description', 'text', represent=lambda d: MARKMIN(d)),
                 Field('representative', 'boolean', comment='Will be display as cover for project'),
@@ -76,6 +76,17 @@ db.define_table('about',
     Field('email', requires=IS_EMAIL()),
     Field('description', 'text', represent=lambda d: MARKMIN(d), length=2048, comment="You can use markmin syntax, see here: http://web2py.com/examples/static/markmin.html")
 )
+
+def makeThumbnail(pictureImg, nx=340, ny=340):
+    try:
+        import os, uuid
+        from PIL import Image
+    except: return
+    im=Image.open(request.folder + 'uploads/' + pictureImg)
+    im.thumbnail((nx,ny), Image.ANTIALIAS)
+    thumbName='picture.thumb.%s.png' % (uuid.uuid4())
+    im.save(request.folder + 'uploads/' + thumbName,'png')
+    return thumbName
 
 def get_tags(cat):
     s = set()
