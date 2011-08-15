@@ -85,7 +85,7 @@ def makeThumbnail(pictureImg, nx=340, ny=340):
     im=Image.open(request.folder + 'uploads/' + pictureImg)
     im.thumbnail((nx,ny), Image.ANTIALIAS)
     thumbName='picture.thumb.%s.png' % (uuid.uuid4())
-    im.save(request.folder + 'uploads/' + thumbName,'png')
+    im.save(request.folder + 'uploads/' + thumbName, 'JPEG')
     return thumbName
 
 def get_tags(cat):
