@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 def index():
-    proiecte = db(db.project.representative==True).select()[:3]
+    proiecte = db((db.project.is_active==True) & (db.project.representative==True)).select()[:3]
     ids = ('doi-doi', 'doi-trei', 'doi-patru')
     divs = []
     for i,p in enumerate(proiecte):
@@ -30,7 +30,7 @@ def proiecte():
     if categoria:
         proiecte = categoria.project
     if categoria and tagul:
-        proiecte = db((db.project.category==categoria) & (db.project.tags.contains(tagul.id)))
+        proiecte = db((db.project.is_active==True) & (db.project.category==categoria) & (db.project.tags.contains(tagul.id)))
     if not proiecte:
         proiecte = db(db.project)
     proiecte = proiecte.select(orderby=~db.project.year, limitby=limitby)
