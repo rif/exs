@@ -6,9 +6,9 @@ def index():
     divs = []
     for i,p in enumerate(proiecte):
         pic = db((db.picture.project==p)&(db.picture.representative==True)).select().first()
-        if not pic: pic = db(db.picture.project==p).select().first() # get the first thumbnail
+        if not pic: pic = db(db.picture.project==p).select().first() # get the first picture
         if pic:
-            divs.append(DIV(A(IMG(_src=URL('download', args=pic.thumb), _alt=p.name +' picture', _title=str(p.year) + ": " + p.description, _class="prj-img"), _href=URL('proiecte')), _id=ids[i]))
+            divs.append(DIV(A(IMG(_src=URL('download', args=pic.gray), _alt=p.name +' picture', _title=str(p.year) + ": " + p.description, _class="prj-img"), _href=URL('proiecte')), _id=ids[i]))
         else: # if project has no pictures
             divs.append(DIV(A('No picture for project %s' % p.name, _href=URL('proiecte')), _id=ids[i]))
     return locals()

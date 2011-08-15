@@ -64,7 +64,8 @@ db.define_table('project',
 db.define_table('picture',
                 Field('project', db.project),
                 Field('image', 'upload'),
-                Field('thumb', 'upload', compute=lambda r: makeThumbnail(r.image)),
+                Field('thumb', 'upload', compute=lambda r: make_thumb(r.image)),
+                Field('gray', 'upload', compute=lambda r: make_gray(r.image)),
                 Field('title'),
                 Field('description', 'text', represent=lambda d: MARKMIN(d)),
                 Field('representative', 'boolean', comment='Will be display as cover for project'),
@@ -77,9 +78,9 @@ db.define_table('about',
     Field('description', 'text', represent=lambda d: MARKMIN(d), length=2048, comment="You can use markmin syntax, see here: http://web2py.com/examples/static/markmin.html")
 )
 
-def makeThumbnail(pictureImg, nx=340, ny=340):
+def make_thumb(pictureImg, nx=340, ny=340):
     try:
-        import os, uuid
+        import uuid
         from PIL import Image
     except: return
     im=Image.open(request.folder + 'uploads/' + pictureImg)
@@ -87,6 +88,23 @@ def makeThumbnail(pictureImg, nx=340, ny=340):
     thumbName='picture.thumb.%s.jpg' % (uuid.uuid4())
     im.save(request.folder + 'uploads/' + thumbName, 'JPEG')
     return thumbName
+
+def make_gray(pictureImg, nx=340, ny=340):
+    try:
+        import uuid
+        from PIL import Image, ImageOps
+    except: return
+    im=Image.open(request.folder + 'uploads/' + pictureImg)
+    if im.mode != "L": im = im.convert("L")
+    im.thumbnail((nx,ny), Image.ANTIALIAS)
+    # optional: apply contrast enhancement here, e.g.
+    im = ImageOps.autocontrast(im)
+    # convert back to RGB so we can save it as JPEG
+    # (alternatively, save it in PNG or similar)
+    im = im.convert("RGB")    
+    grayName='picture.gray.%s.jpg' % (uuid.uuid4())
+    im.save(request.folder + 'uploads/' + grayName, 'JPEG')
+    return grayName
 
 def get_tags(cat):
     s = set()
