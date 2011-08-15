@@ -10,6 +10,7 @@
 
 <script type="text/javascript">
 	$(function(){
+		$("#panou").load($("#grid>a:first").attr("href"));
 		$("#grid>a").click(function(e){
 			$("#panou").load($(this).attr("href"));
 			e.preventDefault();
