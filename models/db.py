@@ -84,7 +84,7 @@ def makeThumbnail(pictureImg, nx=340, ny=340):
     except: return
     im=Image.open(request.folder + 'uploads/' + pictureImg)
     im.thumbnail((nx,ny), Image.ANTIALIAS)
-    thumbName='picture.thumb.%s.png' % (uuid.uuid4())
+    thumbName='picture.thumb.%s.jpg' % (uuid.uuid4())
     im.save(request.folder + 'uploads/' + thumbName, 'JPEG')
     return thumbName
 
