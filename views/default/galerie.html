@@ -4,19 +4,18 @@
 		{{=A(IMG(_src=URL('download', args=pic.gray), _alt=pic.title, _class='pic'), _href=URL('panou', args=pic.id))}}
 	{{pass}}
 	</div>
-	<div id="panou">
-	</div>
+	<div id="panou"></div>
 </div>
 
 <script type="text/javascript">
 	$(function(){
 		$("#panou").load($("#grid>a:first").attr("href"), function(){
 			$("#galerie").css("width","800px");
-			$('#fancybox-content-holder').bind('resize',function(){
-		height = $('#fancybox-content-holder').height()+25;
-		$('#fancybox-wrap').height(height);
-	});
-			$.fancybox({'width': '50%', 'height': '75%'});
+			$('#galerie').bind('resize',function(){
+				height = $('#galerie').height()+25;
+				$('#fancybox-wrap').height(height);
+			});
+			$.fancybox.resize();
 
 		});
 		$("#grid>a").click(function(e){
