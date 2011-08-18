@@ -4,27 +4,44 @@
 		{{=A(IMG(_src=URL('download', args=pic.gray), _alt=pic.title, _class='pic'), _href=URL('panou', args=pic.id))}}
 	{{pass}}
 	</div>
-	<div id="panou"></div>
+	<div id="panou">
+	</div>
 </div>
 
 <script type="text/javascript">
+	function updateProperties() {
+		$("#poza-mare").load(function(){
+			$.fancybox.hideActivity();
+			var height = $(this).height();
+			var width = $(this).width();
+			$('#panou').height(height);
+			$('#panou').width(width);
+			$('#galerie').height(height+340);
+			$('#galerie').width(width+340);
+			$.fancybox.resize();
+		});
+				
+		$('#poza-mare[title]').qtip({
+			style: {name: 'dark'},
+			position: {
+	 			corner: {
+ 					target: 'bottomCenter',
+ 					tooltip: 'bottomLeft'
+					}
+				},
+		});
+	}
+
 	$(function(){
-		$("#panou").load($("#grid>a:first").attr("href"));
-		$('#galerie').bind('resize',function(){
-				var height = $('#galerie').height()+25;
-				var width = $('#galerie').width()+25;
-				console.log(width, height);
-				$('#fancybox-wrap').height(height);
-				$('#fancybox-wrap').width(width);
-			});$('#galerie').bind('resize',function(){
-				var height = $('#galerie').height()+25;
-				var width = $('#galerie').width()+25;
-				console.log(width, height);
-				$('#fancybox-wrap').height(height);
-				$('#fancybox-wrap').width(width);
-			});
+		$.fancybox.showActivity();
+		$("#panou").load($("#grid>a:first").attr("href"), function(){
+			updateProperties();
+		});
+
 		$("#grid>a").click(function(e){
+			$.fancybox.showActivity();
 			$("#panou").load($(this).attr("href"), function(){
+				updateProperties();
 		});
 			e.preventDefault();
 		});

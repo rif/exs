@@ -62,20 +62,21 @@ db.define_table('project',
 )
 
 db.define_table('picture',
-                Field('project', db.project),
-                Field('image', 'upload'),
-                Field('thumb', 'upload', compute=lambda r: make_thumb(r.image)),
-                Field('gray', 'upload', compute=lambda r: make_gray(r.image)),
-                Field('title'),
-                Field('description', 'text', represent=lambda d: MARKMIN(d)),
-                Field('representative', 'boolean', comment='Will be display as cover for project'),
-                auth.signature,
-                format='%(title)s'
+    Field('project', db.project),
+    Field('image', 'upload'),
+    Field('thumb', 'upload', compute=lambda r: make_thumb(r.image)),
+    Field('gray', 'upload', compute=lambda r: make_gray(r.image)),
+    Field('title'),
+    Field('description', 'text', represent=lambda d: MARKMIN(d)),
+    Field('representative', 'boolean', comment='Will be display as cover for project'),
+    auth.signature,
+    format='%(title)s'
 )
 
 db.define_table('about',
     Field('email', requires=IS_EMAIL()),
-    Field('description', 'text', represent=lambda d: MARKMIN(d), length=2048, comment="You can use markmin syntax, see here: http://web2py.com/examples/static/markmin.html")
+    Field('description', 'text', represent=lambda d: MARKMIN(d), length=2048, comment="You can use markmin syntax, see here: http://web2py.com/examples/static/markmin.html"),
+    Field('address', 'text', represent=lambda d: MARKMIN(d), comment="You can use markmin syntax, see here: http://web2py.com/examples/static/markmin.html"),
 )
 
 def make_thumb(pictureImg, nx=340, ny=340):

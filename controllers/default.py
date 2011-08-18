@@ -62,6 +62,7 @@ def contact():
         mail.send(email_to, 'Message de la %s(%s)'%(form.vars.nume, form.vars.companie), form.vars.mesaj + "\nreplay-to: " + form.vars.email)
     elif form.errors:
         response.flash = 'formularul contine erori'
+    abo = db(db.about).select().first()
     return locals()
 
 def galerie():
