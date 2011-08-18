@@ -208,10 +208,10 @@ div.flash
 #year2
     top: $square_side*2
 
-#galerie 
-    height: $square_side*2
-    width: $square_side*3
-    background-image: url('../images/340_transparent.png')
+#galerie
+    display: block
+    min-height: $square_side*2
+    min-width: $square_side*2
     #grid 
         +square(0px, $square_side)
         img.pic
@@ -221,7 +221,7 @@ div.flash
             
 #panou
     position: relative
-    height-min: $square_side*2
-    width-min: $square_side*2
+    min-height: $square_side
+    min-width: $square_side
     left: $square_side
     
