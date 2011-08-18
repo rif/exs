@@ -87,4 +87,4 @@ def make_gray(pictureImg):
     im.save(request.folder + 'uploads/' + grayName, 'JPEG')
     return grayName
 
-a0,a1 = request.args(0), request.args(1)
+a0,a1,a2 = request.args(0), request.args(1), request.args(2)

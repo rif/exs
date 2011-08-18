@@ -1,7 +1,7 @@
 <div id="galerie">
 	<div id="grid">
-	{{for pic in pics:}}
-		{{=A(IMG(_src=URL('download', args=pic.gray), _alt=pic.title, _class='pic'), _href=URL('panou', args=pic.id))}}
+	{{for index,pic in enumerate(pics):}}
+		{{=A(IMG(_src=URL('download', args=pic.gray), _alt=pic.title, _class='pic'), _href=URL('panou', args=(pic.id, index+1, len(pics))))}}
 	{{pass}}
 	</div>
 	<div id="panou">
@@ -37,8 +37,11 @@
 		$("#panou").load($("#grid>a:first").attr("href"), function(){
 			updateProperties();
 		});
+		{{index=0}}
+		{{count=10}}
+		$('<div id="navigator">{{if index>1:}}<a href="{{=URL(args=[index-1])}}"><img src="{{=URL("static", "images/buton_sus.png")}}" alt="prev" /></a>{{else:}}<img src="{{=URL("static", "images/buton_sus_inactiv.png")}}" alt="prev" />{{pass}}{{if index<count:}}<a id="next-img" href="{{=URL("panou", args=(pics[index-1].id, index+1, len(pics)))}}"><img src="{{=URL("static", "images/buton_jos.png")}}" alt="next" /></a>{{else:}}<img src="{{=URL("static", "images/buton_jos_inactiv.png")}}" alt="next" />{{pass}}</div>').insertAfter("#fancybox-close");
 
-		$("#grid>a").click(function(e){
+		$("#grid>a, #next-img, #prev-img").click(function(e){
 			$.fancybox.showActivity();
 			$("#panou").load($(this).attr("href"), function(){
 				updateProperties();
