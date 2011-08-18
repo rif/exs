@@ -1,0 +1,15 @@
+#fancybox-outer {
+    background-color: transparent;
+}
+
+#fancybox-outer div {
+    background: url();
+}
+
+#fancybox-close {
+    background: url('fancybox/fancy_close.png');
+    width: 42px;
+    height: 42px;
+    top: 0px;
+    right: -42px;
+}
