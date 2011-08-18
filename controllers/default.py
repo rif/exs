@@ -18,7 +18,7 @@ def despre_noi():
     return locals()
 
 def proiecte():
-    categoria = db.category(request.vars.cat)
+    an = request.vars.year
     tagul = db.tag(request.vars.tag)
     
     if len(request.args): page=int(a0)
@@ -26,16 +26,11 @@ def proiecte():
     items_per_page=6
     limitby=(page*items_per_page,(page+1)*items_per_page+1)
     
-    proiecte = None
-    if categoria:
-        proiecte = categoria.project
-    if categoria and tagul:
-        proiecte = db((db.project.is_active==True) & (db.project.category==categoria) & (db.project.tags.contains(tagul.id)))
-    if not proiecte:
-        proiecte = db(db.project)
-    proiecte = proiecte.select(orderby=~db.project.year, limitby=limitby)
-    years = [] 
-    [years.append(p.year) for p in proiecte if not p.year in years] 
+    query = db.project.is_active==True
+    if an and an != 'None': query &= db.project.year == an
+    if tagul: query &= db.project.tags.contains(tagul.id)
+    proiecte = db(query).select(orderby=~db.project.year, limitby=limitby)
+    years = db(db.project).select(db.project.year, distinct=True, orderby=~db.project.year)
     
     ids = ('doi-doi', 'doi-trei', 'doi-patru', 'trei-doi', 'trei-trei', 'trei-patru')
     divs = []
