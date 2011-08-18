@@ -66,6 +66,9 @@ def galerie():
 
 def panou():
     pic = db.picture(a0)
+    index = int(a1)
+    count = int(a2)
+    counter = "%s/%s " %(a1, a2)
     return locals()
 
 def user():
