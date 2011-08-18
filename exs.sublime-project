@@ -1,0 +1,196 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"require",
+				"require_once"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0,
+		"selected_items":
+		[
+		],
+		"width": 0
+	},
+	"console":
+	{
+		"height": 136
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/rif/Documents/prog/toolbox/scrapp/README.txt",
+		"/home/rif/Documents/prog/toolbox/scrapp/factory/scrapper.template",
+		"/home/rif/Documents/prog/toolbox/scrapp/factory/PolyFactory.php",
+		"/home/rif/Documents/prog/toolbox/client.php",
+		"/home/rif/Documents/prog/toolbox/factory/AbstractScrapper.php",
+		"/home/rif/Documents/prog/toolbox/factory/PolyFactory.php",
+		"/home/rif/Documents/prog/toolbox/factory/scrappers/Hataday.php",
+		"/home/rif/Documents/webframeworks/bucatar/restaurant/views.py",
+		"/home/rif/Documents/webframeworks/bucatar/settings_dev.py",
+		"/home/rif/Documents/webframeworks/bucatar/restaurant/tests.py",
+		"/home/rif/Documents/webframeworks/bucatar/order/tests.py",
+		"/home/rif/Documents/webframeworks/bucatar/menu/models.py",
+		"/home/rif/Documents/webframeworks/bucatar/menu/tests.py",
+		"/home/rif/Documents/webframeworks/bucatar/templates/registration/activate.html",
+		"/home/rif/Documents/webframeworks/bucatar/templates/registration/activation_complete.html",
+		"/home/rif/Documents/webframeworks/bucatar/templates/registration/activation_email.txt",
+		"/home/rif/Documents/webframeworks/bucatar/templates/registration/activation_email_subject.txt",
+		"/home/rif/Documents/webframeworks/bucatar/templates/registration/login.html",
+		"/home/rif/Documents/webframeworks/bucatar/templates/registration/logout.html",
+		"/home/rif/Documents/webframeworks/bucatar/templates/registration/password_change_done.html",
+		"/home/rif/Documents/webframeworks/bucatar/templates/registration/password_change_form.html",
+		"/home/rif/Documents/webframeworks/bucatar/templates/registration/password_reset_complete.html",
+		"/home/rif/Documents/webframeworks/bucatar/templates/registration/password_reset_confirm.html",
+		"/home/rif/Documents/webframeworks/bucatar/templates/registration/password_reset_done.html",
+		"/home/rif/Documents/webframeworks/bucatar/templates/registration/password_reset_email.html",
+		"/home/rif/Documents/webframeworks/bucatar/templates/registration/password_reset_form.html",
+		"/home/rif/Documents/webframeworks/bucatar/templates/registration/registration_complete.html",
+		"/home/rif/Documents/webframeworks/bucatar/templates/registration/registration_form.html",
+		"/home/rif/Documents/webframeworks/bucatar/templates/jqm/login.html",
+		"/home/rif/Documents/webframeworks/bucatar/templates/jqm/logout.html",
+		"/home/rif/Documents/webframeworks/bucatar/templates/jqm/simple.html",
+		"/home/rif/Documents/webframeworks/bucatar/templates/jqm/v1_0_0b1.html",
+		"/home/rif/Documents/webframeworks/bucatar/templates/jqm/messages.html",
+		"/home/rif/Documents/webframeworks/bucatar/templates/base_alt.html",
+		"/home/rif/Documents/webframeworks/bucatar/templates/header.html",
+		"/home/rif/Documents/webframeworks/bucatar/restaurant/urls.py",
+		"/home/rif/Documents/webframeworks/bucatar/menu/urls.py",
+		"/home/rif/Documents/webframeworks/bucatar/templates/bonus/history.html",
+		"/home/rif/Documents/webframeworks/bucatar/urls.py",
+		"/home/rif/Documents/webframeworks/bucatar/bonus/urls.py",
+		"/home/rif/Documents/webframeworks/jquery_mobile/hello.html",
+		"/home/rif/Documents/webframeworks/web2py/applications/exs/controllers/default.py",
+		"/home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass",
+		"/home/rif/Documents/webframeworks/oiad/kohana/application/classes/controller/categories.php",
+		"/home/rif/.config/sublime-text-2/Packages/User/Global.sublime-settings",
+		"/home/rif/.config/sublime-text-2/Packages/Default/Global.sublime-settings"
+	],
+	"find":
+	{
+		"height": 33
+	},
+	"find_in_files":
+	{
+		"height": 88,
+		"include_history":
+		[
+		],
+		"location_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"failUnlessEqual",
+			"fail",
+			"failUnl",
+			"login",
+			"get_object_or_404"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"assertEqual"
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	{
+		"mount_points":
+		[
+			"/home/rif/Documents/webframeworks/web2py/applications/exs"
+		]
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32
+	},
+	"input":
+	{
+		"height": 0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0,
+			1
+		],
+		"rows":
+		[
+			0,
+			1
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0,
+		"selected_items":
+		[
+		],
+		"width": 0
+	},
+	"select_project":
+	{
+		"height": 500,
+		"selected_items":
+		[
+		],
+		"width": 380
+	},
+	"show_minimap": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 211,
+	"status_bar_visible": true
+}

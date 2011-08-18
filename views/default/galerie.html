@@ -10,7 +10,15 @@
 
 <script type="text/javascript">
 	$(function(){
-		$("#panou").load($("#grid>a:first").attr("href"));
+		$("#panou").load($("#grid>a:first").attr("href"), function(){
+			$("#galerie").css("width","800px");
+			$('#fancybox-content-holder').bind('resize',function(){
+		height = $('#fancybox-content-holder').height()+25;
+		$('#fancybox-wrap').height(height);
+	});
+			$.fancybox({'width': '50%', 'height': '75%'});
+
+		});
 		$("#grid>a").click(function(e){
 			$("#panou").load($(this).attr("href"));
 			e.preventDefault();
