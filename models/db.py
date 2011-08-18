@@ -38,20 +38,12 @@ auth.messages.reset_password = 'Click on the link http://'+request.env.http_host
 
 crud.settings.auth = None        # =auth to enforce authorization on crud
 
-db.define_table('category',
-                Field('name'),
-                Field('order_index', 'integer'),
-                auth.signature,
-                format='%(name)s'
-)
-
 db.define_table('tag',
     Field('name'),
     format='%(name)s'
  )
 
 db.define_table('project',
-    Field('category', db.category),
     Field('name'),
     Field('description', 'text', represent=lambda d: MARKMIN(d)),
     Field('year', 'integer'),
@@ -64,8 +56,8 @@ db.define_table('project',
 db.define_table('picture',
     Field('project', db.project),
     Field('image', 'upload'),
-    Field('thumb', 'upload', compute=lambda r: make_thumb(r.image)),
-    Field('gray', 'upload', compute=lambda r: make_gray(r.image)),
+    Field('thumb', 'upload'),
+    Field('gray', 'upload', compute=lambda r: make_gray(r.thumb)),
     Field('title'),
     Field('description', 'text', represent=lambda d: MARKMIN(d)),
     Field('representative', 'boolean', comment='Will be display as cover for project'),
@@ -79,25 +71,13 @@ db.define_table('about',
     Field('address', 'text', represent=lambda d: MARKMIN(d), comment="You can use markmin syntax, see here: http://web2py.com/examples/static/markmin.html"),
 )
 
-def make_thumb(pictureImg, nx=340, ny=340):
-    try:
-        import uuid
-        from PIL import Image
-    except: return
-    im=Image.open(request.folder + 'uploads/' + pictureImg)
-    im.thumbnail((nx,ny), Image.ANTIALIAS)
-    thumbName='picture.thumb.%s.jpg' % (uuid.uuid4())
-    im.save(request.folder + 'uploads/' + thumbName, 'JPEG')
-    return thumbName
-
-def make_gray(pictureImg, nx=340, ny=340):
+def make_gray(pictureImg):
     try:
         import uuid
         from PIL import Image, ImageOps
     except: return
     im=Image.open(request.folder + 'uploads/' + pictureImg)
     if im.mode != "L": im = im.convert("L")
-    im.thumbnail((nx,ny), Image.ANTIALIAS)
     # optional: apply contrast enhancement here, e.g.
     im = ImageOps.autocontrast(im)
     # convert back to RGB so we can save it as JPEG
@@ -106,14 +86,5 @@ def make_gray(pictureImg, nx=340, ny=340):
     grayName='picture.gray.%s.jpg' % (uuid.uuid4())
     im.save(request.folder + 'uploads/' + grayName, 'JPEG')
     return grayName
-
-def get_tags(cat):
-    s = set()
-    for p in cat.project.select():
-        if p.tags:
-            for tag in p.tags:
-                tag = db.tag(tag)
-                s.add((tag.id, tag.name))
-    return s
 
 a0,a1 = request.args(0), request.args(1)

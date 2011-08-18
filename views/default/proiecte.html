@@ -20,14 +20,12 @@
 </div>
 
 {{if len(years)>0:}}
-<div id="year1">
-{{=years[0]}}
-</div>
+<div id="years">
+<ul>
+{{for year in years:}}
+<li>{{=A(year['year'],_href=URL('proiecte', vars={'year':year['year'], 'tag':request.vars.tag}))}}</li>
 {{pass}}
-
-{{if len(years)>1:}}
-<div id="year2">
-{{=years[-1]}}
+</ul>
 </div>
 {{pass}}
 
@@ -57,5 +55,10 @@
 			'overlayColor'	:	'#000',
 			'scrolling'		:	'no',
 		});
+		var years_li = $("#years li");
+		var years_count = years_li.size();
+		var years_height = $("#years").height();
+		console.log(years_count, years_height);
+		years_li.css("padding-bottom", years_height/years_count);
 	});
 </script>

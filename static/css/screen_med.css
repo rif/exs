@@ -1,1 +1,480 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}body{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block}html,body{height:100%}#container{clear:both;min-height:100%;height:auto !important;height:100%;margin-bottom:-20px}#container #root-footer{height:20px}#footer{clear:both;position:relative;height:20px}body{background-image:url("../images/patrat_300.png");color:#adadad}input[type=text]{background-color:#c1c1c1;color:#646362;border:None;padding-right:0;width:298px;height:19px;font-size:12px;font-family:Arial}input[type=submit]{margin-right:1}textarea{background-color:#c1c1c1;color:#646362;border:None;width:298px;padding:0;height:70px;font-size:12px;font-family:Arial}ul.menu{padding-top:50px}ul.menu a{color:#adadad;text-decoration:None;font-size:12px;font-family:Arial}ul.menu a:visited{color:#adadad}ul.menu a:focus{color:#6c6c6c}ul.menu a:hover{color:#6c6c6c}ul.menu a:active{color:#a5132a}ul.menu a.active{color:#a5132a}ul.menu li{padding-bottom:25px;padding-left:14px;background:url("../images/sageata_gri.png") no-repeat 2px 4px;list-style-type:none}ul#cat-menu{padding-top:50px}ul#cat-menu a{color:#adadad;text-decoration:None;font-size:12px;font-family:Arial}ul#cat-menu a:visited{color:#adadad}ul#cat-menu a:focus{color:#6c6c6c}ul#cat-menu a:hover{color:#6c6c6c}ul#cat-menu a:active{color:#a5132a}ul#cat-menu a.active{color:#a5132a}ul#cat-menu li.principal{padding-left:14px;background:url("../images/sageata_rosie.png") no-repeat 2px 5px;list-style-type:none}ul#cat-menu li.secundar{padding-left:14px}.small{font-size:80%}#footer{color:#646362;font-size:9px;font-family:Arial;z-index:-1}#logo-img{position:absolute;top:600px}#ten-pixels-padder{padding:10px}div.address{font-size:12px;font-family:Arial}div.address p{line-height:1.2em}#doi-unu{display:block;width:300px;height:300px;position:absolute;left:0px;top:300px}#doi-doi{display:block;width:300px;height:300px;position:absolute;left:300px;top:300px}#doi-trei{display:block;width:300px;height:300px;position:absolute;left:600px;top:300px}#doi-patru{display:block;width:300px;height:300px;position:absolute;left:900px;top:300px}#doi-cinci{display:block;width:300px;height:300px;position:absolute;left:1200px;top:300px}#trei-doi{display:block;width:300px;height:300px;position:absolute;left:300px;top:600px}#trei-trei{display:block;width:300px;height:300px;position:absolute;left:600px;top:600px}#trei-patru{display:block;width:300px;height:300px;position:absolute;left:900px;top:600px}.text-right{text-align:right}.right{float:right}#contact{display:block;width:300px;height:300px;padding-top:101.695px;font-size:12px;font-family:Arial}#contact div{margin-bottom:10px}div#trimite{margin:0}div#trimite input{background-color:#a5132a;color:#303030;border:None;float:right;cursor:pointer}div.flash{font-weight:bold;display:none;position:fixed;padding:10px;top:40px;right:10px;min-width:280px;margin:0px 0px 10px 10px;color:#fff;vertical-align:middle;cursor:pointer;background:#000;border:2px solid #fff;filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=85);opacity:0.85;-moz-border-radius:5px;-webkit-border-radius:5px;-o-border-radius:5px;-ms-border-radius:5px;-khtml-border-radius:5px;border-radius:5px;z-index:2}.prj-img{width:299px;height:299px}#prev{position:relative;float:left}#next{margin-top:39px;position:relative;left:-38px}#about_us{font-size:12px;font-family:Arial}#about_us h1{font-size:2em}#about_us ul > li{list-style-type:disc}#about_us ol > li{list-style-type:decimal}#year1,#year2{position:absolute;right:0px;height:298px;background-image:url("../images/dot.png");background-repeat:repeat-y;font-size:12px;font-family:Arial;width:32px}#year1{top:300px}#year2{top:600px}#galerie{min-height:600px;min-width:900px;max-height:900px;max-width:1200px}#galerie #grid{display:block;width:300px;height:300px;position:absolute;left:0px;top:300px}#galerie #grid img.pic{position:relative;float:right;width:75px}#panou{position:relative;left:300px;min-height:600px;min-width:600px}
+/* line 17, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 10, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 12, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#container {
+  clear: both;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -20px;
+}
+/* line 18, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#container #root-footer {
+  height: 20px;
+}
+
+/* line 20, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#footer {
+  clear: both;
+  position: relative;
+  height: 20px;
+}
+
+/* line 17, ../sass/_base.sass */
+body {
+  background-image: url("../images/patrat_300.png");
+  color: #adadad;
+}
+
+/* line 21, ../sass/_base.sass */
+input[type=text] {
+  background-color: #c1c1c1;
+  color: #646362;
+  border: None;
+  padding-right: 0;
+  width: 298px;
+  height: 19px;
+  font-size: 12px;
+  font-family: Arial;
+}
+
+/* line 31, ../sass/_base.sass */
+input[type=submit] {
+  margin-right: 1;
+}
+
+/* line 34, ../sass/_base.sass */
+textarea {
+  background-color: #c1c1c1;
+  color: #646362;
+  border: None;
+  width: 298px;
+  padding: 0;
+  height: 70px;
+  font-size: 12px;
+  font-family: Arial;
+}
+
+/* line 44, ../sass/_base.sass */
+ul.menu {
+  padding-top: 50px;
+}
+/* line 46, ../sass/_base.sass */
+ul.menu a {
+  color: #adadad;
+  text-decoration: None;
+  font-size: 12px;
+  font-family: Arial;
+}
+/* line 18, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+ul.menu a:visited {
+  color: #adadad;
+}
+/* line 21, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+ul.menu a:focus {
+  color: #6c6c6c;
+}
+/* line 24, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+ul.menu a:hover {
+  color: #6c6c6c;
+}
+/* line 27, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+ul.menu a:active {
+  color: #a5132a;
+}
+/* line 51, ../sass/_base.sass */
+ul.menu a.active {
+  color: #a5132a;
+}
+/* line 53, ../sass/_base.sass */
+ul.menu li {
+  padding-bottom: 25px;
+  padding-left: 14px;
+  background: url("../images/sageata_gri.png") no-repeat 2px 4px;
+  list-style-type: none;
+}
+
+/* line 59, ../sass/_base.sass */
+ul#cat-menu {
+  padding-top: 50px;
+}
+/* line 61, ../sass/_base.sass */
+ul#cat-menu a {
+  color: #adadad;
+  text-decoration: None;
+  font-size: 12px;
+  font-family: Arial;
+}
+/* line 18, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+ul#cat-menu a:visited {
+  color: #adadad;
+}
+/* line 21, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+ul#cat-menu a:focus {
+  color: #6c6c6c;
+}
+/* line 24, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+ul#cat-menu a:hover {
+  color: #6c6c6c;
+}
+/* line 27, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+ul#cat-menu a:active {
+  color: #a5132a;
+}
+/* line 66, ../sass/_base.sass */
+ul#cat-menu a.active {
+  color: #a5132a;
+}
+/* line 68, ../sass/_base.sass */
+ul#cat-menu li.principal {
+  padding-left: 14px;
+  background: url("../images/sageata_rosie.png") no-repeat 2px 5px;
+  list-style-type: none;
+}
+
+/* line 73, ../sass/_base.sass */
+.small {
+  font-size: 80%;
+}
+
+/* line 76, ../sass/_base.sass */
+#footer {
+  color: #646362;
+  font-size: 9px;
+  font-family: Arial;
+  z-index: -1;
+}
+
+/* line 82, ../sass/_base.sass */
+#logo-img {
+  position: absolute;
+  top: 600px;
+}
+
+/* line 86, ../sass/_base.sass */
+#ten-pixels-padder {
+  padding: 10px;
+}
+
+/* line 89, ../sass/_base.sass */
+div.address {
+  font-size: 12px;
+  font-family: Arial;
+}
+/* line 92, ../sass/_base.sass */
+div.address p {
+  line-height: 1.2em;
+}
+
+/* line 103, ../sass/_base.sass */
+#doi-unu {
+  display: block;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 0px;
+  top: 300px;
+}
+
+/* line 106, ../sass/_base.sass */
+#doi-doi {
+  display: block;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 300px;
+  top: 300px;
+}
+
+/* line 109, ../sass/_base.sass */
+#doi-trei {
+  display: block;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 600px;
+  top: 300px;
+}
+
+/* line 112, ../sass/_base.sass */
+#doi-patru {
+  display: block;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 900px;
+  top: 300px;
+}
+
+/* line 115, ../sass/_base.sass */
+#doi-cinci {
+  display: block;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 1200px;
+  top: 300px;
+}
+
+/* line 118, ../sass/_base.sass */
+#trei-doi {
+  display: block;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 300px;
+  top: 600px;
+}
+
+/* line 121, ../sass/_base.sass */
+#trei-trei {
+  display: block;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 600px;
+  top: 600px;
+}
+
+/* line 124, ../sass/_base.sass */
+#trei-patru {
+  display: block;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 900px;
+  top: 600px;
+}
+
+/* line 127, ../sass/_base.sass */
+.text-right {
+  text-align: right;
+}
+
+/* line 130, ../sass/_base.sass */
+.right {
+  float: right;
+}
+
+/* line 133, ../sass/_base.sass */
+#contact {
+  display: block;
+  width: 300px;
+  height: 300px;
+  padding-top: 101.695px;
+  font-size: 12px;
+  font-family: Arial;
+}
+/* line 140, ../sass/_base.sass */
+#contact div {
+  margin-bottom: 10px;
+}
+
+/* line 143, ../sass/_base.sass */
+div#trimite {
+  margin: 0;
+}
+/* line 145, ../sass/_base.sass */
+div#trimite input {
+  background-color: #a5132a;
+  color: #303030;
+  border: None;
+  float: right;
+  cursor: pointer;
+}
+
+/* line 152, ../sass/_base.sass */
+div.flash {
+  font-weight: bold;
+  display: none;
+  position: fixed;
+  padding: 10px;
+  top: 40px;
+  right: 10px;
+  min-width: 280px;
+  margin: 0px 0px 10px 10px;
+  color: white;
+  vertical-align: middle;
+  cursor: pointer;
+  background: black;
+  border: 2px solid white;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+  opacity: 0.85;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+/* line 170, ../sass/_base.sass */
+.prj-img {
+  width: 299px;
+  height: 299px;
+}
+
+/* line 174, ../sass/_base.sass */
+#prev {
+  position: relative;
+  float: left;
+}
+
+/* line 178, ../sass/_base.sass */
+#next {
+  margin-top: 39px;
+  position: relative;
+  left: -38px;
+}
+
+/* line 183, ../sass/_base.sass */
+#about_us {
+  font-size: 12px;
+  font-family: Arial;
+}
+/* line 186, ../sass/_base.sass */
+#about_us h1 {
+  font-size: 2em;
+}
+/* line 188, ../sass/_base.sass */
+#about_us ul > li {
+  list-style-type: disc;
+}
+/* line 190, ../sass/_base.sass */
+#about_us ol > li {
+  list-style-type: decimal;
+}
+
+/* line 193, ../sass/_base.sass */
+#years {
+  position: absolute;
+  right: 0px;
+  height: 600px;
+  background-image: url("../images/dot.png");
+  background-repeat: repeat-y;
+  font-size: 12px;
+  font-family: Arial;
+  width: 32px;
+  top: 300px;
+}
+/* line 203, ../sass/_base.sass */
+#years a {
+  color: #adadad;
+  text-decoration: None;
+}
+/* line 18, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#years a:visited {
+  color: #adadad;
+}
+/* line 21, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#years a:focus {
+  color: #6c6c6c;
+}
+/* line 24, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#years a:hover {
+  color: #6c6c6c;
+}
+/* line 27, ../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+#years a:active {
+  color: #a5132a;
+}
+
+/* line 207, ../sass/_base.sass */
+#galerie {
+  min-height: 600px;
+  min-width: 900px;
+  max-height: 900px;
+  max-width: 1200px;
+}
+/* line 212, ../sass/_base.sass */
+#galerie #grid {
+  display: block;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 0px;
+  top: 300px;
+}
+/* line 214, ../sass/_base.sass */
+#galerie #grid img.pic {
+  position: relative;
+  float: right;
+  width: 75px;
+}
+
+/* line 219, ../sass/_base.sass */
+#panou {
+  position: relative;
+  left: 300px;
+  min-height: 600px;
+  min-width: 600px;
+}

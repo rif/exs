@@ -69,8 +69,6 @@ ul#cat-menu
         padding-left: 14px
         background: url('../images/sageata_rosie.png') no-repeat 2px 5px
         list-style-type: none
-    li.secundar
-        padding-left: 14px
 
 .small
     font-size: 80%
@@ -192,21 +190,19 @@ div.flash
     ol>li
         list-style-type: decimal
   
-#year1, #year2
+#years
     position: absolute
     right: 0px
-    height: ($square_side - 2)
+    height: $square_side * 2
     background-image: url("../images/dot.png")
     background-repeat: repeat-y
     font-size: $font-size
     font-family: $font-family
     width: 32px
-
-#year1
     top: $square_side
-
-#year2
-    top: $square_side*2
+    a
+        +link-colors($light-grey, #6c6c6c, $red, $light-grey,  #6c6c6c)
+        text-decoration: None
 
 #galerie
     min-height: $square_side*2
