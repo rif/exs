@@ -209,9 +209,10 @@ div.flash
     top: $square_side*2
 
 #galerie
-    display: block
     min-height: $square_side*2
-    min-width: $square_side*2
+    min-width: $square_side*3
+    max-height: $square_side*3
+    max-width: $square_side*4
     #grid 
         +square(0px, $square_side)
         img.pic
@@ -221,7 +222,7 @@ div.flash
             
 #panou
     position: relative
-    min-height: $square_side
-    min-width: $square_side
     left: $square_side
+    min-height: $square_side*2
+    min-width: $square_side*2
     
