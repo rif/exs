@@ -23,7 +23,7 @@
 			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass",
 			"settings":
 			{
-				"buffer_size": 4531,
+				"buffer_size": 4944,
 				"line_ending": "Unix"
 			}
 		},
@@ -31,7 +31,7 @@
 			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/galerie.html",
 			"settings":
 			{
-				"buffer_size": 1723,
+				"buffer_size": 1872,
 				"line_ending": "Unix"
 			}
 		},
@@ -193,8 +193,8 @@
 						"selection":
 						[
 							[
-								620,
-								132
+								1418,
+								1418
 							]
 						],
 						"settings":
@@ -203,7 +203,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0,
-						"translation.y": 0,
+						"translation.y": 204,
 						"zoom_level": 1
 					},
 					"type": "text"
@@ -213,15 +213,15 @@
 					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass",
 					"settings":
 					{
-						"buffer_size": 4531,
+						"buffer_size": 4944,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4115,
-								4115
+								4543,
+								4558
 							]
 						],
 						"settings":
@@ -231,7 +231,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 3060,
+						"translation.y": 3672,
 						"zoom_level": 1
 					},
 					"type": "text"
@@ -241,15 +241,15 @@
 					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/galerie.html",
 					"settings":
 					{
-						"buffer_size": 1723,
+						"buffer_size": 1872,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								957,
-								957
+								767,
+								767
 							]
 						],
 						"settings":
@@ -258,7 +258,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0,
-						"translation.y": 0,
+						"translation.y": 102,
 						"zoom_level": 1
 					},
 					"type": "text"
@@ -312,7 +312,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 408,
+						"translation.y": 306,
 						"zoom_level": 1
 					},
 					"type": "text"
