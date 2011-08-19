@@ -26,21 +26,23 @@ def proiecte():
     items_per_page=6
     limitby=(page*items_per_page,(page+1)*items_per_page+1)
     
-    query = db.project.is_active==True
-    if an and an != 'None': query &= db.project.year == an
-    if tagul: query &= db.project.tags.contains(tagul.id)
-    proiecte = db(query).select(orderby=~db.project.year, limitby=limitby)
+    query = active_projects_query & project_pictures_query
+    if an and an != 'None': query &= (db.project.year == an)
+    if tagul: query &= db.picture.tags.contains(tagul.id)
+    proiecte = db(query).select(orderby=~db.project.year, limitby=limitby, groupby=db.project.id)
     years = db(db.project).select(db.project.year, distinct=True, orderby=~db.project.year)
     
     ids = ('doi-doi', 'doi-trei', 'doi-patru', 'trei-doi', 'trei-trei', 'trei-patru')
     divs = []
-    for i,p in enumerate(proiecte):
-        pic = db((db.picture.project==p)&(db.picture.representative==True)).select().first()
-        if not pic: pic = db(db.picture.project==p).select().first() # get the first thumbnail
+    tag_id = tagul.id if tagul else -1
+    for i,row in enumerate(proiecte):
+        p = row.project
+        pic = db((db.picture.project==p.id)&(db.picture.representative==True)).select().first()
+        if not pic: pic = db(db.picture.project==p.id).select().first() # get the first thumbnail
         if pic:
-            divs.append(DIV(A(IMG(_src=URL('download', args=pic.thumb), _alt=p.name +' picture', _title=str(p.year) + ": " + p.description, _class="prj-img"), _href=URL('galerie', args=p.id),_class='galerie'), _id=ids[i%items_per_page]))
+            divs.append(DIV(A(IMG(_src=URL('download', args=pic.thumb), _alt=p.name +' picture', _title=str(p.year) + ": " + p.description, _class="prj-img"), _href=URL('galerie', args=p.id, vars={'tag': tag_id}),_class='galerie'), _id=ids[i%items_per_page]))
         else: # if project has no pictures
-            divs.append(DIV(A('No picture for project %s' % p.name, _href=URL('galerie', args=p.id),_class='galerie'), _id=ids[i%items_per_page]))
+            divs.append(DIV(A('No picture for project %s' % p.name, _href=URL('galerie', args=p.id, vars={'tag': tag_id}),_class='galerie'), _id=ids[i%items_per_page]))
     return dict(divs=divs, page=page,items_per_page=items_per_page, years=years)
 
 def contact():
@@ -61,7 +63,10 @@ def contact():
     return locals()
 
 def galerie():
-    pics = db(db.picture.project==a0).select()
+    tagul = db.tag(request.vars.tag)
+    query = db.picture.project==a0
+    if tagul: query &= db.picture.tags.contains(tagul.id)
+    pics = db(query).select()
     return locals()
 
 def panou():
