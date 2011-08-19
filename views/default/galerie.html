@@ -9,24 +9,24 @@
 </div>
 
 <script type="text/javascript">
-	function updateProperties(aObject) {
-		$("#poza-mare").load(function(){
-			$.fancybox.hideActivity();
-			var prevImage = aObject.prev("a").attr("href");
-			var nextImage = aObject.next("a").attr("href");
-			if(prevImage) {
-				$("#prev-gallery").attr("href", prevImage);
-				$("#prev-gallery").removeClass("disabled");
-			} else {
-				$("#prev-gallery").addClass("disabled");
-			}
-			if(nextImage){
-				$("#next-gallery").attr("href", nextImage);
-				$("#next-gallery").removeClass("disabled");
-			} else {
-				$("#next-gallery").addClass("disabled");
-			}
-		});
+	function updatePrevNext(aObject){
+		var prevImage = aObject.prev("a").attr("href");
+		var nextImage = aObject.next("a").attr("href");
+		if(prevImage) {
+			$("#prev-gallery").attr("href", prevImage);
+			$("#prev-gallery").removeClass("disabled");
+		} else {
+			$("#prev-gallery").addClass("disabled");
+		}
+		if(nextImage){
+			$("#next-gallery").attr("href", nextImage);
+			$("#next-gallery").removeClass("disabled");
+		} else {
+			$("#next-gallery").addClass("disabled");
+		}
+	}
+	function updateTip() {
+		$.fancybox.hideActivity();
 				
 		$('#poza-mare[title]').qtip({
 			style: {name: 'dark'},
@@ -43,25 +43,26 @@
 		$.fancybox.showActivity();
 		var firstLink = $("#grid>a:first");
 		$("#panou").load(firstLink.attr("href"), function(){
-			updateProperties(firstLink);
+			updatePrevNext(firstLink);
+			updateTip();
 		});
 		$('<div id="navigator"><a id="prev-gallery" href=""></a><a id="next-gallery" href=""></a></div>').insertAfter("#fancybox-close");
 
 		$("#grid>a").click(function(e){
 			$.fancybox.showActivity();
 			var clickedLink = $(this);
+			updatePrevNext(clickedLink);
 			$("#panou").load(clickedLink.attr("href"), function(){
-				updateProperties(clickedLink);
+				updateTip();
 			});
 			e.preventDefault();
 		});
 		$("#prev-gallery, #next-gallery").click(function(e){
 			$.fancybox.showActivity();
 			var clickedLink = $(this);
+			updatePrevNext($("#grid>a[href='"+clickedLink.attr("href")+"']"));
 			$("#panou").load(clickedLink.attr("href"), function(){
-				console.log("#grid>a[href='"+clickedLink.attr("href")+"']");
-				console.log($("#grid>a[href='"+clickedLink.attr("href")+"']"));
-				updateProperties($("#grid>a[href='"+clickedLink.attr("href")+"']"));
+				updateTip();
 			});
 			e.preventDefault();
 		});
