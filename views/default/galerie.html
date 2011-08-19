@@ -9,16 +9,23 @@
 </div>
 
 <script type="text/javascript">
-	function updateProperties() {
+	function updateProperties(aObject) {
 		$("#poza-mare").load(function(){
 			$.fancybox.hideActivity();
-			var height = $(this).height();
-			var width = $(this).width();
-			$('#panou').height(height);
-			$('#panou').width(width);
-			$('#galerie').height(height+340);
-			$('#galerie').width(width+340);
-			$.fancybox.resize();
+			var prevImage = aObject.prev("a").attr("href");
+			var nextImage = aObject.next("a").attr("href");
+			if(prevImage) {
+				$("#prev-gallery").attr("href", prevImage);
+				$("#prev-gallery").removeClass("disabled");
+			} else {
+				$("#prev-gallery").addClass("disabled");
+			}
+			if(nextImage){
+				$("#next-gallery").attr("href", nextImage);
+				$("#next-gallery").removeClass("disabled");
+			} else {
+				$("#next-gallery").addClass("disabled");
+			}
 		});
 				
 		$('#poza-mare[title]').qtip({
@@ -34,18 +41,28 @@
 
 	$(function(){
 		$.fancybox.showActivity();
-		$("#panou").load($("#grid>a:first").attr("href"), function(){
-			updateProperties();
+		var firstLink = $("#grid>a:first");
+		$("#panou").load(firstLink.attr("href"), function(){
+			updateProperties(firstLink);
 		});
-		{{index=0}}
-		{{count=10}}
-		$('<div id="navigator">{{if index>1:}}<a href="{{=URL(args=[index-1])}}"><img src="{{=URL("static", "images/buton_sus.png")}}" alt="prev" /></a>{{else:}}<img src="{{=URL("static", "images/buton_sus_inactiv.png")}}" alt="prev" />{{pass}}{{if index<count:}}<a id="next-img" href="{{=URL("panou", args=(pics[index-1].id, index+1, len(pics)))}}"><img src="{{=URL("static", "images/buton_jos.png")}}" alt="next" /></a>{{else:}}<img src="{{=URL("static", "images/buton_jos_inactiv.png")}}" alt="next" />{{pass}}</div>').insertAfter("#fancybox-close");
+		$('<div id="navigator"><a id="prev-gallery" href=""></a><a id="next-gallery" href=""></a></div>').insertAfter("#fancybox-close");
 
-		$("#grid>a, #next-img, #prev-img").click(function(e){
+		$("#grid>a").click(function(e){
 			$.fancybox.showActivity();
-			$("#panou").load($(this).attr("href"), function(){
-				updateProperties();
+			var clickedLink = $(this);
+			$("#panou").load(clickedLink.attr("href"), function(){
+				updateProperties(clickedLink);
+			});
+			e.preventDefault();
 		});
+		$("#prev-gallery, #next-gallery").click(function(e){
+			$.fancybox.showActivity();
+			var clickedLink = $(this);
+			$("#panou").load(clickedLink.attr("href"), function(){
+				console.log("#grid>a[href='"+clickedLink.attr("href")+"']");
+				console.log($("#grid>a[href='"+clickedLink.attr("href")+"']"));
+				updateProperties($("#grid>a[href='"+clickedLink.attr("href")+"']"));
+			});
 			e.preventDefault();
 		});
 	});
