@@ -48,19 +48,19 @@ db.define_table('project',
     Field('description', 'text', represent=lambda d: MARKMIN(d)),
     Field('year', 'integer'),
     Field('representative', 'boolean', comment='Will be displayed on the home page'),
-    Field('tags', 'list:reference tag'),
     auth.signature,
     format='%(name)s'
 )
 
 db.define_table('picture',
     Field('project', db.project),
-    Field('image', 'upload'),
-    Field('thumb', 'upload'),
+    Field('image', 'upload', required=True, notnull=True),
+    Field('thumb', 'upload', required=True, notnull=True),
     Field('gray', 'upload', compute=lambda r: make_gray(r.thumb)),
     Field('title'),
     Field('description', 'text', represent=lambda d: MARKMIN(d)),
     Field('representative', 'boolean', comment='Will be display as cover for project'),
+    Field('tags', 'list:reference tag'),
     auth.signature,
     format='%(title)s'
 )
@@ -88,3 +88,5 @@ def make_gray(pictureImg):
     return grayName
 
 a0,a1,a2 = request.args(0), request.args(1), request.args(2)
+active_projects_query = (db.project.is_active == True)
+project_pictures_query = (db.project.id == db.picture.project)
