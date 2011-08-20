@@ -2,7 +2,9 @@
 {{extend 'layout.html'}}
 <div id="doi-trei" class="text-right">
   <div id="ten-pixels-padder" class="address">
+  {{if abo:}}
   {{=MARKMIN(abo.address)}}
+  {{pass}}
   </div>
 </div>
 
