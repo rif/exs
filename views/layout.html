@@ -64,15 +64,7 @@
       
       <div id="page"> <!-- Here my central body -->	  
 	<div id="zona1">
-      	  <img id="logo-img" src="{{=URL('static', 'images/logo_exs.png')}}" alt="logo exs"/>
-	  <div id="doi-unu">
-	    <ul id="cat-menu">
-	      <li class="principal"><a href="{{=URL('proiecte')}}">toate</a></li>
-	      {{for tag in db(db.tag).select():}}
-	      <li class="principal"><a href="{{=URL('proiecte', vars={'tag':tag.id, 'year': request.vars.year})}}">{{=tag.name}}</a></li>
-	      {{pass}}
-	    </ul>
-	  </div>
+    <img id="logo-img" src="{{=URL('static', 'images/logo_exs.png')}}" alt="logo exs"/>
 	  <!-- content -->
 	  <div id="content">
 	    {{include}}

@@ -19,6 +19,15 @@
 {{pass}}
 </div>
 
+<div id="doi-unu">
+	<ul id="cat-menu">
+		<li class="principal"><a href="{{=URL('proiecte')}}">toate</a></li>
+	    {{for tag in db(db.tag).select():}}
+	    <li class="principal"><a href="{{=URL('proiecte', vars={'tag':tag.id, 'year': request.vars.year})}}">{{=tag.name}}</a></li>
+	    {{pass}}
+	</ul>
+</div>
+
 <div id="trei-unu">
 	{{if len(years)>0:}}
 	<div id="years">
