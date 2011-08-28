@@ -65,3 +65,5 @@ def user():
 def download():
     return response.download(request,db)
 
+def access():
+    return locals()
