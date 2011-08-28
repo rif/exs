@@ -19,15 +19,24 @@
 {{pass}}
 </div>
 
-{{if len(years)>0:}}
-<div id="years">
-<ul>
-{{for year in years:}}
-<li>{{=A(year['year'],_href=URL('proiecte', vars={'year':year['year'], 'tag':request.vars.tag}))}}</li>
-{{pass}}
-</ul>
+<div id="trei-unu">
+	{{if len(years)>0:}}
+	<div id="years">
+		<ul>
+		{{for year in years:}}
+			<li>{{=A(year['year'],_href=URL('proiecte', vars={'year':year['year'], 'tag':request.vars.tag}))}}</li>
+		{{pass}}
+		</ul>
+	</div>
+	{{pass}}
 </div>
-{{pass}}
+
+<div id="trei-cinci">
+<div id="links">
+	<div id="contact-link"><a href="{{=URL('contact')}}"><img src="{{=URL('static', 'images/contact.png')}}" alt='contact'/></a></div>
+	<div id="access-link"><a href="{{=URL('access')}}"><img src="{{=URL('static', 'images/access.png')}}" alt='access'/></a></div>
+</div>
+</div>
 
 <script type="text/javascript">
 	$(function(){
@@ -54,10 +63,5 @@
 			'overlayColor'	:	'#000',
 			'scrolling'		:	'no',
 		});
-		var years_li = $("#years li");
-		var years_count = years_li.size();
-		var years_height = $("#years").height();
-		years_li.css("padding-bottom", years_height/years_count);
-		$("#years li:last").css("padding-bottom", "0");
 	});
 </script>

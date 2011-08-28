@@ -64,23 +64,8 @@ textarea
     font-size: $font-size
     font-family: $font-family
 
-ul.menu
-    padding-top: 50px
-    a
-        +link-colors($light-grey, #6c6c6c, $red, $light-grey,  #6c6c6c)
-        text-decoration: None
-        font-size: $font-size
-        font-family: $font-family
-    a.active
-        color: $red
-    li
-        padding-bottom: ($square_side/12)
-        padding-left: 14px
-        background: url('../images/sageata_gri.png') no-repeat 2px 4px
-        list-style-type: none
-
 ul#cat-menu
-    padding-top: 15%
+    padding-top: 5%
     a
         +link-colors($light-grey, #6c6c6c, $red, $light-grey,  #6c6c6c)
         text-decoration: None
@@ -93,18 +78,29 @@ ul#cat-menu
         background: url('../images/sageata_rosie.png') no-repeat 2px 5px
         list-style-type: none
 
+#years
+    padding-top: 5%
+    padding-left: 10px
+    font-size: $font-size
+    font-family: $font-family
+    a
+        +link-colors($light-grey, #6c6c6c, $red, $light-grey,  #6c6c6c)
+        text-decoration: None
+
 .small
     font-size: 80%
 
 #footer
-    color: #646362
+    position: absolute
     font-size: 9px
     font-family: $font-family
-    z-index: -1
+    top: $gutter_height + $square_side*2 + 65
+    left: 10px
 
 #logo-img
     position: absolute
-    top: ($square_side*2)
+    top: $gutter_height - 43
+    left: $gutter_width
 
 #ten-pixels-padder
     padding: 10px
@@ -138,6 +134,9 @@ div.address
 #doi-cinci
     +square($gutter_width+ $square_side*3, $gutter_height)
 
+#trei-unu
+    +square(0, $gutter_height + $square_side)
+
 #trei-doi
     +square($gutter_width, $gutter_height + $square_side)
 
@@ -146,6 +145,9 @@ div.address
 
 #trei-patru
     +square($gutter_width+$square_side*2, $gutter_height + $square_side)
+
+#trei-cinci
+    +square($gutter_width+$square_side*3, $gutter_height + $square_side)
 
 .text-right
     text-align: right
@@ -203,6 +205,10 @@ div.flash
     position: relative
     left: -42px
 
+#links
+    margin-top: $square_side - 84
+
+
 #about_us
     font-size: $font-size
     font-family: $font-family
@@ -212,20 +218,6 @@ div.flash
         list-style-type: disc
     ol>li
         list-style-type: decimal
-  
-#years
-    position: absolute
-    right: 0px
-    height: $square_side * 2
-    background-image: url("../images/dot.png")
-    background-repeat: repeat-y
-    font-size: $font-size
-    font-family: $font-family
-    width: 32px
-    top: $square_side
-    a
-        +link-colors($light-grey, #6c6c6c, $red, $light-grey,  #6c6c6c)
-        text-decoration: None
 
 #galerie
     min-height: $square_side*2
