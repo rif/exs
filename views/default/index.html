@@ -1,13 +1,36 @@
 {{extend 'layout.html'}}
 
-{{for div in divs:}}
+{{for i,div in enumerate(divs):}}
+{{if i==items_per_page: break}}
 {{=div}}
 {{pass}}
 
+<div id="doi-cinci">
+{{if page:}}
+<a href="{{=URL(args=[page-1])}}"><img id="prev" src="{{=URL('static', 'images/buton_sus.png')}}" alt="prev" /></a>
+{{else:}}
+<img id="prev" src="{{=URL('static', 'images/buton_sus_inactiv.png')}}" alt="prev" />
+{{pass}}
+
+{{if len(divs)>items_per_page:}}
+<a href="{{=URL(args=[page+1])}}"><img id="next" src="{{=URL('static', 'images/buton_jos.png')}}" alt="next" /></a>
+{{else:}}
+<img id="next" src="{{=URL('static', 'images/buton_jos_inactiv.png')}}" alt="next" />
+{{pass}}
+</div>
+
+{{if len(years)>0:}}
+<div id="years">
+<ul>
+{{for year in years:}}
+<li>{{=A(year['year'],_href=URL('proiecte', vars={'year':year['year'], 'tag':request.vars.tag}))}}</li>
+{{pass}}
+</ul>
+</div>
+{{pass}}
 
 <script type="text/javascript">
 	$(function(){
-		$("a:contains('HOME')").addClass("active");
 		$('img.prj-img[title]').qtip({
 			style: {name: 'dark'},
 			position: {
@@ -17,6 +40,24 @@
       			}
    			}
 		});
-		$('.prj-img').hide().fadeIn(1000);
-      });
+		var square_side = $("#doi-doi").width();
+		$("a.galerie").fancybox({
+			'transitionIn'	:	'elastic',
+			'transitionOut'	:	'elastic',
+			'padding'		:	'0',
+			'margin'		:	'0',
+			'width'			:	square_side*3,
+			'height'		:	square_side*2,
+			'opacity'		:	true,
+			'showNavArrows'	:	false,
+			'overlayOpacity': 	"0.9", 
+			'overlayColor'	:	'#000',
+			'scrolling'		:	'no',
+		});
+		var years_li = $("#years li");
+		var years_count = years_li.size();
+		var years_height = $("#years").height();
+		years_li.css("padding-bottom", years_height/years_count);
+		$("#years li:last").css("padding-bottom", "0");
+	});
 </script>

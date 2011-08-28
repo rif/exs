@@ -1,23 +1,6 @@
 # -*- coding: utf-8 -*-
 
 def index():
-    proiecte = db((db.project.is_active==True) & (db.project.representative==True)).select()[:3]
-    ids = ('doi-doi', 'doi-trei', 'doi-patru')
-    divs = []
-    for i,p in enumerate(proiecte):
-        pic = db((db.picture.project==p)&(db.picture.representative==True)).select().first()
-        if not pic: pic = db(db.picture.project==p).select().first() # get the first picture
-        if pic:
-            divs.append(DIV(A(IMG(_src=URL('download', args=pic.gray), _alt=p.name +' picture', _title=str(p.year) + ": " + p.description, _class="prj-img"), _href=URL('proiecte')), _id=ids[i]))
-        else: # if project has no pictures
-            divs.append(DIV(A('No picture for project %s' % p.name, _href=URL('proiecte')), _id=ids[i]))
-    return locals()
-
-def despre_noi():
-    abo = db(db.about).select().first()
-    return locals()
-
-def proiecte():
     an = request.vars.year
     tagul = db.tag(request.vars.tag)
     

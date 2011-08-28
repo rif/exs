@@ -47,7 +47,6 @@ db.define_table('project',
     Field('name'),
     Field('description', 'text', represent=lambda d: MARKMIN(d)),
     Field('year', 'integer'),
-    Field('representative', 'boolean', comment='Will be displayed on the home page'),
     auth.signature,
     format='%(name)s'
 )
