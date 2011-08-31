@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"de",
+				"decoration"
+			],
+			[
 				"require",
 				"require_once"
 			]
@@ -12,11 +16,10 @@
 	"buffers":
 	[
 		{
-			"contents": "@import compass/reset\n@import \"compass/typography/links/link-colors\"\n@import \"compass/typography/lists/bullets\"\n@import \"compass/css3/border-radius\"\n@import \"compass/css3/opacity\"\n@import \"compass/css3/text-shadow\"\n\n$gutter_width: 171px\n$gutter_height: 85px\n$square_side: 340px\n$padding-contact: ($square_side/2.4)\n\n$light-grey: #adadad\n$red:  #a5132a\n$font-family: Arial\n$font-size: 12px\n    \nbody\n    color: $light-grey\n\n#zona1, #zona2, #zona3, #zona4\n    float: left\n\n#zona1\n    width: 1362px\n    height: 850px\n    background-image: url(\"../images/zona_1.png\")\n    background-repeat: no-repeat\n#zona2\n    height: 850px\n    background-image: url(\"../images/zona_2.png\")\n    repeat-x\n#zona3\n    width: 1362px\n    background-image: url(\"../images/zona_3.png\")\n    background-repeat: repeat-y\n#zona4\n    width: 340px\n    height: 340px\n    background-image: url(\"../images/patrat_340.png\")\n    background-repeat: repeat\n\ninput[type=text]\n    background-color: #c1c1c1\n    color: #646362\n    border: None\n    padding-right: 0\n    width: ($square_side - 2)\n    height: 19px\n    font-size: $font-size\n    font-family: $font-family\n    \ninput[type=submit]\n    margin-right: 1\n        \ntextarea\n    background-color: #c1c1c1\n    color: #646362\n    border: None\n    width: ($square_side - 2)\n    padding: 0\n    height: 70px\n    font-size: $font-size\n    font-family: $font-family\n\nul#cat-menu\n    padding-top: 5%\n    a\n        +link-colors($light-grey, #6c6c6c, $red, $light-grey,  #6c6c6c)\n        text-decoration: None\n        font-size: $font-size\n        font-family: $font-family\n    a.active\n        color: $red\n    li.principal\n        padding-left: 14px\n        background: url('../images/sageata_rosie.png') no-repeat 2px 5px\n        list-style-type: none\n\n#years\n    padding-top: 5%\n    padding-left: 10px\n    font-size: $font-size\n    font-family: $font-family\n    a\n        +link-colors($light-grey, #6c6c6c, $red, $light-grey,  #6c6c6c)\n        text-decoration: None\n\n.small\n    font-size: 80%\n\n#footer\n    position: absolute\n    font-size: 9px\n    font-family: $font-family\n    top: $gutter_height + $square_side*2 + 65\n    left: 10px\n\n#logo-img\n    position: absolute\n    top: $gutter_height - 43\n    left: $gutter_width\n\n#ten-pixels-padder\n    padding: 10px\n\ndiv.address\n    font-size: $font-size\n    font-family: $font-family\n    p\n        line-height: 1.2em\n\n@mixin square($left, $top: 10px)\n    display: block\n    width: $square_side\n    height: $square_side\n    position: absolute\n    left: $left\n    top: $top\n\n#doi-unu\n    +square(0px, $gutter_height)\n\n#doi-doi\n    +square($gutter_width, $gutter_height)\n\n#doi-trei\n    +square($gutter_width+$square_side, $gutter_height)\n\n#doi-patru\n    +square($gutter_width+ $square_side*2, $gutter_height)\n  \n#doi-cinci\n    +square($gutter_width+ $square_side*3, $gutter_height)\n\n#trei-unu\n    +square(0, $gutter_height + $square_side)\n\n#trei-doi\n    +square($gutter_width, $gutter_height + $square_side)\n\n#trei-trei\n    +square($gutter_width+$square_side, $gutter_height + $square_side)\n\n#trei-patru\n    +square($gutter_width+$square_side*2, $gutter_height + $square_side)\n\n#trei-cinci\n    +square($gutter_width+$square_side*3, $gutter_height + $square_side)\n\n.text-right\n    text-align: right\n      \n.right\n    float: right\n\n#contact\n    display: block\n    width: ($square_side)\n    height: ($square_side)\n    padding-top: $padding-contact\n    font-size: $font-size\n    font-family: $font-family\n    div\n        margin-bottom: 10px\n\ndiv#trimite\n    margin: 0\n    input\n        background-color: $red\n        color: #303030\n        border: None\n        float: right\n        cursor: pointer\n        \ndiv.flash\n    font-weight: bold\n    display: none\n    position: fixed\n    padding: 10px\n    top: 40px\n    right: 10px\n    min-width: 280px\n    margin: 0px 0px 10px 10px\n    color: #fff\n    vertical-align: middle\n    cursor: pointer\n    background: #000\n    border: 2px solid #fff\n    z-index: 2\n    +opacity(0.85)\n    +border-radius\n    \n\n.prj-img\n    width: ($square_side - 1)\n    height: ($square_side - 1)\n  \n#prev\n    position: relative\n    float: left\n\n#next\n    margin-top: 40px\n    position: relative\n    left: -42px\n\n#links\n    margin-top: $square_side - 84\n\n\n#about_us\n    font-size: $font-size\n    font-family: $font-family\n    h1\n        font-size: 2em\n    ul>li\n        list-style-type: disc\n    ol>li\n        list-style-type: decimal\n\n#galerie\n    min-height: $square_side*2\n    min-width: $square_side*3\n    max-height: $square_side*3\n    max-width: $square_side*4\n    #grid \n        +square(0px, $square_side)\n        img.pic\n            position: relative\n            float: right\n            width: $square_side/4\n            \n#panou\n    position: relative\n    left: $square_side\n    min-height: $square_side*2\n    min-width: $square_side*2\n    img\n        max-width: 100%\n\n#next-gallery, #prev-gallery\n    display: block\n    width: 42px\n    height: 41px\n\n#next-gallery\n    background-image: url(\"../images/buton_jos.png\")\n#next-gallery.disabled\n    background-image: url(\"../images/buton_jos_inactiv.png\")\n\n#prev-gallery\n    background-image: url(\"../images/buton_sus.png\")\n#prev-gallery.disabled\n    background-image: url(\"../images/buton_sus_inactiv.png\")\n",
 			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/screen.sass",
 			"settings":
 			{
-				"buffer_size": 5227,
+				"buffer_size": 6070,
 				"line_ending": "Unix"
 			}
 		},
@@ -24,15 +27,7 @@
 			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/controllers/default.py",
 			"settings":
 			{
-				"buffer_size": 2917,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/models/db.py",
-			"settings":
-			{
-				"buffer_size": 4319,
+				"buffer_size": 3037,
 				"line_ending": "Unix"
 			}
 		},
@@ -40,7 +35,7 @@
 			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/contact.html",
 			"settings":
 			{
-				"buffer_size": 878,
+				"buffer_size": 880,
 				"line_ending": "Unix"
 			}
 		},
@@ -48,7 +43,7 @@
 			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/layout.html",
 			"settings":
 			{
-				"buffer_size": 5184,
+				"buffer_size": 5224,
 				"line_ending": "Unix"
 			}
 		},
@@ -56,7 +51,7 @@
 			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/index.html",
 			"settings":
 			{
-				"buffer_size": 2109,
+				"buffer_size": 1863,
 				"line_ending": "Unix"
 			}
 		},
@@ -65,6 +60,22 @@
 			"settings":
 			{
 				"buffer_size": 24,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/galerie.html",
+			"settings":
+			{
+				"buffer_size": 2134,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/panou.html",
+			"settings":
+			{
+				"buffer_size": 392,
 				"line_ending": "Unix"
 			}
 		}
@@ -86,21 +97,22 @@
 	{
 		"menu_visible": true,
 		"show_minimap": false,
+		"show_open_files": true,
 		"show_tabs": false,
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
 	"file_history":
 	[
+		"/home/rif/Documents/webframeworks/web2py/applications/exs/models/menu.py",
+		"/home/rif/Documents/webframeworks/web2py/applications/exs/models/db.py",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/index.html",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/views/layout.html",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/proiecte.html",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/static/css/fancybox_corrections.css",
-		"/home/rif/Documents/webframeworks/web2py/applications/exs/models/menu.py",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/panou.html",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/galerie.html",
-		"/home/rif/Documents/webframeworks/web2py/applications/exs/models/db.py",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/controllers/default.py",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/contact.html",
 		"/home/rif/Documents/prog/toolbox/scrapp/README.txt",
@@ -167,6 +179,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"updateTip",
+			"hide",
+			"contact",
 			"prog",
 			"print",
 			"href",
@@ -203,15 +218,15 @@
 					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/screen.sass",
 					"settings":
 					{
-						"buffer_size": 5227,
+						"buffer_size": 6070,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3991,
-								3997
+								6070,
+								6070
 							]
 						],
 						"settings":
@@ -221,7 +236,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 2638,
+						"translation.y": 4253,
 						"zoom_level": 1
 					},
 					"type": "text"
@@ -231,15 +246,15 @@
 					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/controllers/default.py",
 					"settings":
 					{
-						"buffer_size": 2917,
+						"buffer_size": 3037,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2917,
-								2917
+								820,
+								820
 							]
 						],
 						"settings":
@@ -249,53 +264,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 357,
+						"translation.y": 306,
 						"zoom_level": 1
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/models/db.py",
-					"settings":
-					{
-						"buffer_size": 4319,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2612,
-								2612
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0,
-						"translation.y": 510,
-						"zoom_level": 1
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/contact.html",
 					"settings":
 					{
-						"buffer_size": 878,
+						"buffer_size": 880,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								880,
+								880
 							]
 						],
 						"settings":
@@ -311,19 +298,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/layout.html",
 					"settings":
 					{
-						"buffer_size": 5184,
+						"buffer_size": 5224,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4434,
-								4434
+								4513,
+								4513
 							]
 						],
 						"settings":
@@ -333,25 +320,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 1258,
+						"translation.y": 1003,
 						"zoom_level": 1
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/index.html",
 					"settings":
 					{
-						"buffer_size": 2109,
+						"buffer_size": 1863,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								929,
-								929
+								1014,
+								1018
 							]
 						],
 						"settings":
@@ -360,13 +347,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0,
-						"translation.y": 17,
+						"translation.y": 255,
 						"zoom_level": 1
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 5,
 					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/access.html",
 					"settings":
 					{
@@ -379,6 +366,59 @@
 							[
 								24,
 								24
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0,
+						"translation.y": 0,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/galerie.html",
+					"settings":
+					{
+						"buffer_size": 2134,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1150,
+								1154
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0,
+						"translation.y": 612,
+						"zoom_level": 1
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/panou.html",
+					"settings":
+					{
+						"buffer_size": 392,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								165,
+								165
 							]
 						],
 						"settings":
@@ -447,6 +487,7 @@
 		"width": 380
 	},
 	"show_minimap": true,
+	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 211,
