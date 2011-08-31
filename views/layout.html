@@ -99,6 +99,11 @@
 	   </script>
 	   -->  
      <script type="text/javascript">
+      function apple_effect(element, size1, size2){
+        element.parent().prev().children('a').css('font-size', size2);
+        element.css('font-size', size1);
+        element.parent().next().children('a').css('font-size', size2);
+      }
       function fill_screen(){
         $("#zona2").width($(window).width() - $("#zona1").width());
         $("#zona3").height($(window).height() - $("#zona1").height());
@@ -107,6 +112,10 @@
       }
       $(function(){
         fill_screen();
+        $("#menu>li>a").hover(
+          function(){apple_effect($(this), '1.2em', '1em');},
+          function(){apple_effect($(this), '10px', '10px');}
+        );
       });
       $(window).resize(function() {
         fill_screen();

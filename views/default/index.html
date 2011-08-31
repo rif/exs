@@ -40,11 +40,6 @@
 </div>
 
 <script type="text/javascript">
-	function apple_effect(element, size1, size2){
-		element.parent().prev().children('a').css('font-size', size2);
-		element.css('font-size', size1);
-		element.parent().next().children('a').css('font-size', size2);
-	}
 	$(function(){
 		$('img.prj-img[title]').qtip({
 			style: {name: 'dark'},
@@ -55,10 +50,7 @@
       			}
    			}
 		});
-		$("#menu>li>a").hover(
-			function(){apple_effect($(this), '1.2em', '1em');},
-			function(){apple_effect($(this), '10px', '10px');}
-		);
+		
 		$("#years>li>a").hover(
 			function(){apple_effect($(this), '1.2em', '1em');},
 			function(){apple_effect($(this), '10px', '10px');}
