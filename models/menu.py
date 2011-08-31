@@ -15,9 +15,5 @@ response.meta.generator = 'Web2py Enterprise Framework'
 
 
 
-response.menu = [
-    (T('HOME'), False, URL('default','index'), []),
-    (T('PROIECTE'), False, URL('default','proiecte'), []),
-    (T('CONTACT'), False, URL('default','contact'), [])
-    ]
+response.menu = []
 

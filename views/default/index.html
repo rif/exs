@@ -21,9 +21,9 @@
 
 <div id="doi-unu">
 	<ul id="menu">
-		<li><a href="{{=URL('proiecte')}}">toate</a></li>
+		<li><a href="{{=URL('index')}}">toate</a></li>
 	    {{for tag in db(db.tag).select():}}
-	    <li><a href="{{=URL('proiecte', vars={'tag':tag.id, 'year': request.vars.year})}}">{{=tag.name}}</a></li>
+	    <li><a href="{{=URL('index', vars={'tag':tag.id, 'year': request.vars.year})}}">{{=tag.name}}</a></li>
 	    {{pass}}
 	</ul>
 </div>
@@ -32,7 +32,7 @@
 	{{if len(years)>0:}}
 	<ul id="years">
 	{{for year in years:}}
-		<li>{{=A(year['year'],_href=URL('proiecte', vars={'year':year['year'], 'tag':request.vars.tag}))}}</li>
+		<li>{{=A(year['year'],_href=URL('index', vars={'year':year['year'], 'tag':request.vars.tag}))}}</li>
 	{{pass}}
 	</ul>
 	{{pass}}
@@ -76,7 +76,7 @@
 			'scrolling'		:	'no',
 		});
 		$("#menu>li>a").hover(
-			function(){apple_effect($(this), '1.2em', '1.1em');},
+			function(){apple_effect($(this), '1.2em', '1em');},
 			function(){apple_effect($(this), '10px', '10px');}
 		);
 		$("#years>li>a").hover(
