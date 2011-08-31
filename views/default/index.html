@@ -22,7 +22,7 @@
 <div id="doi-unu">
 	<ul id="menu">
 		<li><a href="{{=URL('index')}}">toate</a></li>
-	    {{for tag in db(db.tag).select():}}
+	    {{for tag in tags:}}
 	    <li><a href="{{=URL('index', vars={'tag':tag.id, 'year': request.vars.year})}}">{{=tag.name}}</a></li>
 	    {{pass}}
 	</ul>
@@ -40,8 +40,8 @@
 
 <div id="trei-cinci">
 <div id="links">
-	<div id="contact-link"><a href="{{=URL('contact')}}"><img src="{{=URL('static', 'images/contact.png')}}" alt='contact'/></a></div>
-	<div id="access-link"><a href="{{=URL('access')}}"><img src="{{=URL('static', 'images/access.png')}}" alt='access'/></a></div>
+	<a href="{{=URL('contact')}}"><img src="{{=URL('static', 'images/contact.png')}}" alt='contact'/></a><br/>
+	<a href="{{=URL('access')}}"><img src="{{=URL('static', 'images/access.png')}}" alt='access'/></a>
 </div>
 </div>
 
