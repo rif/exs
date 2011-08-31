@@ -67,7 +67,7 @@
 			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/galerie.html",
 			"settings":
 			{
-				"buffer_size": 2134,
+				"buffer_size": 2082,
 				"line_ending": "Unix"
 			}
 		},
@@ -75,7 +75,7 @@
 			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/panou.html",
 			"settings":
 			{
-				"buffer_size": 392,
+				"buffer_size": 406,
 				"line_ending": "Unix"
 			}
 		}
@@ -210,7 +210,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -383,15 +383,15 @@
 					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/galerie.html",
 					"settings":
 					{
-						"buffer_size": 2134,
+						"buffer_size": 2082,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1150,
-								1154
+								1386,
+								1386
 							]
 						],
 						"settings":
@@ -400,7 +400,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0,
-						"translation.y": 612,
+						"translation.y": 459,
 						"zoom_level": 1
 					},
 					"type": "text"
@@ -410,15 +410,15 @@
 					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/panou.html",
 					"settings":
 					{
-						"buffer_size": 392,
+						"buffer_size": 406,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								165,
-								165
+								375,
+								375
 							]
 						],
 						"settings":
