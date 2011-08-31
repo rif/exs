@@ -46,15 +46,10 @@
 </div>
 
 <script type="text/javascript">
-	function apple_effect(element, size1, size2, size3){
-		prev1 = element.parent().prev();
-		console.log(prev1.children('a'));
-		prev1.children('a').css('font-size', size2);
-		prev1.prev().children('a').css('font-size', size3);
+	function apple_effect(element, size1, size2){
+		element.parent().prev().children('a').css('font-size', size2);
 		element.css('font-size', size1);
-		next1 = element.parent().next();
-		next1.children('a').css('font-size', size2);
-		next1.next().children('a').css('font-size', size3);
+		element.parent().next().children('a').css('font-size', size2);
 	}
 	$(function(){
 		$('img.prj-img[title]').qtip({
@@ -81,12 +76,12 @@
 			'scrolling'		:	'no',
 		});
 		$("#menu>li>a").hover(
-			function(){apple_effect($(this), '1.2em', '1.07em', '.97em');},
-			function(){apple_effect($(this), '10px', '10px', '10px');}
+			function(){apple_effect($(this), '1.2em', '1em');},
+			function(){apple_effect($(this), '10px', '10px');}
 		);
 		$("#years>li>a").hover(
-			function(){apple_effect($(this), '1.2em', '1.07em', '.97em');},
-			function(){apple_effect($(this), '10px', '10px', '10px');}
+			function(){apple_effect($(this), '1.2em', '1em');},
+			function(){apple_effect($(this), '10px', '10px');}
 		);
 	});
 </script>
