@@ -206,6 +206,11 @@ div.flash
     position: relative
     left: -42px
 
+#counter
+    font-size: .8em
+    padding-left: 10px
+    color: #6c6c6c
+
 #links
     margin-top: $square_side - 86
 
@@ -234,10 +239,12 @@ div.flash
 #panou
     position: relative
     left: $square_side
-    min-height: $square_side*2
-    min-width: $square_side*2
+    height: $square_side*2
+    width: $square_side*2
     img
+        vertical-align: middle
         max-width: 100%
+        max-height: 100%
 
 #next-gallery, #prev-gallery
     display: block
@@ -253,3 +260,14 @@ div.flash
     background-image: url("../images/buton_sus.png")
 #prev-gallery.disabled
     background-image: url("../images/buton_sus_inactiv.png")
+
+#progress
+    display: none
+    margin-top: -16px
+    margin-left: -16px
+
+.hidden-text
+    font-size: .8em
+    display: none
+    position: relative
+    bottom: 15px
