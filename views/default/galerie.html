@@ -46,8 +46,6 @@
 	}
 	
 	function updateTip() {
-		hideActivity();
-				
 		$('#poza-mare[title]').qtip({
 			style: {name: 'dark'},
 			position: {
@@ -57,6 +55,7 @@
 					}
 				},
 		});
+		hideActivity();
 	}
 	$(function(){
 		showActivity();
