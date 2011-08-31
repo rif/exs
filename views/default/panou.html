@@ -4,17 +4,7 @@
 $("#panou>img").load(function(){
 	$("#panou>img").css("top", ($("#panou").height() - $("#panou>img").height())/2);
 	$("#panou>img").css("left", ($("#panou").width() - $("#panou>img").width())/2);
-	function updateTip() {
-		$('#poza-mare[title]').qtip({
-			style: {name: 'dark'},
-			position: {
-	 			corner: {
- 					target: 'bottomCenter',
- 					tooltip: 'bottomLeft'
-					}
-				},
-		});
-	}
+	updateTip();
 	hideActivity();
 });
 </script>

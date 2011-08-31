@@ -44,13 +44,22 @@
 	function hideActivity(){
 		$("#progress").hide();
 	}
-
+	function updateTip() {
+		$('#poza-mare[title]').qtip({
+			style: {name: 'dark'},
+			position: {
+	 			corner: {
+ 					target: 'bottomCenter',
+ 					tooltip: 'bottomLeft'
+					}
+				},
+		});
+	}
 	$(function(){
 		showActivity();
 		var firstLink = $("#grid>a:first");
 		$("#panou").load(firstLink.attr("href"), function(){
 			updatePrevNext(firstLink);
-			updateTip();
 		});
 		$('').insertAfter("#fancybox-close");
 
@@ -59,7 +68,6 @@
 			var clickedLink = $(this);
 			updatePrevNext(clickedLink);
 			$("#panou").load(clickedLink.attr("href"), function(){
-				updateTip();
 			});
 			e.preventDefault();
 		});
@@ -68,7 +76,6 @@
 			var clickedLink = $(this);
 			updatePrevNext($("#grid>a[href='"+clickedLink.attr("href")+"']"));
 			$("#panou").load(clickedLink.attr("href"), function(){
-				updateTip();
 			});
 			e.preventDefault();
 		});
