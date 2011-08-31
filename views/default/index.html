@@ -42,13 +42,13 @@
 <script type="text/javascript">
 	$(function(){
 		$('img.prj-img[title]').qtip({
-			style: {name: 'dark'},
+			style: {
+				classes: "ui-tooltip-dark"
+			},
 			position: {
-    		 	corner: {
-         			target: 'topLeft',
-         			tooltip: 'topLeft'
-      			}
-   			}
+				at: "top left",
+				my: "top left"
+			}
 		});
 		
 		$("#years>li>a").hover(

@@ -46,15 +46,16 @@
 	}
 	function updateTip() {
 		$('#poza-mare[title]').qtip({
-			style: {name: 'dark'},
+			style: {
+				classes: "ui-tooltip-dark"
+			},
 			position: {
-	 			corner: {
- 					target: 'bottomCenter',
- 					tooltip: 'bottomLeft'
-					}
-				},
+				at: "bottom left",
+				my: "bottom left"
+			}
 		});
 	}
+
 	$(function(){
 		showActivity();
 		var firstLink = $("#grid>a:first");
