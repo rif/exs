@@ -17,15 +17,9 @@
 {{else:}}
 <img id="next" src="{{=URL('static', 'images/buton_jos_inactiv.png')}}" alt="next" />
 {{pass}}
+<div id="counter">
+{{=page+1}}/{{=max_pages}}
 </div>
-
-<div id="doi-unu">
-	<ul id="menu">
-		<li><a href="{{=URL('index')}}">toate</a></li>
-	    {{for tag in tags:}}
-	    <li><a href="{{=URL('index', vars={'tag':tag.id, 'year': request.vars.year})}}">{{=tag.name}}</a></li>
-	    {{pass}}
-	</ul>
 </div>
 
 <div id="trei-unu">
@@ -40,8 +34,8 @@
 
 <div id="trei-cinci">
 <div id="links">
-	<a href="{{=URL('contact')}}"><img src="{{=URL('static', 'images/contact.png')}}" alt='contact'/></a><br/>
-	<a href="{{=URL('access')}}"><img src="{{=URL('static', 'images/access.png')}}" alt='access'/></a>
+	<div><a class="text-show" href="{{=URL('contact')}}"><img src="{{=URL('static', 'images/contact.png')}}" alt='contact'/></a> <span class="hidden-text">Contact</span></div>
+	<div><a class="text-show" href="{{=URL('access')}}"><img src="{{=URL('static', 'images/access.png')}}" alt='access'/></a> <span class="hidden-text">Acces clienti</span></div>
 </div>
 </div>
 
@@ -61,20 +55,6 @@
       			}
    			}
 		});
-		var square_side = $("#doi-doi").width();
-		$("a.galerie").fancybox({
-			'transitionIn'	:	'elastic',
-			'transitionOut'	:	'elastic',
-			'padding'		:	'0',
-			'margin'		:	'0',
-			'width'			:	square_side*3,
-			'height'		:	square_side*2,
-			'opacity'		:	true,
-			'showNavArrows'	:	false,
-			'overlayOpacity': 	"0.9", 
-			'overlayColor'	:	'#000',
-			'scrolling'		:	'no',
-		});
 		$("#menu>li>a").hover(
 			function(){apple_effect($(this), '1.2em', '1em');},
 			function(){apple_effect($(this), '10px', '10px');}
@@ -82,6 +62,14 @@
 		$("#years>li>a").hover(
 			function(){apple_effect($(this), '1.2em', '1em');},
 			function(){apple_effect($(this), '10px', '10px');}
+		);
+		$("#years>li>a").hover(
+			function(){apple_effect($(this), '1.2em', '1em');},
+			function(){apple_effect($(this), '10px', '10px');}
+		);
+		$("a.text-show").hover(
+			function(){$(this).next('span.hidden-text').fadeIn();},
+			function(){$(this).next('span.hidden-text').fadeOut();}
 		);
 	});
 </script>
