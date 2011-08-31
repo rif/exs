@@ -27,14 +27,13 @@ body
     background-image: url("../images/zona_1.png")
     background-repeat: no-repeat
 #zona2
-    owerflow: auto
     height: 850px
     background-image: url("../images/zona_2.png")
     repeat-x
 #zona3
     width: 1362px
     background-image: url("../images/zona_3.png")
-    background-repeat: reapeat-y
+    background-repeat: repeat-y
 #zona4
     width: 340px
     height: 340px
@@ -64,19 +63,21 @@ textarea
     font-size: $font-size
     font-family: $font-family
 
-ul#cat-menu
+ul#menu
     padding-top: 5%
     a
-        +link-colors($light-grey, #6c6c6c, $red, $light-grey,  #6c6c6c)
+        +link-colors(#6c6c6c, $light-grey, $red, #6c6c6c, $light-grey )
         text-decoration: None
         font-size: $font-size
         font-family: $font-family
     a.active
         color: $red
-    li.principal
-        padding-left: 14px
-        background: url('../images/sageata_rosie.png') no-repeat 2px 5px
+    li
         list-style-type: none
+        a
+            padding-left: 14px
+        a:hover
+            background: url('../images/sageata_rosie.png') no-repeat 2px 5px
 
 #years
     padding-top: 5%
@@ -84,7 +85,7 @@ ul#cat-menu
     font-size: $font-size
     font-family: $font-family
     a
-        +link-colors($light-grey, #6c6c6c, $red, $light-grey,  #6c6c6c)
+        +link-colors(#6c6c6c, $red, $light-grey, #6c6c6c, $light-grey)
         text-decoration: None
 
 .small
@@ -188,9 +189,10 @@ div.flash
     cursor: pointer
     background: #000
     border: 2px solid #fff
+    z-index: 2
     +opacity(0.85)
     +border-radius
-    z-index: 2
+    
 
 .prj-img
     width: ($square_side - 1)

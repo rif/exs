@@ -20,23 +20,21 @@
 </div>
 
 <div id="doi-unu">
-	<ul id="cat-menu">
-		<li class="principal"><a href="{{=URL('proiecte')}}">toate</a></li>
+	<ul id="menu">
+		<li><a href="{{=URL('proiecte')}}">toate</a></li>
 	    {{for tag in db(db.tag).select():}}
-	    <li class="principal"><a href="{{=URL('proiecte', vars={'tag':tag.id, 'year': request.vars.year})}}">{{=tag.name}}</a></li>
+	    <li><a href="{{=URL('proiecte', vars={'tag':tag.id, 'year': request.vars.year})}}">{{=tag.name}}</a></li>
 	    {{pass}}
 	</ul>
 </div>
 
 <div id="trei-unu">
 	{{if len(years)>0:}}
-	<div id="years">
-		<ul>
-		{{for year in years:}}
-			<li>{{=A(year['year'],_href=URL('proiecte', vars={'year':year['year'], 'tag':request.vars.tag}))}}</li>
-		{{pass}}
-		</ul>
-	</div>
+	<ul id="years">
+	{{for year in years:}}
+		<li>{{=A(year['year'],_href=URL('proiecte', vars={'year':year['year'], 'tag':request.vars.tag}))}}</li>
+	{{pass}}
+	</ul>
 	{{pass}}
 </div>
 
@@ -48,6 +46,11 @@
 </div>
 
 <script type="text/javascript">
+	function apple_effect(element, size1, size2){
+		element.parent().prev().children('a').css('font-size', size2);
+		element.css('font-size', size1);
+		element.parent().next().children('a').css('font-size', size2);
+	}
 	$(function(){
 		$('img.prj-img[title]').qtip({
 			style: {name: 'dark'},
@@ -72,5 +75,17 @@
 			'overlayColor'	:	'#000',
 			'scrolling'		:	'no',
 		});
+		$("#menu>li>a").hover(
+			function(){apple_effect($(this), '1.3em', '1.1em');},
+			function(){apple_effect($(this), '1em', '1em');}
+		);
+		$("#menu>li>a").hover(
+			function(){apple_effect($(this), '1.3em', '1.1em');},
+			function(){apple_effect($(this), '1em', '1em');}
+		);
+		$("#years>li>a").hover(
+			function(){apple_effect($(this), '1.4em', '1em');},
+			function(){apple_effect($(this), '1em', '1em');}
+		);
 	});
 </script>
