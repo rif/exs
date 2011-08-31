@@ -1,11 +1,8 @@
 {{=IMG(_src=URL('download', args=pic.image), _alt=pic.title or pic.description, _title=counter + pic.description, _id='poza-mare')}}
 
 <script type="text/javascript">
-$(function(){
-	hideActivity();
-});
 $("#panou>img").load(function(){
-	console.log(($("#panou").width() - $('#panou>img').width())/2);
+	hideActivity();
 	$("#panou>img").css("top", ($("#panou").height() - $("#panou>img").height())/2);
 	$("#panou>img").css("left", ($("#panou").width() - $("#panou>img").width())/2);
 });
