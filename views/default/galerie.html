@@ -19,12 +19,15 @@
 
 <div id="doi-cinci">
 	<div id="navigator"><a id="prev-gallery" href=""></a><a id="next-gallery" href=""></a></div>
+	<div id="counter">
+	</div>
 </div>
 
 <script type="text/javascript">
 	function updatePrevNext(aObject){
 		var prevImage = aObject.prev("a").attr("href");
 		var nextImage = aObject.next("a").attr("href");
+		console.log(prevImage, nextImage);
 		if(prevImage) {
 			$("#prev-gallery").attr("href", prevImage);
 			$("#prev-gallery").removeClass("disabled");

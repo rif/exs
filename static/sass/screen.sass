@@ -112,8 +112,8 @@ div.address
 
 @mixin square($left, $top: 10px)
     display: block
-    width: $square_side
-    height: $square_side
+    width: $square_side - 1 
+    height: $square_side - 1
     position: absolute
     left: $left
     top: $top
@@ -254,7 +254,7 @@ div.flash
     max-height: $square_side*3
     max-width: $square_side*4
     #grid 
-        +square(0px, $square_side - 1)
+        +square(0px, $square_side)
         img.pic
             position: relative
             float: right
