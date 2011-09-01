@@ -74,8 +74,6 @@ ul#menu
             line-height: 10px
             font-family: $font-family
             padding-left: 14px
-        a:hover
-            background: url('../images/sageata_rosie.png') no-repeat 2px 5px
 
 #years
     padding-top: 2%
@@ -95,8 +93,8 @@ ul#menu
     font-size: 9px
     color: #6c6c6c
     font-family: $font-family
-    top: $gutter_height + $square_side*2 + 65
-    left: 10px
+    top: $gutter_height + $square_side*2 + 1
+    left: 14px
 
 #logo-img
     position: absolute
@@ -256,14 +254,14 @@ div.flash
     max-height: $square_side*3
     max-width: $square_side*4
     #grid 
-        +square(0px, $square_side)
+        +square(0px, $square_side - 1)
         img.pic
             position: relative
             float: right
             width: $square_side/4
             
 #panou
-    background-color: black
+    background-color: #6f6f6f
     position: relative
     left: $square_side
     height: ($square_side * 2 - 1)

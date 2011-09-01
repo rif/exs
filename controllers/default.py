@@ -16,7 +16,10 @@ def index():
     toate_proiectele = db(query).select()
     max_pages = len(toate_proiectele)/items_per_page
     
-    years = db(query).select(db.project.year, distinct=True, orderby=~db.project.year)
+    if tagul:
+        years = db(query).select(db.project.year, distinct=True, orderby=~db.project.year)
+    else:
+        years = db(db.project).select(db.project.year, distinct=True, orderby=~db.project.year)
     
     ids = ('doi-doi', 'doi-trei', 'doi-patru', 'trei-doi', 'trei-trei', 'trei-patru')
     divs = []
