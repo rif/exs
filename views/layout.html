@@ -111,11 +111,17 @@
         element.css('font-size', size1);
         element.parent().next().children('a').css('font-size', size2);
       }
+      function min_with(arg){
+        Math.min((1362+340+5),arg);
+      }
+      function min_height(arg){
+        Math.min((850+340+5),arg);
+      }
       function fill_screen(){
-        $("#zona2").width($(window).width() - $("#zona1").width());
-        $("#zona3").height($(window).height() - $("#zona1").height());
-        $("#zona4").width($(window).width() - $("#zona1").width());
-        $("#zona4").height($(window).height() - $("#zona1").height());
+        $("#zona2").width(min_with($(window).width() - $("#zona1").width()));
+        $("#zona3").height(min_height($(window).height() - $("#zona1").height()));
+        $("#zona4").width(min_with($(window).width() - $("#zona1").width()));
+        $("#zona4").height(min_height($(window).height() - $("#zona1").height()));
       }
       $(function(){
         fill_screen();
