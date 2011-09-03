@@ -10,3 +10,4 @@ errors/*
 uploads/
 databases/
 static/.sass-cache/
+.directory
