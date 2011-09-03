@@ -7,15 +7,14 @@
 
 <div id="doi-cinci">
 {{if page:}}
-<a href="{{=URL(args=[page-1])}}"><img id="prev" src="{{=URL('static', 'images/buton_sus.png')}}" alt="prev" /></a>
+<a id="prev" href="{{=URL(args=[page-1])}}"></a>
 {{else:}}
-<img id="prev" src="{{=URL('static', 'images/buton_sus_inactiv.png')}}" alt="prev" />
+<a id="prev" href=""></a>
 {{pass}}
-
 {{if len(divs)>items_per_page:}}
-<a href="{{=URL(args=[page+1])}}"><img id="next" src="{{=URL('static', 'images/buton_jos.png')}}" alt="next" /></a>
+<a id="next" href="{{=URL(args=[page+1])}}"></a>
 {{else:}}
-<img id="next" src="{{=URL('static', 'images/buton_jos_inactiv.png')}}" alt="next" />
+<a id="prev" href=""></a>
 {{pass}}
 <div id="counter">
 {{=page+1}}/{{=max_pages}}
@@ -43,7 +42,7 @@
 				my: "top left"
 			}
 		});
-		
+		$("#home-link").addClass('current');
 		$("#years>li>a").hover(
 			function(){apple_effect($(this), '1.2em', '1em');},
 			function(){apple_effect($(this), '10px', '10px');}

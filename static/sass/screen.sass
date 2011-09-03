@@ -135,7 +135,7 @@ div.address
     top: $top
 
 #doi-unu
-    +square(0px, $gutter_height)
+    +half_with_square(0px, $gutter_height)
 
 #doi-doi
     +square($gutter_width, $gutter_height)
@@ -150,7 +150,7 @@ div.address
     +half_with_square($gutter_width+ $square_side*3, $gutter_height)
 
 #trei-unu
-    +square(0, $gutter_height + $square_side)
+    +half_with_square(0, $gutter_height + $square_side)
 
 #trei-doi
     +square($gutter_width, $gutter_height + $square_side)
@@ -211,15 +211,22 @@ div.flash
 .prj-img
     width: ($square_side - 1)
     height: ($square_side - 1)
-  
-#prev
-    position: relative
-    float: left
+
+#next, #prev
+    display: block
+    width: 42px
+    height: 41px
 
 #next
-    margin-top: 42px
-    position: relative
-    left: -42px
+    background-image: url("../images/buton_jos.png")
+    margin-top: 1px
+#next:hover
+    background-image: url("../images/buton_jos_inactiv.png")
+
+#prev
+    background-image: url("../images/buton_sus.png")
+#prev:hover
+    background-image: url("../images/buton_sus_inactiv.png")
 
 #counter
     font-family: $font-family
@@ -228,9 +235,11 @@ div.flash
     color: #6c6c6c
 
 #links
-    margin-top: $square_side - 84
+    margin-top: $square_side - 127
     a
         text-decoration: none
+    .current
+        border: 1px solid $red
 
 .hidden-text
     font-family: $font-family
@@ -241,18 +250,21 @@ div.flash
     padding-left: 3px
     bottom: 15px
 
-#contact-link, #access-link
+#home-link, #contact-link, #access-link
     width: 42px
     height: 41px
     display: inline-block
 
+#home-link
+    background-image: url("../images/home.png")
+
 #contact-link
     background-image: url("../images/contact.png")
-    margin-bottom: 1px
+    margin-top: -1px
 
 #access-link
     background-image: url("../images/access.png")
-    margin-top: -3px
+    margin-top: -1px
 
 #about_us
     font-size: $font-size
@@ -274,7 +286,7 @@ div.flash
         img.pic
             position: relative
             float: right
-            width: $square_side/4
+            width: $square_side/4 - 1
             
 #panou
     background-color: #6f6f6f
@@ -287,21 +299,6 @@ div.flash
         max-width: 100%
         max-height: 100%
         position: relative
-
-#next-gallery, #prev-gallery
-    display: block
-    width: 42px
-    height: 41px
-
-#next-gallery
-    background-image: url("../images/buton_jos.png")
-#next-gallery.disabled
-    background-image: url("../images/buton_jos_inactiv.png")
-
-#prev-gallery
-    background-image: url("../images/buton_sus.png")
-#prev-gallery.disabled
-    background-image: url("../images/buton_sus_inactiv.png")
 
 #progress
     display: none

@@ -18,27 +18,22 @@
 </div>
 
 <div id="doi-cinci">
-	<div id="navigator"><a id="prev-gallery" href=""></a><a id="next-gallery" href=""></a></div>
-	<div id="counter">
+	<div id="navigator">
+		<a id="prev" href="#"></a>
+		<a id="next" href="#"></a>
 	</div>
+	<div id="counter"></div>
 </div>
 
 <script type="text/javascript">
 	function updatePrevNext(aObject){
 		var prevImage = aObject.prev("a").attr("href");
 		var nextImage = aObject.next("a").attr("href");
-		console.log(prevImage, nextImage);
 		if(prevImage) {
-			$("#prev-gallery").attr("href", prevImage);
-			$("#prev-gallery").removeClass("disabled");
-		} else {
-			$("#prev-gallery").addClass("disabled");
+			$("#prev").attr("href", prevImage);
 		}
 		if(nextImage){
-			$("#next-gallery").attr("href", nextImage);
-			$("#next-gallery").removeClass("disabled");
-		} else {
-			$("#next-gallery").addClass("disabled");
+			$("#next").attr("href", nextImage);
 		}
 	}
 	function showActivity(){
@@ -65,22 +60,20 @@
 		$("#panou").load(firstLink.attr("href"), function(){
 			updatePrevNext(firstLink);
 		});
-		$('').insertAfter("#fancybox-close");
 
 		$("#grid>a").click(function(e){
 			showActivity();
 			var clickedLink = $(this);
 			updatePrevNext(clickedLink);
-			$("#panou").load(clickedLink.attr("href"), function(){
-			});
+			$("#panou").load(clickedLink.attr("href"));
 			e.preventDefault();
 		});
-		$("#prev-gallery, #next-gallery").click(function(e){
+		$("#prev, #next").click(function(e){
 			showActivity();
 			var clickedLink = $(this);
-			updatePrevNext($("#grid>a[href='"+clickedLink.attr("href")+"']"));
 			$("#panou").load(clickedLink.attr("href"), function(){
 			});
+			updatePrevNext($("#grid>a[href='"+clickedLink.attr("href")+"']"));
 			e.preventDefault();
 		});
 	});

@@ -56,6 +56,11 @@
     <div id="container">	      		      	
       
       <div id="page"> <!-- Here my central body -->	
+      
+	<div id="zona1">
+    <a href="{{=URL('index')}}"><img id="logo-img" src="{{=URL('static', 'images/logo_exs.png')}}" alt="logo exs"/></a>
+	  <!-- content -->
+	  <div id="content">
       <div id="doi-unu">
   <ul id="menu">
     <li><a href="{{=URL('index')}}">toate</a></li>
@@ -64,10 +69,6 @@
       {{pass}}
   </ul>
 </div>  
-	<div id="zona1">
-    <a href="{{=URL('index')}}"><img id="logo-img" src="{{=URL('static', 'images/logo_exs.png')}}" alt="logo exs"/></a>
-	  <!-- content -->
-	  <div id="content">
 	    {{include}}
 	  </div>
 	  <!-- content -->
@@ -78,6 +79,7 @@
 	<div id="zona4"></div>
   <div id="trei-cinci">
 <div id="links">
+  <a id="home-link" class="text-show" href="{{=URL('index')}}"></a><span class="hidden-text">Acasa</span><br/>
   <a id="contact-link" class="text-show" href="{{=URL('contact')}}"></a><span class="hidden-text">Contact</span><br/>
   <a id="access-link" class="text-show" href="{{=URL('access')}}"></a><span class="hidden-text">Acces clienti</span>
 </div>
