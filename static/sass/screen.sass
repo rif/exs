@@ -22,21 +22,29 @@ body
     float: left
 
 #zona1
+    position: absolute
     width: 1362px
     height: 850px
     background-image: url("../images/zona_1.png")
     background-repeat: no-repeat
 #zona2
+    position: absolute
+    left: 1362px
+    top: 0px
     height: 850px
     background-image: url("../images/zona_2.png")
-    repeat-x
+    background-repeat: repeat-x
 #zona3
+    position: absolute
+    left: 0px
+    top: 850px
     width: 1362px
     background-image: url("../images/zona_3.png")
     background-repeat: repeat-y
 #zona4
-    width: 340px
-    height: 340px
+    position: absolute
+    left: 1362px
+    top: 850px
     background-image: url("../images/patrat_340.png")
     background-repeat: repeat
 
@@ -118,6 +126,14 @@ div.address
     left: $left
     top: $top
 
+@mixin half_with_square($left, $top: 10px)
+    display: block
+    width: $square_side / 2 - 1
+    height: $square_side - 1
+    position: absolute
+    left: $left
+    top: $top
+
 #doi-unu
     +square(0px, $gutter_height)
 
@@ -131,7 +147,7 @@ div.address
     +square($gutter_width+ $square_side*2, $gutter_height)
   
 #doi-cinci
-    +square($gutter_width+ $square_side*3, $gutter_height)
+    +half_with_square($gutter_width+ $square_side*3, $gutter_height)
 
 #trei-unu
     +square(0, $gutter_height + $square_side)
@@ -146,7 +162,7 @@ div.address
     +square($gutter_width+$square_side*2, $gutter_height + $square_side)
 
 #trei-cinci
-    +square($gutter_width+$square_side*3, $gutter_height + $square_side)
+    +half_with_square($gutter_width+$square_side*3, $gutter_height + $square_side)
 
 .text-right
     text-align: right
