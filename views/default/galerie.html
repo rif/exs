@@ -4,7 +4,7 @@
 	<div id="galerie">
 		<div id="grid">
 		{{for index,pic in enumerate(pics):}}
-			{{=A(IMG(_src=URL('download', args=pic.gray), _alt=pic.title, _class='pic', _style='margin-top:%dpx' % (84*(3-index/4))), _href=URL('panou', args=(pic.id, index+1, len(pics))))}}
+			{{=A(IMG(_src=URL('download', args=pic.gray), _alt=pic.title, _class='pic'), _href=URL('panou', args=(pic.id, index+1, len(pics))))}}
 		{{pass}}
 		</div>
 		<div id="panou"></div>
