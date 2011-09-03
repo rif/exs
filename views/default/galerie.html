@@ -57,22 +57,20 @@
 	$(function(){
 		showActivity();
 		var firstLink = $("#grid>a:first");
-		$("#panou").load(firstLink.attr("href"), function(){
-			updatePrevNext(firstLink);
-		});
+		$("#panou").load(firstLink.attr("href"));
+		updatePrevNext(firstLink);
 
 		$("#grid>a").click(function(e){
 			showActivity();
 			var clickedLink = $(this);
-			updatePrevNext(clickedLink);
 			$("#panou").load(clickedLink.attr("href"));
+			updatePrevNext(clickedLink);
 			e.preventDefault();
 		});
 		$("#prev, #next").click(function(e){
 			showActivity();
 			var clickedLink = $(this);
-			$("#panou").load(clickedLink.attr("href"), function(){
-			});
+			$("#panou").load(clickedLink.attr("href"));
 			updatePrevNext($("#grid>a[href='"+clickedLink.attr("href")+"']"));
 			e.preventDefault();
 		});
