@@ -125,6 +125,10 @@
           function(){apple_effect($(this), '1.2em', '1em');},
           function(){apple_effect($(this), '10px', '10px');}
         );
+        $("a.text-show").hover(
+          function(){$(this).next('span.hidden-text').fadeIn();},
+          function(){$(this).next('span.hidden-text').fadeOut();}
+        );
       });
       $(window).resize(function() {
         fill_screen();
