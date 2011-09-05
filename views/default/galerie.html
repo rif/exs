@@ -2,7 +2,7 @@
 
 <div id="doi-doi">
 	<div id="galerie">
-		<div id="grid" style="{{='top:%dpx' % (340 + 84*(3-(len(pics)-1)/4))}}">
+		<div id="grid" style="{{='top:%dpx' % (342 + 84*(3-(len(pics)-1)/4))}}">
 		{{for index,pic in enumerate(pics):}}
 			{{=A(IMG(_src=URL('download', args=pic.gray), _alt=pic.title, _class='pic'), _href=URL('panou', args=(pic.id, index+1, len(pics))))}}
 		{{pass}}
