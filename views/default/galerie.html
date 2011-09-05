@@ -29,19 +29,11 @@
 	function updatePrevNext(aObject){
 		var prevImage = aObject.prev("a").attr("href");
 		var nextImage = aObject.next("a").attr("href");
-		if(prevImage) {
-			$("#prev").attr("href", prevImage);
-		}
-		if(nextImage){
-			$("#next").attr("href", nextImage);
-		}
+		if(prevImage) $("#prev").attr("href", prevImage);
+		if(nextImage) $("#next").attr("href", nextImage);
 	}
-	function showActivity(){
-		$("#progress").show();
-	}
-	function hideActivity(){
-		$("#progress").hide();
-	}
+	function showActivity(){$("#progress").show();}
+	function hideActivity(){$("#progress").hide();}
 	function updateTip() {
 		$('#poza-mare[title]').qtip({
 			style: {

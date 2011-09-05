@@ -19,7 +19,7 @@
 			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/screen.sass",
 			"settings":
 			{
-				"buffer_size": 6341,
+				"buffer_size": 6373,
 				"line_ending": "Unix"
 			}
 		},
@@ -43,7 +43,7 @@
 			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/layout.html",
 			"settings":
 			{
-				"buffer_size": 5783,
+				"buffer_size": 5958,
 				"line_ending": "Unix"
 			}
 		},
@@ -51,7 +51,7 @@
 			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/index.html",
 			"settings":
 			{
-				"buffer_size": 1325,
+				"buffer_size": 1176,
 				"line_ending": "Unix"
 			}
 		},
@@ -59,7 +59,7 @@
 			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/galerie.html",
 			"settings":
 			{
-				"buffer_size": 1759,
+				"buffer_size": 1789,
 				"line_ending": "Unix"
 			}
 		},
@@ -180,6 +180,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"mous",
 			"-gallery",
 			"%20",
 			"resp",
@@ -215,7 +216,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -223,15 +224,15 @@
 					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/screen.sass",
 					"settings":
 					{
-						"buffer_size": 6341,
+						"buffer_size": 6373,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6015,
-								6021
+								5897,
+								5897
 							]
 						],
 						"settings":
@@ -241,7 +242,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 5312,
+						"translation.y": 3052,
 						"zoom_level": 1
 					},
 					"type": "text"
@@ -307,15 +308,15 @@
 					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/layout.html",
 					"settings":
 					{
-						"buffer_size": 5783,
+						"buffer_size": 5958,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3727,
-								3727
+								15,
+								15
 							]
 						],
 						"settings":
@@ -325,7 +326,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0,
-						"translation.y": 972,
+						"translation.y": 1080,
 						"zoom_level": 1
 					},
 					"type": "text"
@@ -335,15 +336,15 @@
 					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/index.html",
 					"settings":
 					{
-						"buffer_size": 1325,
+						"buffer_size": 1176,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								880,
-								844
+								1160,
+								1160
 							]
 						],
 						"settings":
@@ -352,7 +353,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0,
-						"translation.y": 240,
+						"translation.y": 320,
 						"zoom_level": 1
 					},
 					"type": "text"
@@ -362,15 +363,15 @@
 					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/galerie.html",
 					"settings":
 					{
-						"buffer_size": 1759,
+						"buffer_size": 1789,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1748,
-								1748
+								925,
+								925
 							]
 						],
 						"settings":
@@ -379,7 +380,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0,
-						"translation.y": 660,
+						"translation.y": 12,
 						"zoom_level": 1
 					},
 					"type": "text"
