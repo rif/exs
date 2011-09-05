@@ -14,7 +14,7 @@
 {{if len(divs)>items_per_page:}}
 <a id="next" href="{{=URL(args=[page+1])}}"></a>
 {{else:}}
-<a id="prev" href=""></a>
+<a id="next" href=""></a>
 {{pass}}
 <div id="counter">
 {{=page+1}}/{{=max_pages}}
