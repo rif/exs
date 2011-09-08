@@ -64,7 +64,7 @@
       <div id="doi-unu">
   <ul id="menu">
     <li><a href="{{=URL('index')}}">toate</a></li>
-      {{for tag in db(db.tag).select():}}
+      {{for tag in db(db.tag).select(orderby=db.tag.order_index):}}
       <li><a href="{{=URL('index', vars={'tag':tag.id, 'year': request.vars.year})}}">{{=tag.name}}</a></li>
       {{pass}}
   </ul>
