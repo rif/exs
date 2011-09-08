@@ -40,6 +40,7 @@ crud.settings.auth = None        # =auth to enforce authorization on crud
 
 db.define_table('tag',
     Field('name'),
+    Field('order_index', 'integer'),
     format='%(name)s'
  )
 
