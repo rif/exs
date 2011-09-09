@@ -213,6 +213,25 @@ div.flash
     width: ($square_side - 1)
     height: ($square_side - 1)
 
+#next-detail, #prev-detail
+    display: block
+    width: 10px
+    height: 18px
+
+#next-detail
+    background-image: url("../images/next.png")
+    margin-left: -30px
+    margin-top: -9px
+#next-detail:hover
+    background-image: url("../images/next_hover.png")
+
+#prev-detail
+    background-image: url("../images/back.png")
+    margin-left: 20px
+    margin-top: -9px
+#prev-detail:hover
+    background-image: url("../images/back_hover.png")
+
 #next, #prev
     display: block
     width: 42px
@@ -300,9 +319,9 @@ div.flash
             float: left
 
 #panou
-    background-color: #6f6f6f
+    background-color: #303030
     position: relative
-    left: $square_side
+    left: $gutter_width
     height: ($square_side * 2 - 1)
     width: ($square_side * 2 - 1)
     img
