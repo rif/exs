@@ -83,7 +83,12 @@ ul#menu
             line-height: 10px
             font-family: $font-family
             padding-left: 14px
-
+    li.active
+        background-color: #6c6c6c
+        padding-bottom: 4px
+        a
+            color: $light-grey
+            
 #years
     padding-top: 2%
     a
@@ -134,6 +139,20 @@ div.address
     position: absolute
     left: $left
     top: $top
+
+@mixin half_height_square($left, $top: 0px)
+    display: block
+    width: $square_side - 1 
+    height: $square_side / 2 - 1
+    position: absolute
+    left: $left
+    top: $top
+
+#unu-trei
+    +half_height_square($gutter_width+ $square_side, 0px)
+
+#unu-patru
+    +half_height_square($gutter_width+ $square_side*2, 0px)
 
 #doi-unu
     +half_with_square(0px, $gutter_height)
@@ -322,7 +341,6 @@ div.flash
             border: 1px solid $red
             width: ($square_side / 4) - 3
 
-
 #panou
     background-color: #303030
     height: ($square_side * 2 - 1)
@@ -332,10 +350,18 @@ div.flash
         max-width: 100%
         max-height: 100%
         position: relative
-        
-
+ 
 #progress
     display: none
     margin-top: -10px
     margin-left: -31px
     z-index: 2
+
+span.current-thing
+    color: #6C6C6C
+    position: relative
+    margin-left: 10px
+    top: $gutter_height/2 - 10
+    a
+        +link-colors(#6c6c6c, $light-grey, $red, #6c6c6c, $light-grey )
+        text-decoration: None

@@ -65,7 +65,7 @@
   <ul id="menu">
     <li><a href="{{=URL('index')}}">toate</a></li>
       {{for tag in db(db.tag).select(orderby=db.tag.order_index):}}
-      <li><a href="{{=URL('index', vars={'tag':tag.id})}}">{{=tag.name}}</a></li>
+      <li {{if str(tag.id)==request.vars.tag:}}class="active"{{pass}}><a href="{{=URL('index', vars={'tag':tag.id})}}">{{=tag.name}}</a></li>
       {{pass}}
   </ul>
 </div>  
@@ -92,21 +92,7 @@
 	<script src="{{=URL('static','js/dd_belatedpng.js')}}"></script>
 	<script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
 	<![endif]-->
-    
-    <!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet 
-	 change the UA-XXXXX-X to be your site's ID -->
-    <!--   
-	   <script>
-	     var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
-	     (function(d, t) {
-	     var g = d.createElement(t),
-	     s = d.getElementsByTagName(t)[0];
-	     g.async = true;
-	     g.src = '//www.google-analytics.com/ga.js';
-	     s.parentNode.insertBefore(g, s);
-	     })(document, 'script');
-	   </script>
-	   -->  
+    <!--<script>var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>-->
      <script type="text/javascript">
       function apple_effect(element, size1, size2){
         element.parent().prev().children('a').css('font-size', size2);

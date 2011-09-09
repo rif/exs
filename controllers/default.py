@@ -53,6 +53,7 @@ def contact():
 
 def galerie():
     tagul = db.tag(request.vars.tag)
+    project = db.project(a0)
     query = db.picture.project==a0
     if tagul: query &= db.picture.tags.contains(tagul.id)
     pics = db(query).select()
