@@ -239,8 +239,6 @@ div.flash
     margin-top: $square_side - 127
     a
         text-decoration: none
-    .current
-        border: 1px solid $red
 
 .hidden-text
     font-family: $font-family
@@ -257,15 +255,24 @@ div.flash
     display: inline-block
 
 #home-link
-    background-image: url("../images/home.png")
+    background-image: url("../images/home_activ.png")
+
+#home-link.current
+    background-image: url("../images/home_inactiv.png")
 
 #contact-link
-    background-image: url("../images/contact.png")
+    background-image: url("../images/contact_activ.png")
     margin-top: -2px
 
+#contact-link.current
+    background-image: url("../images/contact_inactiv.png")
+
 #access-link
-    background-image: url("../images/access.png")
+    background-image: url("../images/acces_activ.png")
     margin-top: -2px
+
+#access-link.current
+    background-image: url("../images/acces_inactiv.png")
 
 #about_us
     font-size: $font-size
