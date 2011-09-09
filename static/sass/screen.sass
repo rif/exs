@@ -134,7 +134,7 @@ div.address
 
 @mixin half_with_square($left, $top: 10px)
     display: block
-    width: $square_side / 2 - 1
+    width: $gutter_width
     height: $square_side - 1
     position: absolute
     left: $left
@@ -143,7 +143,7 @@ div.address
 @mixin half_height_square($left, $top: 0px)
     display: block
     width: $square_side - 1 
-    height: $square_side / 2 - 1
+    height: $gutter_height
     position: absolute
     left: $left
     top: $top
