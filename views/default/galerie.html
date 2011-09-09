@@ -31,6 +31,8 @@
 
 <script type="text/javascript">
 	function updatePrevNext(aObject){
+                $("#grid>a>img.pic").removeClass("current-pic");
+                aObject.children("img.pic").addClass("current-pic");
 		var prevImage = aObject.prev("a").attr("href");
 		var nextImage = aObject.next("a").attr("href");
 		if(prevImage) $("#prev-detail").attr("href", prevImage);
