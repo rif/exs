@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 def index():
-    an = request.vars.year
+    #an = request.vars.year
     tagul = db.tag(request.vars.tag)
     
     if len(request.args): page=int(a0)
@@ -10,16 +10,16 @@ def index():
     limitby=(page*items_per_page,(page+1)*items_per_page+1)
     
     query = active_projects_query & project_pictures_query
-    if an and an != 'None': query &= (db.project.year == an)
+    #if an and an != 'None': query &= (db.project.year == an)
     if tagul: query &= db.picture.tags.contains(tagul.id)    
     proiecte = db(query).select(orderby=~db.project.year, limitby=limitby, groupby=db.project.id)
     toate_proiectele = db(query).select()
     max_pages = len(toate_proiectele)/items_per_page
     
-    if tagul:
-        years = db(query).select(db.project.year, distinct=True, orderby=~db.project.year)
-    else:
-        years = db(db.project).select(db.project.year, distinct=True, orderby=~db.project.year)
+    #if tagul:
+    #    years = db(query).select(db.project.year, distinct=True, orderby=~db.project.year)
+    #else:
+    #    years = db(db.project).select(db.project.year, distinct=True, orderby=~db.project.year)
     
     ids = ('doi-doi', 'doi-trei', 'doi-patru', 'trei-doi', 'trei-trei', 'trei-patru')
     divs = []
@@ -32,7 +32,7 @@ def index():
             divs.append(DIV(A(IMG(_src=URL('download', args=pic.thumb), _alt=p.name +' picture', _title=str(p.year) + ": " + p.description, _class="prj-img"), _href=URL('galerie', args=p.id, vars={'tag': tag_id}),_class='galerie'), _id=ids[i%items_per_page]))
         else: # if project has no pictures
             divs.append(DIV(A('No picture for project %s' % p.name, _href=URL('galerie', args=p.id, vars={'tag': tag_id}),_class='galerie'), _id=ids[i%items_per_page]))
-    return dict(divs=divs, page=page,items_per_page=items_per_page, years=years, max_pages=max_pages)
+    return dict(divs=divs, page=page,items_per_page=items_per_page, max_pages=max_pages)
 
 def contact():
     form = SQLFORM.factory(
