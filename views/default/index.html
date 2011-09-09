@@ -21,16 +21,6 @@
 </div>
 </div>
 
-<div id="trei-unu">
-	{{if len(years)>0:}}
-	<ul id="years">
-	{{for year in years:}}
-		<li>{{=A(year['year'],_href=URL('index', vars={'year':year['year'], 'tag':request.vars.tag}))}}</li>
-	{{pass}}
-	</ul>
-	{{pass}}
-</div>
-
 <script type="text/javascript">
 	$(function(){
 		$('img.prj-img[title]').qtip({
