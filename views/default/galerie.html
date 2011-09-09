@@ -1,36 +1,40 @@
 {{extend 'layout.html'}}
 
-<div id="doi-doi">
+<div id="doi-patru">
 	<div id="galerie">
-		<div id="grid" style="{{='top:%dpx' % (341 + 84*(3-(len(pics)-1)/4))}}">
+               
+		<div id="grid">
 		{{for index,pic in enumerate(pics):}}
 			{{=A(IMG(_src=URL('download', args=pic.gray), _alt=pic.title, _class='pic'), _href=URL('panou', args=(pic.id, index+1, len(pics))))}}
 		{{pass}}
-		</div>
-		<div id="panou"></div>
+		</div>		
 	</div>
 </div>
-
-<div id="trei-patru">
+<div id="doi-unu">
+ <div id="panou"></div>
+</div>
+<div id="trei-trei">
 	<div id="progress">
 		<img src="{{=URL('static', 'images/progress.gif')}}" alt="progress"/>
 	</div>
 </div>
 
-<div id="doi-cinci">
-	<div id="navigator">
-		<a id="prev" href="#"></a>
-		<a id="next" href="#"></a>
-	</div>
-	<div id="counter"></div>
+<div id="navigator">    
+  <div id="trei-doi">
+    <a id="prev-detail" href="#"></a>
+  </div>
+  <div id="trei-patru">
+    <a id="next-detail" href="#"></a>
+  </div>
 </div>
+
 
 <script type="text/javascript">
 	function updatePrevNext(aObject){
 		var prevImage = aObject.prev("a").attr("href");
 		var nextImage = aObject.next("a").attr("href");
-		if(prevImage) $("#prev").attr("href", prevImage);
-		if(nextImage) $("#next").attr("href", nextImage);
+		if(prevImage) $("#prev-detail").attr("href", prevImage);
+		if(nextImage) $("#next-detail").attr("href", nextImage);
 	}
 	function showActivity(){$("#progress").show();}
 	function hideActivity(){$("#progress").hide();}
@@ -59,7 +63,7 @@
 			updatePrevNext(clickedLink);
 			e.preventDefault();
 		});
-		$("#prev, #next").click(function(e){
+		$("#prev-detail, #next-detail").click(function(e){
 			showActivity();
 			var clickedLink = $(this);
 			$("#panou").load(clickedLink.attr("href"));

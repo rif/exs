@@ -412,34 +412,65 @@ div.flash {
 }
 
 /* line 216, ../sass/screen.sass */
+#next-detail, #prev-detail {
+  display: block;
+  width: 10px;
+  height: 18px;
+}
+
+/* line 221, ../sass/screen.sass */
+#next-detail {
+  background-image: url("../images/next.png");
+  margin-left: -30px;
+  margin-top: -9px;
+}
+
+/* line 225, ../sass/screen.sass */
+#next-detail:hover {
+  background-image: url("../images/next_hover.png");
+}
+
+/* line 228, ../sass/screen.sass */
+#prev-detail {
+  background-image: url("../images/back.png");
+  margin-left: 20px;
+  margin-top: -9px;
+}
+
+/* line 232, ../sass/screen.sass */
+#prev-detail:hover {
+  background-image: url("../images/back_hover.png");
+}
+
+/* line 235, ../sass/screen.sass */
 #next, #prev {
   display: block;
   width: 42px;
   height: 41px;
 }
 
-/* line 221, ../sass/screen.sass */
+/* line 240, ../sass/screen.sass */
 #next {
   background-image: url("../images/buton_jos.png");
   margin-top: 1px;
 }
 
-/* line 224, ../sass/screen.sass */
+/* line 243, ../sass/screen.sass */
 #next:hover {
   background-image: url("../images/buton_jos_inactiv.png");
 }
 
-/* line 227, ../sass/screen.sass */
+/* line 246, ../sass/screen.sass */
 #prev {
   background-image: url("../images/buton_sus.png");
 }
 
-/* line 229, ../sass/screen.sass */
+/* line 248, ../sass/screen.sass */
 #prev:hover {
   background-image: url("../images/buton_sus_inactiv.png");
 }
 
-/* line 232, ../sass/screen.sass */
+/* line 251, ../sass/screen.sass */
 #counter {
   font-family: Arial;
   font-size: 0.8em;
@@ -447,16 +478,16 @@ div.flash {
   color: #6c6c6c;
 }
 
-/* line 238, ../sass/screen.sass */
+/* line 257, ../sass/screen.sass */
 #links {
   margin-top: 213px;
 }
-/* line 240, ../sass/screen.sass */
+/* line 259, ../sass/screen.sass */
 #links a {
   text-decoration: none;
 }
 
-/* line 243, ../sass/screen.sass */
+/* line 262, ../sass/screen.sass */
 .hidden-text {
   font-family: Arial;
   color: #6c6c6c;
@@ -467,77 +498,77 @@ div.flash {
   bottom: 15px;
 }
 
-/* line 252, ../sass/screen.sass */
+/* line 271, ../sass/screen.sass */
 #home-link, #contact-link, #access-link {
   width: 42px;
   height: 41px;
   display: inline-block;
 }
 
-/* line 257, ../sass/screen.sass */
+/* line 276, ../sass/screen.sass */
 #home-link {
   background-image: url("../images/home_activ.png");
 }
 
-/* line 260, ../sass/screen.sass */
+/* line 279, ../sass/screen.sass */
 #home-link.current {
   background-image: url("../images/home_inactiv.png");
 }
 
-/* line 263, ../sass/screen.sass */
+/* line 282, ../sass/screen.sass */
 #contact-link {
   background-image: url("../images/contact_activ.png");
   margin-top: -2px;
 }
 
-/* line 267, ../sass/screen.sass */
+/* line 286, ../sass/screen.sass */
 #contact-link.current {
   background-image: url("../images/contact_inactiv.png");
 }
 
-/* line 270, ../sass/screen.sass */
+/* line 289, ../sass/screen.sass */
 #access-link {
   background-image: url("../images/acces_activ.png");
   margin-top: -2px;
 }
 
-/* line 274, ../sass/screen.sass */
+/* line 293, ../sass/screen.sass */
 #access-link.current {
   background-image: url("../images/acces_inactiv.png");
 }
 
-/* line 277, ../sass/screen.sass */
+/* line 296, ../sass/screen.sass */
 #about_us {
   font-size: 12px;
   font-family: Arial;
 }
-/* line 280, ../sass/screen.sass */
+/* line 299, ../sass/screen.sass */
 #about_us h1 {
   font-size: 2em;
 }
-/* line 282, ../sass/screen.sass */
+/* line 301, ../sass/screen.sass */
 #about_us ul > li {
   list-style-type: disc;
 }
-/* line 284, ../sass/screen.sass */
+/* line 303, ../sass/screen.sass */
 #about_us ol > li {
   list-style-type: decimal;
 }
 
-/* line 287, ../sass/screen.sass */
+/* line 306, ../sass/screen.sass */
 #galerie {
   min-height: 680px;
   min-width: 1020px;
   max-height: 1020px;
   max-width: 1360px;
 }
-/* line 292, ../sass/screen.sass */
+/* line 311, ../sass/screen.sass */
 #galerie #grid {
   display: block;
   width: 340px;
   position: absolute;
 }
-/* line 296, ../sass/screen.sass */
+/* line 315, ../sass/screen.sass */
 #galerie #grid img.pic {
   position: relative;
   width: 84px;
@@ -545,15 +576,15 @@ div.flash {
   float: left;
 }
 
-/* line 302, ../sass/screen.sass */
+/* line 321, ../sass/screen.sass */
 #panou {
-  background-color: #6f6f6f;
+  background-color: #303030;
   position: relative;
-  left: 340px;
+  left: 171px;
   height: 679px;
   width: 679px;
 }
-/* line 308, ../sass/screen.sass */
+/* line 327, ../sass/screen.sass */
 #panou img {
   vertical-align: middle;
   max-width: 100%;
@@ -561,7 +592,7 @@ div.flash {
   position: relative;
 }
 
-/* line 315, ../sass/screen.sass */
+/* line 334, ../sass/screen.sass */
 #progress {
   display: none;
   margin-top: -10px;
