@@ -25,9 +25,11 @@
 </div>
 
 <div id="unu-trei">
+  {{if tagul: }}
   <span class="current-thing">
     <a href="{{=URL('galerie', args=project.id)}}">{{=project.name}}</a>
   </span>
+  {{pass}}
 </div>
 
 <div id="navigator">    
