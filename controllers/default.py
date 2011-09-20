@@ -3,24 +3,24 @@
 def index():
     #an = request.vars.year
     tagul = db.tag(request.vars.tag)
-    
+
     if len(request.args): page=int(a0)
     else: page=0
     items_per_page=6
     limitby=(page*items_per_page,(page+1)*items_per_page+1)
-    
+
     query = active_projects_query & project_pictures_query
     #if an and an != 'None': query &= (db.project.year == an)
-    if tagul: query &= db.picture.tags.contains(tagul.id)    
+    if tagul: query &= db.picture.tags.contains(tagul.id)
     proiecte = db(query).select(orderby=~db.project.year, limitby=limitby, groupby=db.project.id)
     toate_proiectele = db(query).select()
     max_pages = len(toate_proiectele)/items_per_page
-    
+
     #if tagul:
     #    years = db(query).select(db.project.year, distinct=True, orderby=~db.project.year)
     #else:
     #    years = db(db.project).select(db.project.year, distinct=True, orderby=~db.project.year)
-    
+
     ids = ('doi-doi', 'doi-trei', 'doi-patru', 'trei-doi', 'trei-trei', 'trei-patru')
     divs = []
     tag_id = tagul.id if tagul else -1

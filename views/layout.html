@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="{{=T.accepted_language or 'en'}}" class="no-js"><!-- no-js need it for modernzr -->
  <head>
-    
-    <meta charset="utf-8" />	  	
+
+    <meta charset="utf-8" />
     <!-- www.phpied.com/conditional-comments-block-downloads/ -->
-    <!--[if IE]><![endif]-->    
-    <!-- Always force latest IE rendering engine 
-	 (even in intranet) & Chrome Frame 
+    <!--[if IE]><![endif]-->
+    <!-- Always force latest IE rendering engine
+	 (even in intranet) & Chrome Frame
 	 Remove this if you use the .htaccess -->
 	 <!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <![endif]-->
     <title>{{=response.title or request.application}}</title>
-    
+
     <!-- http://dev.w3.org/html5/markup/meta.name.html -->
-    <meta name="application-name" content="{{=request.application}}" />	
-    
-    <!-- Speaking of Google, don't forget to set your site up: 
+    <meta name="application-name" content="{{=request.application}}" />
+
+    <!-- Speaking of Google, don't forget to set your site up:
 	 http://google.com/webmasters -->
     <meta name="google-site-verification" content="" />
-    
+
     <!--  Mobile Viewport Fix
-	  j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 
+	  j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag
 	  device-width: Occupy full width of the screen in its current orientation
 	  initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
 	  maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
       -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references -->
     <link rel="shortcut icon" href="{{=URL('static','favicon.ico')}}" type="image/x-icon">
     <link rel="apple-touch-icon" href="{{=URL('static','favicon.png')}}">
@@ -43,36 +43,35 @@
     {{include 'web2py_ajax.html'}}
     <script type='text/javascript' src="{{=URL('static', 'js/jquery.qtip.min.js')}}"></script>
   </head>
-  
-  <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->	
+
+  <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
   <!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
   <!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
   <!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
   <!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
   <!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
-    
+
     <div class="flash">{{=response.flash or ''}}</div> <!-- notification div -->
-    
-    <div id="container">	      		      	
-      
-      <div id="page"> <!-- Here my central body -->	
-      
+
+    <div id="container">
+
+      <div id="page"> <!-- Here my central body -->
+
 	<div id="zona1">
     <a href="{{=URL('index')}}"><img id="logo-img" src="{{=URL('static', 'images/logo_exs.png')}}" alt="logo exs"/></a>
 	  <!-- content -->
 	  <div id="content">
       <div id="doi-unu">
   <ul id="menu">
-    <li><a href="{{=URL('index')}}">toate</a></li>
       {{for tag in db(db.tag).select(orderby=db.tag.order_index):}}
       <li {{if str(tag.id)==request.vars.tag:}}class="active"{{pass}}><a href="{{=URL('index', vars={'tag':tag.id})}}">{{=tag.name}}</a></li>
       {{pass}}
   </ul>
-</div>  
+</div>
 	    {{include}}
 	  </div>
 	  <!-- content -->
-	  <div id="footer">ex studio &#169; 2011</div><!-- footer -->	
+	  <div id="footer">ex studio &#169; 2011</div><!-- footer -->
 	</div><!-- zona1 -->
 	<div id="zona2"></div>
 	<div id="zona3"></div>
@@ -86,8 +85,8 @@
 </div>
       </div><!-- page -->
       <div style="clear: both;"></div><!-- Clear the divs -->
-    </div><!-- container -->		
-    	
+    </div><!-- container -->
+
     <!--[if lt IE 7 ]>
 	<script src="{{=URL('static','js/dd_belatedpng.js')}}"></script>
 	<script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
@@ -109,7 +108,7 @@
         fill_screen();
         $("#menu>li>a").hover(
           function(){apple_effect($(this), '1.2em', '1em');},
-          function(){apple_effect($(this), '10px', '10px');}
+          function(){apple_effect($(this), '11px', '11px');}
         );
         $("a.text-show").hover(
           function(){$(this).next('span.hidden-text').fadeIn();},
@@ -119,6 +118,6 @@
       $(window).resize(function() {
         fill_screen();
       });
-     </script>  
+     </script>
   </body>
 </html>

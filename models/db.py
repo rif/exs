@@ -82,7 +82,7 @@ def make_gray(pictureImg):
     im = ImageOps.autocontrast(im)
     # convert back to RGB so we can save it as JPEG
     # (alternatively, save it in PNG or similar)
-    im = im.convert("RGB")    
+    im = im.convert("RGB")
     grayName='picture.gray.%s.jpg' % (uuid.uuid4())
     im.save(request.folder + 'uploads/' + grayName, 'JPEG')
     return grayName
