@@ -27,7 +27,7 @@ def index():
     for i,row in enumerate(proiecte):
         p = row.project
         query = db.picture.project==p.id
-        if tagul:
+        if tagul and tagul.order_index != 0:
           query &= db.picture.tags.contains(tagul.id)
         else:
           query &= db.picture.representative==True
