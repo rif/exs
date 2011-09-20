@@ -2,12 +2,12 @@
 
 <div id="doi-patru">
 	<div id="galerie">
-               
+
 		<div id="grid">
 		{{for index,pic in enumerate(pics):}}
 			{{=A(IMG(_src=URL('download', args=pic.gray), _alt=pic.title, _class='pic'), _href=URL('panou', args=(pic.id, index+1, len(pics))))}}
 		{{pass}}
-		</div>		
+		</div>
 	</div>
 </div>
 <div id="doi-doi">
@@ -32,7 +32,7 @@
   {{pass}}
 </div>
 
-<div id="navigator">    
+<div id="navigator">
   <div id="trei-doi">
     <a id="prev-detail" href="#"></a>
   </div>

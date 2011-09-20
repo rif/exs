@@ -14,7 +14,7 @@ $light-grey: #adadad
 $red:  #a5132a
 $font-family: Arial
 $font-size: 12px
-    
+
 body
     color: $light-grey
 
@@ -57,10 +57,10 @@ input[type=text]
     height: 19px
     font-size: $font-size
     font-family: $font-family
-    
+
 input[type=submit]
     margin-right: 1px
-        
+
 textarea
     background-color: #c1c1c1
     color: #646362
@@ -79,8 +79,8 @@ ul#menu
         a
             +link-colors(#6c6c6c, $light-grey, $red, #6c6c6c, $light-grey )
             text-decoration: None
-            font-size: 10px
-            line-height: 10px
+            font-size: 11px
+            line-height: 11px
             font-family: $font-family
             padding-left: 14px
     li.active
@@ -88,7 +88,7 @@ ul#menu
         padding-bottom: 4px
         a
             color: $light-grey
-            
+
 #years
     padding-top: 2%
     a
@@ -126,7 +126,7 @@ div.address
 
 @mixin square($left, $top: 10px)
     display: block
-    width: $square_side - 1 
+    width: $square_side - 1
     height: $square_side - 1
     position: absolute
     left: $left
@@ -142,7 +142,7 @@ div.address
 
 @mixin half_height_square($left, $top: 0px)
     display: block
-    width: $square_side - 1 
+    width: $square_side - 1
     height: $gutter_height
     position: absolute
     left: $left
@@ -165,7 +165,7 @@ div.address
 
 #doi-patru
     +square($gutter_width+ $square_side*2, $gutter_height)
-  
+
 #doi-cinci
     +half_with_square($gutter_width+ $square_side*3, $gutter_height)
 
@@ -186,7 +186,7 @@ div.address
 
 .text-right
     text-align: right
-      
+
 .right
     float: right
 
@@ -208,7 +208,7 @@ div#trimite
         border: None
         float: right
         cursor: pointer
-        
+
 div.flash
     font-weight: bold
     display: none
@@ -226,7 +226,7 @@ div.flash
     z-index: 2
     +opacity(0.85)
     +border-radius
-    
+
 
 .prj-img
     width: ($square_side - 1)
@@ -327,7 +327,7 @@ div.flash
     min-width: $square_side*3
     max-height: $square_side*3
     max-width: $square_side*4
-    #grid 
+    #grid
         display: block
         width: 340px
         position: absolute
@@ -350,7 +350,7 @@ div.flash
         max-width: 100%
         max-height: 100%
         position: relative
- 
+
 #progress
     display: none
     margin-top: -10px
@@ -358,10 +358,11 @@ div.flash
     z-index: 2
 
 span.current-thing
+    font-family: $font-family
     color: #6C6C6C
     position: relative
     margin-left: 10px
-    top: $gutter_height/2 - 10
+    top: $gutter_height - 47
     a
         +link-colors(#6c6c6c, $light-grey, $red, #6c6c6c, $light-grey )
         text-decoration: None
