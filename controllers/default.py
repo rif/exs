@@ -78,4 +78,20 @@ def download():
     return response.download(request,db)
 
 def access():
+    import os, hashlib
+    files = []
+    dirname = ''
+    project = ''
+    path = os.path.join(request.folder, 'static/projects/')
+    cod_valid = False
+    form = SQLFORM.factory(Field('project_code'),submit_button='Trimite')
+    project_code = a0
+    if form.accepts(request.vars, session):        
+        project_code = form.vars.project_code            
+    for d in os.listdir(path):        
+        if hashlib.sha1(d).hexdigest() == project_code:
+            cod_valid = True
+            dirname = os.path.join('projects/',d)
+            project = d
+            files = os.listdir(os.path.join(path, d))
     return locals()
