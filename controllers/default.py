@@ -94,4 +94,6 @@ def access():
             dirname = os.path.join('projects/',d)
             project = d
             files = os.listdir(os.path.join(path, d))
+            # sort by modification time in reverse order (latest first)
+            files.sort(key=lambda x: os.path.getmtime(os.path.join(path,d,x)), reverse=True)
     return locals()
