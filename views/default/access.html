@@ -1,5 +1,24 @@
 {{extend 'layout.html'}}
 
+<div id="doi-doi">
+	<div id="project-files">
+		{{if not cod_valid:}}
+			<h1>COD PROIECT:</h1>
+			{{=form.custom.begin}}
+  			<div class="clearme">{{=form.custom.widget.project_code}}</div>  
+  			<div id="trimite">{{=form.custom.submit}}</div>
+  			{{=form.custom.end}}
+		{{else:}}
+			<h1>{{=project.upper()}}</h1>
+			<ol>
+				{{for f in files:}}
+				<li>{{=A(f, _href=URL('static', os.path.join(dirname,f)))}}</li>
+				{{pass}}
+			</ol>
+		{{pass}}
+	</div>
+</div>
+
 <script type="text/javascript">
 $(function(){
     $("#access-link").addClass('current');
