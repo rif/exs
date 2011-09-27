@@ -63,6 +63,7 @@
 	  <div id="content">
       <div id="doi-unu">
   <ul id="menu">
+      <li><a href="{{=URL('index')}}">toate proiectele</a></li>
       {{for tag in db(db.tag).select(orderby=db.tag.order_index):}}
       <li {{if str(tag.id)==request.vars.tag:}}class="active"{{pass}}><a href="{{=URL('index', vars={'tag':tag.id})}}">{{=tag.name}}</a></li>
       {{pass}}
