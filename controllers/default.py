@@ -97,3 +97,14 @@ def access():
             # sort by modification time in reverse order (latest first)
             files.sort(key=lambda x: os.path.getmtime(os.path.join(path,d,x)), reverse=True)
     return locals()
+
+@auth.requires_permission('read', 'about')
+def access_codes():
+    import os,hashlib
+    path = os.path.join(request.folder, 'static/projects/')
+    projects = []
+    for d in os.listdir(path):
+        if os.path.isdir(os.path.join(path,d)):
+            code = hashlib.sha1(d).hexdigest()
+            projects.append((d, code, 'http://www.exstudio.ro/init/default/access/' +  code))
+    return locals()

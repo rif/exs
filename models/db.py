@@ -90,3 +90,8 @@ def make_gray(pictureImg):
 a0,a1,a2 = request.args(0), request.args(1), request.args(2)
 active_projects_query = (db.project.is_active == True)
 project_pictures_query = (db.project.id == db.picture.project)
+
+plugins.instant_admin.extra_sidebar_title = "Acces clienti la proiecte"
+plugins.instant_admin.extra_sidebar = [
+    A('Coduri de acces', _href=URL('default','access_codes')),
+]

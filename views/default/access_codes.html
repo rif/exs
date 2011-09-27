@@ -1,0 +1,25 @@
+{{extend 'plugin_instant_admin/layout.html'}}
+
+{{block main-content}}
+<h1>Coduri de acces</h1>
+
+ <table class='table grid'>
+        <thead>
+            <tr>
+            <th class='start'>Proiect</th>
+            <th>Cod</th>
+            <th>Link</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {{for project, code, link in projects:}}
+            <tr>
+                <td>{{=project}}</td>
+                <td>{{=code}}</td>
+                <td>{{=A(link, _href=link)}}</td>
+            </tr>
+            {{pass}}
+        </tbody>
+</table>
+{{pass}}
