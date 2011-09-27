@@ -11,8 +11,8 @@
 		{{else:}}
 			<h1>{{=project.upper()}}</h1>
 			<ol>
-				{{for f in files:}}
-				<li>{{=A(f, _href=URL('static', os.path.join(dirname,f)))}}</li>
+				{{for f, size in files:}}
+				<li>{{=A(f + ' ' + size, _href=URL('static', os.path.join(dirname,f)))}}</li>
 				{{pass}}
 			</ol>
 		{{pass}}

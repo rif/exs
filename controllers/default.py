@@ -27,7 +27,7 @@ def index():
     for i,row in enumerate(proiecte):
         p = row.project
         query = db.picture.project==p.id
-        if tagul and tagul.order_index != 0:
+        if tagul:
           query &= db.picture.tags.contains(tagul.id)
         else:
           query &= db.picture.representative==True
@@ -96,7 +96,14 @@ def access():
             files = os.listdir(os.path.join(path, d))
             # sort by modification time in reverse order (latest first)
             files.sort(key=lambda x: os.path.getmtime(os.path.join(path,d,x)), reverse=True)
+            files = [(f, __sizeof_fmt(os.path.getsize(os.path.join(path,d,f)))) for f in files]
     return locals()
+
+def __sizeof_fmt(num):
+    for x in ['bytes','KB','MB','GB','TB']:
+        if num < 1024.0:
+            return "%3.1f%s" % (num, x)
+        num /= 1024.0
 
 @auth.requires_permission('read', 'about')
 def access_codes():
