@@ -13,8 +13,8 @@ def index():
     #if an and an != 'None': query &= (db.project.year == an)
     if tagul: query &= db.picture.tags.contains(tagul.id)
     proiecte = db(query).select(orderby=~db.project.year, limitby=limitby, groupby=db.project.id)
-    toate_proiectele = db(query).select()
-    max_pages = len(toate_proiectele)/items_per_page
+    toate_proiectele = db(query).select(groupby=db.project.id)
+    max_pages = int(round(float(len(toate_proiectele))/items_per_page)) or 1
 
     #if tagul:
     #    years = db(query).select(db.project.year, distinct=True, orderby=~db.project.year)
