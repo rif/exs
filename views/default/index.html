@@ -25,11 +25,11 @@
 	$(function(){
 		$('img.prj-img[title]').qtip({
 			style: {
-				classes: "ui-tooltip-dark"
+				classes: "ui-tooltip-tipsy"
 			},
 			position: {
-				at: "top left",
-				my: "top left"
+				at: "bottom center",
+				my: "bottom center"
 			}
 		});
 		$("#home-link").addClass('current');
@@ -37,8 +37,8 @@
 			$(this).css({'z-index' : '10'}); /*Add a higher z-index value so this image stays on top*/ 
 			$(this).stop() /* Add class of "hover", then stop animation queue buildup*/
 				.animate({
-					marginTop: '-80px', /* The next 4 lines will vertically align this image */ 
-					marginLeft: '-80px',
+					marginTop: '-70px', /* The next 4 lines will vertically align this image */ 
+					marginLeft: '-70px',
 					top: '25%',
 					left: '25%',
 					width: '400px', /* Set new width */
