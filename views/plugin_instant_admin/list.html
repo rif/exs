@@ -101,6 +101,8 @@
                                     <img src="{{=URL('static','plugin_instant_admin/images/icon-no.png')}}" />
                                     {{pass}}
                                     </td>
+                                {{elif table[field].type is 'upload':}}
+                                    <td> {{=IMG(_src=URL('download', args=row[field]), _alt=row[field], _width="50px")}} </td>
                                 {{else:}}
                                     <td> {{=row[field]}} </td>
                                 {{pass}}
