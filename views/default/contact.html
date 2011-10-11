@@ -12,11 +12,11 @@
 </div>
 
 <div id="doi-trei">
-{{=IMG(_src=URL('download', args=abo.claudiu), _alt='claudiu, _title='claudiu')}}
+{{=IMG(_src=URL('download', args=abo.claudiu), _alt='claudiu', _title='claudiu')}}
 </div>
 
 <div id="doi-patru">
-{{=IMG(_src=URL('download', args=abo.tibi), _alt='tibi, _title='tibi')}}
+{{=IMG(_src=URL('download', args=abo.tibi), _alt='tibi', _title='tibi')}}
 </div>
 
 <div id="trei-patru">
@@ -42,6 +42,19 @@ $(function(){
     if(!this.value.length) {
         this.value = this.defaultValue;
     }
+    });
+   $('img[title]').qtip({
+      style: {
+        classes: "ui-tooltip-tipsy"
+      },
+      position: {
+        at: "bottom center",
+        my: "bottom center"
+      },
+      show: {
+        event: 'click mouseenter', // Don't specify a show event...
+        ready: true // ... but show the tooltip when ready
+      },
     });
 });
 
