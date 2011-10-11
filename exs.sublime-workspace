@@ -24,15 +24,15 @@
 	"buffers":
 	[
 		{
-			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/screen.sass",
+			"file": "static/sass/screen.sass",
 			"settings":
 			{
-				"buffer_size": 8336,
+				"buffer_size": 8351,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/contact.html",
+			"file": "views/default/contact.html",
 			"settings":
 			{
 				"buffer_size": 923,
@@ -40,31 +40,31 @@
 			}
 		},
 		{
-			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/layout.html",
+			"file": "views/layout.html",
 			"settings":
 			{
-				"buffer_size": 5632,
+				"buffer_size": 5696,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/index.html",
+			"file": "views/default/index.html",
 			"settings":
 			{
-				"buffer_size": 675,
+				"buffer_size": 1654,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/galerie.html",
+			"file": "views/default/galerie.html",
 			"settings":
 			{
-				"buffer_size": 2457,
+				"buffer_size": 2474,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/panou.html",
+			"file": "views/default/panou.html",
 			"settings":
 			{
 				"buffer_size": 432,
@@ -72,15 +72,15 @@
 			}
 		},
 		{
-			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/controllers/default.py",
+			"file": "controllers/default.py",
 			"settings":
 			{
-				"buffer_size": 4090,
+				"buffer_size": 4764,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/static/projects/generate_link.py",
+			"file": "static/projects/generate_link.py",
 			"settings":
 			{
 				"buffer_size": 227,
@@ -88,10 +88,18 @@
 			}
 		},
 		{
-			"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/access.html",
+			"file": "views/default/access.html",
 			"settings":
 			{
-				"buffer_size": 593,
+				"buffer_size": 612,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/db.py",
+			"settings":
+			{
+				"buffer_size": 4515,
 				"line_ending": "Unix"
 			}
 		}
@@ -99,15 +107,15 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392,
+		"height": 392.0,
 		"selected_items":
 		[
 		],
-		"width": 392
+		"width": 392.0
 	},
 	"console":
 	{
-		"height": 136
+		"height": 136.0
 	},
 	"distraction_free":
 	{
@@ -120,6 +128,7 @@
 	},
 	"file_history":
 	[
+		"/home/rif/Documents/webframeworks/web2py/applications/exs/views/plugin_instant_admin/list.html",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/access.html",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/models/menu.py",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/models/db.py",
@@ -179,11 +188,11 @@
 	],
 	"find":
 	{
-		"height": 33
+		"height": 33.0
 	},
 	"find_in_files":
 	{
-		"height": 88,
+		"height": 88.0,
 		"include_history":
 		[
 		],
@@ -196,6 +205,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"prj-img",
+			"hoover",
 			"mous",
 			"-gallery",
 			"%20",
@@ -232,40 +243,40 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/screen.sass",
+					"file": "static/sass/screen.sass",
 					"settings":
 					{
-						"buffer_size": 8336,
+						"buffer_size": 8351,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5550,
-								5550
+								4849,
+								4849
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 4.0,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0,
-						"translation.y": 3985,
-						"zoom_level": 1
+						"translation.x": 0.0,
+						"translation.y": 3058.0,
+						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/contact.html",
+					"file": "views/default/contact.html",
 					"settings":
 					{
 						"buffer_size": 923,
@@ -282,21 +293,21 @@
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 2.0,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/layout.html",
+					"file": "views/layout.html",
 					"settings":
 					{
-						"buffer_size": 5632,
+						"buffer_size": 5696,
 						"regions":
 						{
 						},
@@ -310,29 +321,29 @@
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 2.0,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0,
-						"translation.y": 40,
-						"zoom_level": 1
+						"translation.x": 0.0,
+						"translation.y": 40.0,
+						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/index.html",
+					"file": "views/default/index.html",
 					"settings":
 					{
-						"buffer_size": 675,
+						"buffer_size": 1654,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								581,
+								587
 							]
 						],
 						"settings":
@@ -340,26 +351,26 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
+						"translation.x": 0.0,
+						"translation.y": 181.0,
+						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/galerie.html",
+					"file": "views/default/galerie.html",
 					"settings":
 					{
-						"buffer_size": 2457,
+						"buffer_size": 2474,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1720,
+								1720
 							]
 						],
 						"settings":
@@ -367,15 +378,15 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
+						"translation.x": 0.0,
+						"translation.y": 336.0,
+						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/panou.html",
+					"file": "views/default/panou.html",
 					"settings":
 					{
 						"buffer_size": 432,
@@ -393,43 +404,43 @@
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/controllers/default.py",
+					"file": "controllers/default.py",
 					"settings":
 					{
-						"buffer_size": 4090,
+						"buffer_size": 4764,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3977,
-								3977
+								1971,
+								1971
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 4.0,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0,
-						"translation.y": 1027,
-						"zoom_level": 1
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/static/projects/generate_link.py",
+					"file": "static/projects/generate_link.py",
 					"settings":
 					{
 						"buffer_size": 227,
@@ -447,35 +458,63 @@
 						{
 							"syntax": "Packages/Python/Python.tmLanguage"
 						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 8,
-					"file": "/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/access.html",
+					"file": "views/default/access.html",
 					"settings":
 					{
-						"buffer_size": 593,
+						"buffer_size": 612,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								331,
-								331
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
-						"translation.x": 0,
-						"translation.y": 0,
-						"zoom_level": 1
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "models/db.py",
+					"settings":
+					{
+						"buffer_size": 4515,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2871,
+								2871
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4.0,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 720.0,
+						"zoom_level": 1.0
 					},
 					"type": "text"
 				}
@@ -484,11 +523,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 32
+		"height": 32.0
 	},
 	"input":
 	{
-		"height": 30
+		"height": 30.0
 	},
 	"layout":
 	{
@@ -503,41 +542,49 @@
 		],
 		"cols":
 		[
-			0,
-			1
+			0.0,
+			1.0
 		],
 		"rows":
 		[
-			0,
-			1
+			0.0,
+			1.0
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 104.0
+	},
 	"replace":
 	{
-		"height": 62
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
 	{
-		"height": 0,
+		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"db",
+				"models/db.py"
+			]
 		],
-		"width": 0
+		"width": 0.0
 	},
 	"select_project":
 	{
-		"height": 500,
+		"height": 500.0,
 		"selected_items":
 		[
 		],
-		"width": 380
+		"width": 380.0
 	},
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 211,
+	"side_bar_width": 211.0,
 	"status_bar_visible": true
 }
