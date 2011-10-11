@@ -69,8 +69,8 @@ db.define_table('about',
     Field('email', requires=IS_EMAIL()),
     Field('description', 'text', represent=lambda d: MARKMIN(d), length=2048, comment="You can use markmin syntax, see here: http://web2py.com/examples/static/markmin.html"),
     Field('address', 'text', represent=lambda d: MARKMIN(d), comment="You can use markmin syntax, see here: http://web2py.com/examples/static/markmin.html"),
-    Field('claudiu', 'upload', required=True, notnull=True),
-    Field('tibi', 'upload', required=True, notnull=True),
+    Field('claudiu', 'upload', required=True),
+    Field('tibi', 'upload', required=True),
 )
 
 def make_gray(pictureImg):
