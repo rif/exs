@@ -11,6 +11,7 @@ $square_side: 340px
 $padding-contact: ($square_side/2.4)
 
 $light-grey: #adadad
+$background-gray: #303030
 $red:  #a5132a
 $font-family: Arial
 $font-size: 12px
@@ -200,11 +201,21 @@ div.address
     div
         margin-bottom: 10px
 
+#descriere
+    font-family: $font-family
+    font-size: $font-size
+    display: block
+    background-color: $background-gray
+    +square($gutter_width, $gutter_height)
+    height: $square_side * 2 - 2
+    p
+        margin-bottom: 1em
+
 div#trimite
     margin: 0
     input
         background-color: $red
-        color: #303030
+        color: $background-gray
         border: None
         float: right
         cursor: pointer
@@ -344,7 +355,7 @@ div.flash
             width: ($square_side / 4) - 3
 
 #panou
-    background-color: #303030
+    background-color: $background-gray
     height: ($square_side * 2 - 1)
     width: ($square_side * 2 - 1)
     img
@@ -383,7 +394,7 @@ span.current-thing
         +link-colors(#6c6c6c, $light-grey, $red, #6c6c6c, $light-grey )    
     input[type=submit]
         background-color: $red
-        color: #303030
+        color: $background-gray
         border: None
         float: right
         cursor: pointer
