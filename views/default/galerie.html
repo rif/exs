@@ -5,7 +5,7 @@
 
 		<div id="grid">
 		{{for index,pic in enumerate(pics):}}
-			{{=A(IMG(_src=URL('download', args=pic.gray), _alt=pic.title, _class='pic'), _href=URL('panou', args=(pic.id, index+1, len(pics))))}}
+			{{=A(IMG(_src=URL('download', args=pic.gray), _alt=pic.title, _class='pic'), _href=URL('panou', args=(pic.id, index+1, len(pics))))}}			
 		{{pass}}
 		</div>
 	</div>
@@ -69,7 +69,6 @@
             },
 		});
 	}
-
 	$(function(){
 		showActivity();
 		var firstLink = $("#grid>a:first");
