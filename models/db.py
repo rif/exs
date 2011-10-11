@@ -69,6 +69,8 @@ db.define_table('about',
     Field('email', requires=IS_EMAIL()),
     Field('description', 'text', represent=lambda d: MARKMIN(d), length=2048, comment="You can use markmin syntax, see here: http://web2py.com/examples/static/markmin.html"),
     Field('address', 'text', represent=lambda d: MARKMIN(d), comment="You can use markmin syntax, see here: http://web2py.com/examples/static/markmin.html"),
+    Field('claudiu', 'upload', required=True, notnull=True),
+    Field('tibi', 'upload', required=True, notnull=True),
 )
 
 def make_gray(pictureImg):
@@ -80,8 +82,6 @@ def make_gray(pictureImg):
     if im.mode != "L": im = im.convert("L")
     # optional: apply contrast enhancement here, e.g.
     im = ImageOps.autocontrast(im)
-    # convert back to RGB so we can save it as JPEG
-    # (alternatively, save it in PNG or similar)
     im = im.convert("RGB")
     grayName='picture.gray.%s.jpg' % (uuid.uuid4())
     im.save(request.folder + 'uploads/' + grayName, 'JPEG')
