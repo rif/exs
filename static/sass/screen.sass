@@ -359,6 +359,8 @@ div.flash
     background-color: $background-gray
     height: ($square_side * 2 - 1)
     width: ($square_side * 2 - 1)
+    position: absolute
+    z-index: 2
     img
         vertical-align: middle
         max-width: 100%
@@ -406,3 +408,18 @@ span.current-thing
 
 .undercover
     display: none
+
+.overlay
+    font-size: 11px
+    font-family: $font-family
+    color: white
+    padding: 10px
+    background: transparent    
+    background: rgba(0,0,0,.47)    
+    position: absolute
+    width: $square_side - 20
+    bottom: 0px
+    display: none
+
+#panou>div.overlay
+    width: $square_side * 2 - 20

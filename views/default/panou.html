@@ -1,11 +1,18 @@
-{{=IMG(_src=URL('download', args=pic.image), _alt=pic.title or pic.description, _title=pic.description, _id='poza-mare')}}
-
+{{=IMG(_src=URL('download', args=pic.image), _alt=pic.title or pic.description, _id='poza-mare')}}
+{{=DIV(pic.description, _class='overlay')}}
 <script type="text/javascript">
 $("#panou>img").load(function(){
 	$("#panou>img").css("top", ($("#panou").height() - $("#panou>img").height())/2);
 	$("#panou>img").css("left", ($("#panou").width() - $("#panou>img").width())/2);
 	$("#counter").text("{{=counter}}")
-	updateTip();
+	$("#panou").hover(
+  			function () {  				
+    			$(this).children(".overlay").slideDown("fast");
+  			}, 
+  			function () {
+    			$(this).children(".overlay").slideUp("fast");
+  			}
+		);	
 	hideActivity();
 });
 </script>

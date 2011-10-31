@@ -27,7 +27,7 @@
 			"file": "static/sass/screen.sass",
 			"settings":
 			{
-				"buffer_size": 8674,
+				"buffer_size": 8693,
 				"line_ending": "Unix"
 			}
 		},
@@ -59,7 +59,7 @@
 			"file": "views/default/galerie.html",
 			"settings":
 			{
-				"buffer_size": 2425,
+				"buffer_size": 2424,
 				"line_ending": "Unix"
 			}
 		},
@@ -75,7 +75,7 @@
 			"file": "controllers/default.py",
 			"settings":
 			{
-				"buffer_size": 4764,
+				"buffer_size": 4780,
 				"line_ending": "Unix"
 			}
 		},
@@ -250,7 +250,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -258,15 +258,15 @@
 					"file": "static/sass/screen.sass",
 					"settings":
 					{
-						"buffer_size": 8674,
+						"buffer_size": 8693,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1161,
-								1163
+								5331,
+								5336
 							]
 						],
 						"settings":
@@ -276,7 +276,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 5858.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -321,8 +321,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								5107,
+								5107
 							]
 						],
 						"settings":
@@ -332,7 +332,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 24.0,
+						"translation.y": 1320.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -349,8 +349,8 @@
 						"selection":
 						[
 							[
-								427,
-								685
+								686,
+								686
 							]
 						],
 						"settings":
@@ -369,15 +369,15 @@
 					"file": "views/default/galerie.html",
 					"settings":
 					{
-						"buffer_size": 2425,
+						"buffer_size": 2424,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1825,
-								1825
+								875,
+								875
 							]
 						],
 						"settings":
@@ -386,7 +386,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 48.0,
+						"translation.y": 160.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -422,15 +422,15 @@
 					"file": "controllers/default.py",
 					"settings":
 					{
-						"buffer_size": 4764,
+						"buffer_size": 4780,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1410,
-								1410
+								1030,
+								1030
 							]
 						],
 						"settings":
