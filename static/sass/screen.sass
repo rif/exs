@@ -248,10 +248,12 @@ div.flash
     display: block
     width: 30px
     height: 38px
+    position: absolute
+    z-index: 3
 
 #next-detail
     background-image: url("../images/next.png")
-    float: right
+    right: 0px
     margin-right: 20px  
     margin-top: -20px
     &:hover
@@ -337,10 +339,7 @@ div.flash
         list-style-type: decimal
 
 #galerie
-    min-height: $square_side*2
-    min-width: $square_side*3
-    max-height: $square_side*3
-    max-width: $square_side*4
+    max-height: $square_side*2    
     #grid
         display: block
         width: 340px
