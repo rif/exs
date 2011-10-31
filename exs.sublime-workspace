@@ -27,7 +27,7 @@
 			"file": "static/sass/screen.sass",
 			"settings":
 			{
-				"buffer_size": 8351,
+				"buffer_size": 8674,
 				"line_ending": "Unix"
 			}
 		},
@@ -35,7 +35,7 @@
 			"file": "views/default/contact.html",
 			"settings":
 			{
-				"buffer_size": 923,
+				"buffer_size": 1524,
 				"line_ending": "Unix"
 			}
 		},
@@ -51,7 +51,7 @@
 			"file": "views/default/index.html",
 			"settings":
 			{
-				"buffer_size": 1654,
+				"buffer_size": 686,
 				"line_ending": "Unix"
 			}
 		},
@@ -59,7 +59,7 @@
 			"file": "views/default/galerie.html",
 			"settings":
 			{
-				"buffer_size": 2474,
+				"buffer_size": 2425,
 				"line_ending": "Unix"
 			}
 		},
@@ -99,7 +99,7 @@
 			"file": "models/db.py",
 			"settings":
 			{
-				"buffer_size": 4515,
+				"buffer_size": 4505,
 				"line_ending": "Unix"
 			}
 		}
@@ -205,6 +205,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"sha",
+			"display: none",
+			"text-area",
+			"#303030",
+			"contact",
+			"hover",
 			"prj-img",
 			"hoover",
 			"mous",
@@ -232,6 +238,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"$background-gray",
 			"assertEqual"
 		],
 		"reverse": false,
@@ -243,7 +250,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -251,15 +258,15 @@
 					"file": "static/sass/screen.sass",
 					"settings":
 					{
-						"buffer_size": 8351,
+						"buffer_size": 8674,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4849,
-								4849
+								1161,
+								1163
 							]
 						],
 						"settings":
@@ -269,7 +276,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3058.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -279,15 +286,15 @@
 					"file": "views/default/contact.html",
 					"settings":
 					{
-						"buffer_size": 923,
+						"buffer_size": 1524,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								227,
-								560
+								842,
+								842
 							]
 						],
 						"settings":
@@ -325,7 +332,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 40.0,
+						"translation.y": 24.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -335,15 +342,15 @@
 					"file": "views/default/index.html",
 					"settings":
 					{
-						"buffer_size": 1654,
+						"buffer_size": 686,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								581,
-								587
+								427,
+								685
 							]
 						],
 						"settings":
@@ -352,7 +359,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 181.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -362,15 +369,15 @@
 					"file": "views/default/galerie.html",
 					"settings":
 					{
-						"buffer_size": 2474,
+						"buffer_size": 2425,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1720,
-								1720
+								1825,
+								1825
 							]
 						],
 						"settings":
@@ -379,7 +386,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 336.0,
+						"translation.y": 48.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -422,8 +429,8 @@
 						"selection":
 						[
 							[
-								1971,
-								1971
+								1410,
+								1410
 							]
 						],
 						"settings":
@@ -476,8 +483,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								612,
+								612
 							]
 						],
 						"settings":
@@ -495,15 +502,15 @@
 					"file": "models/db.py",
 					"settings":
 					{
-						"buffer_size": 4515,
+						"buffer_size": 4505,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2871,
-								2871
+								3201,
+								3201
 							]
 						],
 						"settings":
@@ -513,7 +520,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 720.0,
+						"translation.y": 384.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -552,10 +559,6 @@
 		]
 	},
 	"menu_visible": true,
-	"output.exec":
-	{
-		"height": 104.0
-	},
 	"replace":
 	{
 		"height": 62.0
