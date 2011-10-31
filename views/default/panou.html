@@ -1,5 +1,7 @@
 {{=IMG(_src=URL('download', args=pic.image), _alt=pic.title or pic.description, _id='poza-mare')}}
-{{=DIV(pic.description, _class='overlay')}}
+{{if pic.description or pic.title:}}
+{{=DIV(pic.description or pic.title, _class='overlay')}}
+{{pass}}
 <script type="text/javascript">
 $("#panou>img").load(function(){
 	$("#panou>img").css("top", ($("#panou").height() - $("#panou>img").height())/2);
