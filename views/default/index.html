@@ -24,12 +24,8 @@
 <script type="text/javascript">
 	$(function(){
 		$("img.prj-img").hover(
-  			function () {
-    			$(this).parent("a.galerie").siblings(".overlay").slideDown("fast");
-  			}, 
-  			function () {
-    			$(this).parent("a.galerie").siblings(".overlay").slideUp("fast");
-  			}
+  			function () {$(this).parent("a.galerie").siblings(".overlay").slideDown("fast");}, 
+  			function () {$(this).parent("a.galerie").siblings(".overlay").slideUp("fast");}
 		);	
 		$("#home-link").addClass('current');
 	});

@@ -8,13 +8,9 @@ $("#panou>img").load(function(){
 	$("#panou>img").css("left", ($("#panou").width() - $("#panou>img").width())/2);
 	$("#counter").text("{{=counter}}")
 	$("#panou").hover(
-  			function () {  				
-    			$(this).children(".overlay").slideDown("fast");
-  			}, 
-  			function () {
-    			$(this).children(".overlay").slideUp("fast");
-  			}
-		);	
+		function () {$(this).children(".overlay").slideDown("fast");}, 
+		function () {$(this).children(".overlay").slideUp("fast");}
+	);	
 	hideActivity();
 });
 </script>
