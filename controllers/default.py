@@ -35,7 +35,7 @@ def index():
         pic = db(query).select().first()
         if not pic: pic = db(db.picture.project==p.id).select().first() # get the first thumbnail
         if pic:
-            divs.append(DIV(A(IMG(_src=URL('download', args=pic.thumb), _alt=p.name +' picture', _title=str(p.year) + ": " + p.description, _class="prj-img"), _href=URL('galerie', args=p.id, vars={'tag': tag_id}),_class='galerie'), _id=ids[i%items_per_page]))
+            divs.append(DIV(A(IMG(_src=URL('download', args=pic.thumb), _alt=p.name +' picture', _class="prj-img"), _href=URL('galerie', args=p.id, vars={'tag': tag_id}),_class='galerie'),DIV(str(p.year) + ": " + p.description, _class="overlay"), _id=ids[i%items_per_page]))
         else: # if project has no pictures
             divs.append(DIV(A('No picture for project %s' % p.name, _href=URL('galerie', args=p.id, vars={'tag': tag_id}),_class='galerie'), _id=ids[i%items_per_page]))
     return dict(divs=divs, page=page,items_per_page=items_per_page, max_pages=max_pages)
