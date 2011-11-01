@@ -10,11 +10,19 @@
   			{{=form.custom.end}}
 		{{else:}}
 			<h1>{{=project.upper()}}</h1>
-			<ol>
+			<table>
+				<tbody>
+				{{tr_classes = ('odd','even')}}
+				{{i=1}}
 				{{for f, size in files:}}
-				<li>{{=A(f + ' ' + size, _href=URL('static', os.path.join(dirname,f)))}}</li>
+					<tr class="{{=tr_classes[i%2]}}">
+						<td>{{=A(f, _href=URL('static', os.path.join(dirname,f)))}}</td>
+						<td>{{=size}}</td>
+					</tr>
+					{{i+=1}}
 				{{pass}}
-			</ol>
+				</tbody>
+			</table>
 		{{pass}}
 	</div>
 </div>
@@ -22,5 +30,6 @@
 <script type="text/javascript">
 $(function(){
     $("#access-link").addClass('current');
+    $("#links>li:last").addClass('active');
 });
 </script>

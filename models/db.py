@@ -71,6 +71,7 @@ db.define_table('about',
     Field('address', 'text', represent=lambda d: MARKMIN(d), comment="You can use markmin syntax, see here: http://web2py.com/examples/static/markmin.html"),
     Field('claudiu', 'upload', required=True),
     Field('tibi', 'upload', required=True),
+    Field('news', 'text'),
 )
 
 def make_gray(pictureImg):
@@ -90,6 +91,7 @@ def make_gray(pictureImg):
 a0,a1,a2 = request.args(0), request.args(1), request.args(2)
 active_projects_query = (db.project.is_active == True)
 project_pictures_query = (db.project.id == db.picture.project)
+abo = db(db.about).select().first()
 
 plugins.instant_admin.extra_sidebar_title = "Client access"
 plugins.instant_admin.extra_sidebar = [
