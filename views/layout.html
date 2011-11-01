@@ -71,17 +71,19 @@
 	  </div>
 	  <!-- content -->
 	  <div id="footer">ex studio &#169; 2011</div><!-- footer -->
+	  {{if abo.news:}}
+	  <div id="news">{{=abo.news}}</div>
+	  {{pass}}
 	</div><!-- zona1 -->
 	<div id="zona2"></div>
 	<div id="zona3"></div>
 	<div id="zona4"></div>
-  <div id="trei-cinci">
-<div id="links">
-  <a id="home-link" class="text-show" href="{{=URL('index')}}"></a><span class="hidden-text">Acasa</span><br/>
-  <a id="contact-link" class="text-show" href="{{=URL('contact')}}"></a><span class="hidden-text">Contact</span><br/>
-  <a id="access-link" class="text-show" href="{{=URL('access')}}"></a><span class="hidden-text">Acces clienti</span>
-</div>
-</div>
+  <div id="trei-unu">
+	<ul id="links">  
+  		<li><a id="contact-link" class="text-show" href="{{=URL('contact')}}">{{=T('contact')}}</a></li>
+  		<li><a id="access-link" class="text-show" href="{{=URL('access')}}">{{=T('acces clienti')}}</a></li>
+	</ul>
+  </div>
       </div><!-- page -->
       <div style="clear: both;"></div><!-- Clear the divs -->
     </div><!-- container -->

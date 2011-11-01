@@ -1,9 +1,10 @@
 @import compass/reset
-@import "compass/typography/links/link-colors"
-@import "compass/typography/lists/bullets"
-@import "compass/css3/border-radius"
-@import "compass/css3/opacity"
-@import "compass/css3/text-shadow"
+@import compass/typography/links/link-colors
+@import compass/typography/lists/bullets
+@import compass/css3/border-radius
+@import compass/css3/opacity
+@import compass/css3/text-shadow
+@import compass/utilities/tables
 
 $gutter_width: 171px
 $gutter_height: 85px
@@ -12,6 +13,7 @@ $padding-contact: 0
 
 $light-grey: #adadad
 $background-gray: #303030
+$color: #6c6c6c
 $red:  #a5132a
 $font-family: Arial
 $font-size: 12px
@@ -73,43 +75,47 @@ textarea
     font-family: $font-family
     resize: none
 
-ul#menu
-    padding-top: 2%
+@mixin menu()
+    width: $gutter_width - 1
     li
         list-style-type: none
         a
-            +link-colors(#6c6c6c, $light-grey, $red, #6c6c6c, $light-grey )
+            +link-colors($color, $light-grey, $red, $color, $light-grey )
             text-decoration: None
             font-size: 11px
             line-height: 11px
             font-family: $font-family
             padding-left: 14px
     li.active
-        background-color: #6c6c6c
+        background-color: $color
         padding-bottom: 0px
         a
             color: $light-grey
 
-#years
-    padding-top: 2%
-    a
-        padding-left: 14px
-        font-size: 10px
-        line-height: 10px
-        font-family: $font-family
-        +link-colors(#6c6c6c, $red, $light-grey, #6c6c6c, $light-grey)
-        text-decoration: None
+ul#menu
+    padding-top: 5%
+    +menu
+ul#links         
+    padding-top: $square_side - 40
+    +menu    
 
 .small
     font-size: 80%
 
-#footer
+@mixin bottom($left, $size)
     position: absolute
-    font-size: 9px
-    color: #6c6c6c
+    font-size: $size
+    color: $color
     font-family: $font-family
-    top: $gutter_height + $square_side*2 + 1
-    left: 14px
+    top: $gutter_height*2 + $square_side*2 - 13       
+    left: $left
+
+#footer
+    +bottom(14px, 9px)
+
+#news
+    +bottom($gutter_width + 14px, 11px)
+    width: $square_side * 3 - 30
 
 #logo-img
     position: absolute
@@ -208,8 +214,9 @@ div.address
     background-color: $background-gray
     +square($gutter_width, $gutter_height)
     height: $square_side * 2 - 2
+    overflow: auto
     p
-        margin-bottom: 1em
+        padding: 10px 10px 0px 10px        
 
 div#trimite
     margin: 0
@@ -287,46 +294,7 @@ div.flash
     font-size: .8em
     padding-left: 10px
     margin-top: 2px
-    color: #6c6c6c
-
-#links
-    margin-top: $square_side - 127
-    a
-        text-decoration: none
-
-.hidden-text
-    font-family: $font-family
-    color: #6c6c6c
-    font-size: .8em
-    display: none
-    position: relative
-    padding-left: 3px
-    bottom: 15px
-
-#home-link, #contact-link, #access-link
-    width: 42px
-    height: 41px
-    display: inline-block
-
-#home-link
-    background-image: url("../images/home_activ.png")
-
-#home-link.current
-    background-image: url("../images/home_inactiv.png")
-
-#contact-link
-    background-image: url("../images/contact_activ.png")
-    margin-top: -2px
-
-#contact-link.current
-    background-image: url("../images/contact_inactiv.png")
-
-#access-link
-    background-image: url("../images/acces_activ.png")
-    margin-top: -2px
-
-#access-link.current
-    background-image: url("../images/acces_inactiv.png")
+    color: $color
 
 #about_us
     font-size: $font-size
@@ -372,28 +340,31 @@ div.flash
     margin-left: -31px
     z-index: 2
 
-span.current-thing
+span.current-thing 
     font-family: $font-family
-    font-size: 11px
-    color: #6C6C6C
+    font-size: 12px
+    color: $color
     position: relative
     margin-left: 10px
     top: $gutter_height - 48
     a
-        +link-colors(#6c6c6c, $light-grey, $red, #6c6c6c, $light-grey )
+        +link-colors($color, $light-grey, $red, $color, $light-grey )
         text-decoration: None
+        margin-left: 10px
 
 #project-files
+    height: $square_side * 2 - 2
+    overflow: auto
     h1
         margin-left: 10px
         font-family: $font-family
-        font-size: 11px
+        font-size: 12px
         margin-top: 20px
         margin-bottom: 10px
     a
         font-family: $font-family
         font-size: 11px
-        +link-colors(#6c6c6c, $light-grey, $red, #6c6c6c, $light-grey )    
+        +link-colors($color, $light-grey, $red, $color, $light-grey )    
     input[type=submit]
         background-color: $red
         color: $background-gray
@@ -404,6 +375,16 @@ span.current-thing
         margin-left: 10px
     ol>li
         line-height: 1.2em
+    table
+        width: $square_side - 1
+        +table-scaffolding
+        +alternating-rows-and-columns(#5C5C5C, #4D4D4D, #222)
+        tr
+            height: 20px
+        tr>td, tr>td>a
+            color: #969696
+            font-family: $font-family
+            font-size: 12px
 
 .undercover
     display: none
