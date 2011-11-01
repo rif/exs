@@ -75,6 +75,13 @@
 		
 		// Fade in images so there isn't a color "pop" document load and then on window load
 		grayscale($(".pic"));
-		
+		$(".pic").fadeIn(500);		
+		// Fade image 
+		$(".pic").hover(
+			function () {grayscale.reset($(this));}, 
+			function () {grayscale($(this));}
+		);	
 	});
+	
+
 </script>
