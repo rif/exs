@@ -114,8 +114,8 @@ ul#links
     +bottom(14px, 9px)
 
 #news
-    +bottom($gutter_width + 14px, 11px)
-    width: $square_side * 3 - 30
+    +bottom($gutter_width + 1, 11px)
+    width: $square_side * 3 - 4
     a
         +link-colors($color, $light-grey, $red, $color, $light-grey )
 
@@ -438,3 +438,18 @@ span.current-thing
 
 #panou>div.overlay
     width: $square_side * 2 - 20
+
+/* CSS for the scrollers */
+div.horizontal_scroller, div.vertical_scroller
+    position: relative
+    height: 1em
+    width: 500px
+    display: block
+    overflow: hidden
+
+div.scrollingtext
+    position: absolute
+    white-space: nowrap
+    font-family: $font-family
+    font-size: 11px
+    

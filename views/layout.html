@@ -41,6 +41,7 @@
   <![endif]-->
     {{include 'web2py_ajax.html'}}    
     <script src="{{=URL('static','js/grayScale.js')}}"></script>
+    <script src="{{=URL('static','js/jquery.Scroller-1.0.min.js')}}"></script>
   </head>
 
   <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
@@ -73,7 +74,11 @@
 	  <!-- content -->
 	  <div id="footer">ex studio &#169; 2011</div><!-- footer -->
 	  {{if abo.news:}}
-	  <div id="news">{{=MARKMIN(abo.news)}}</div>
+	  <div id="news" class="horizontal_scroller">
+	  	<div class="scrollingtext">
+	  		{{=MARKMIN(abo.news)}}
+	  	</div>
+	  	</div>
 	  {{pass}}
 	</div><!-- zona1 -->
 	<div id="zona2"></div>
@@ -116,6 +121,16 @@
           function(){$(this).next('span.hidden-text').fadeIn();},
           function(){$(this).next('span.hidden-text').fadeOut();}
         );
+        $('.horizontal_scroller').SetScroller({	velocity: 	 60,
+											direction: 	 'horizontal',
+											startfrom: 	 'right',
+											loop:		 'infinite',
+											movetype: 	 'linear',
+											onmouseover: 'pause',
+											onmouseout:  'play',
+											onstartup: 	 'play',
+											cursor: 	 'pointer'
+										});
       });
       $(window).resize(function() {
         fill_screen();
