@@ -54,9 +54,9 @@ db.define_table('project',
 
 db.define_table('picture',
     Field('project', db.project),
-    Field('image', 'upload', required=True, notnull=True),
-    Field('thumb', 'upload', required=True, notnull=True),
-    Field('gray', 'upload', compute=lambda r: make_gray(r.thumb)),
+    Field('image', 'upload', required=True, notnull=True, comment='Dimensiune 680x680 maxim'),
+    Field('thumb', 'upload', required=True, notnull=True, comment='Dimensiune 340x340'),
+    Field('gray', 'upload', compute=lambda r: make_small_for_gray(r.thumb), comment='Autogenerat la 84x84'),
     Field('title'),
     Field('description', 'text', represent=lambda d: MARKMIN(d)),
     Field('representative', 'boolean', comment='Will be display as cover for project'),
@@ -69,15 +69,15 @@ db.define_table('about',
     Field('email', requires=IS_EMAIL()),
     Field('description', 'text', represent=lambda d: MARKMIN(d), length=2048, comment="You can use markmin syntax, see here: http://web2py.com/examples/static/markmin.html"),
     Field('address', 'text', represent=lambda d: MARKMIN(d), comment="You can use markmin syntax, see here: http://web2py.com/examples/static/markmin.html"),
-    Field('claudiu', 'upload', required=True),
+    Field('claudiu', 'upload', required=True, comment='Dimensiune 340x340 maxim'),
     Field('tibi', 'upload', required=True),
     Field('news', 'text', represent=lambda d: MARKMIN(d), comment="You can use markmin syntax, see here: http://web2py.com/examples/static/markmin.html"),
 )
 
-def make_gray(pictureImg):
+def make_small_for_gray(pictureImg):
     try:
         import uuid
-        from PIL import Image, ImageOps
+        from PIL import Image
     except: return
     size = 84, 84
     im=Image.open(request.folder + 'uploads/' + pictureImg)    
