@@ -16,7 +16,7 @@
 				{{i=1}}
 				{{for f, size in files:}}
 					<tr class="{{=tr_classes[i%2]}}">
-						<td>{{=A(f, _href=URL('static', os.path.join(dirname,f)))}}</td>
+						<td class="long">{{=A(f, _href=URL('static', os.path.join(dirname,f)))}}</td>
 						<td>{{=size}}</td>
 					</tr>
 					{{i+=1}}
