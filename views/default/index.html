@@ -5,20 +5,22 @@
 {{=div}}
 {{pass}}
 
-<div id="doi-cinci">
+<div id="unu-patru">
+<div id="counter">
+	<span id="text">
+	{{=page+1}}/{{=max_pages}}
+	</span>
+</div>
 {{if page:}}
 <a id="prev" href="{{=URL(args=[page-1])}}"></a>
 {{else:}}
-<a id="prev" href=""></a>
+<a id="prev" class="inactive" href=""></a>
 {{pass}}
 {{if len(divs)>items_per_page:}}
 <a id="next" href="{{=URL(args=[page+1])}}"></a>
 {{else:}}
-<a id="next" href=""></a>
+<a id="next" class="inactive" href=""></a>
 {{pass}}
-<div id="counter">
-{{=page+1}}/{{=max_pages}}
-</div>
 </div>
 
 <script type="text/javascript">

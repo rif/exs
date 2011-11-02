@@ -11,3 +11,4 @@ uploads/
 databases/
 static/.sass-cache/
 .directory
+static/projects/

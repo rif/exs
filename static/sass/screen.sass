@@ -107,7 +107,7 @@ ul#links
     font-size: $size
     color: $color
     font-family: $font-family
-    top: $gutter_height*2 + $square_side*2 - 13       
+    top: $gutter_height*2 + $square_side*2 - 20       
     left: $left
 
 #footer
@@ -116,6 +116,8 @@ ul#links
 #news
     +bottom($gutter_width + 14px, 11px)
     width: $square_side * 3 - 30
+    a
+        +link-colors($color, $light-grey, $red, $color, $light-grey )
 
 #logo-img
     position: absolute
@@ -216,7 +218,9 @@ div.address
     height: $square_side * 2 - 2
     overflow: auto
     p
-        padding: 10px 10px 0px 10px        
+        padding: 10px 10px 0px 10px
+    a
+        +link-colors($color, $light-grey, $red, $color, $light-grey )      
 
 div#trimite
     margin: 0
@@ -253,48 +257,63 @@ div.flash
 
 #next-detail, #prev-detail
     display: block
-    width: 30px
-    height: 38px
+    width: 100px
+    height: 100px
     position: absolute
     z-index: 3
 
 #next-detail
     background-image: url("../images/next.png")
     right: 0px
-    margin-right: 20px  
-    margin-top: -20px
+    margin-right: 25px  
+    margin-top: -55px
     &:hover
         background-image: url("../images/next_hover.png")
 
 #prev-detail
     background-image: url("../images/back.png")
-    margin-left: 20px
-    margin-top: -20px
+    margin-left: 25px
+    margin-top: -55px
     &:hover
         background-image: url("../images/back_hover.png")
 
 #next, #prev
-    display: block
-    width: 42px
-    height: 41px
+    display: inline-block
+    position: absolute
+    top: $gutter_height - 43
+    width: 43px
+    height: 42px
 
 #next
     background-image: url("../images/buton_jos.png")
-    margin-top: 1px
-    &:hover
+    left: $square_side - 88
+    &.inactive
         background-image: url("../images/buton_jos_inactiv.png")
+    &:hover
+        background-image: url("../images/buton_jos_hover.png")
 
 #prev
     background-image: url("../images/buton_sus.png")
-    &:hover
+    left: $square_side - 44
+    &.inactive
         background-image: url("../images/buton_sus_inactiv.png")
+    &:hover
+        background-image: url("../images/buton_sus_hover.png")
 
-#counter
-    font-family: $font-family
-    font-size: .8em
-    padding-left: 10px
-    margin-top: 2px
-    color: $color
+#counter    
+    position: absolute
+    left: $square_side - 131
+    top: $gutter_height - 43
+    display: inline-block
+    width: 42px
+    height: 42px
+    background-image: url("../images/nr_pagini.png")        
+    #text
+        position: absolute
+        font-family: $font-family
+        font-size: .8em
+        color: $color
+        margin: 14px 0 0 12px
 
 #about_us
     font-size: $font-size
