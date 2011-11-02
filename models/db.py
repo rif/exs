@@ -79,11 +79,9 @@ def make_gray(pictureImg):
         import uuid
         from PIL import Image, ImageOps
     except: return
-    im=Image.open(request.folder + 'uploads/' + pictureImg)
-    if im.mode != "L": im = im.convert("L")
-    # optional: apply contrast enhancement here, e.g.
-    im = ImageOps.autocontrast(im)
-    im = im.convert("RGB")
+    size = 84, 84
+    im=Image.open(request.folder + 'uploads/' + pictureImg)    
+    im.thumbnail(size)
     grayName='picture.gray.%s.jpg' % (uuid.uuid4())
     im.save(request.folder + 'uploads/' + grayName, 'JPEG')
     return grayName
