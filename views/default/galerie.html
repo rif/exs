@@ -4,7 +4,7 @@
 	<div id="galerie">
 		<div id="grid">
 		{{for index,pic in enumerate(pics):}}
-			{{=A(IMG(_src=URL('download', args=pic.gray), _alt=pic.title, _class='pic'), _href=URL('panou', args=(pic.id, index+1, len(pics))))}}					
+			{{=A(DIV(_src=URL('download', args=pic.gray), _class='pic'), _href=URL('panou', args=(pic.id, index+1, len(pics))))}}					
 		{{pass}}
 		</div>
 	</div>
@@ -71,20 +71,10 @@
 			updatePrevNext($("#grid>a[href='"+clickedLink.attr("href")+"']"));
 			e.preventDefault();
 		});
+		$("#grid .pic").each(function(){
+			console.log("test");
+			$(this).css("background-image", "url("+$(this).attr("src")+")");
+		});
 	});	
-	// On window load. This waits until images have loaded which is essential
-	$(window).load(function(){
-		
-		// Fade in images so there isn't a color "pop" document load and then on window load
-		grayscale.prepare($('#grid .pic'));
-		grayscale($("#grid .pic"));
-		$("#grid .pic").fadeIn(500);				
-		// Fade image 
-		$("#grid .pic").hover(
-			function () {grayscale.reset($(this));}, 
-			function () {grayscale($(this));}
-		);	
-	});
-	
 
 </script>
