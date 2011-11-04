@@ -87,13 +87,26 @@ db.define_table('about',
 def make_small_for_gray(pictureImg):
     try:
         import uuid
-        from PIL import Image
+        from PIL import Image, ImageOps
     except: return
-    size = 84, 84
+    width = height = 84    
+    size = width, height
+    master = Image.new(mode='RGBA',size=(width * 2, height), color=(0,0,0,0))  # fully transparent
+    
+    #resize de image
     im=Image.open(request.folder + 'uploads/' + pictureImg)    
-    im.thumbnail(size)
+    im.thumbnail(size)    
+    master.paste(im,(0,0))
+    
+    #grayscale it
+    if im.mode != "L": im = im.convert("L")    
+    im = ImageOps.autocontrast(im) # optional: apply contrast enhancement here, e.g.
+    im = im.convert("RGB")    
+    master.paste(im,(width,0))    
+    
+    #save it
     grayName='picture.gray.%s.jpg' % (uuid.uuid4())
-    im.save(request.folder + 'uploads/' + grayName, 'JPEG')
+    master.save(request.folder + 'uploads/' + grayName, 'JPEG', transparency=0 )
     return grayName
 
 a0,a1,a2 = request.args(0), request.args(1), request.args(2)

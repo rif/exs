@@ -27,7 +27,7 @@
 			"file": "static/sass/screen.sass",
 			"settings":
 			{
-				"buffer_size": 10021,
+				"buffer_size": 10364,
 				"line_ending": "Unix"
 			}
 		},
@@ -35,7 +35,7 @@
 			"file": "views/default/contact.html",
 			"settings":
 			{
-				"buffer_size": 1483,
+				"buffer_size": 1585,
 				"line_ending": "Unix"
 			}
 		},
@@ -43,15 +43,18 @@
 			"file": "views/layout.html",
 			"settings":
 			{
-				"buffer_size": 6004,
+				"buffer_size": 6420,
 				"line_ending": "Unix"
 			}
 		},
 		{
+			"contents": "hg {{extend 'layout.html'}}\n\n{{for i,div in enumerate(divs):}}\n{{if i==items_per_page: break}}\n{{=div}}\n{{pass}}\n\n<div id=\"unu-patru\">\n<div id=\"counter\">\n	<span id=\"text\">\n	{{=page+1}}/{{=max_pages}}\n	</span>\n</div>\n{{if page:}}\n<a id=\"prev\" href=\"{{=URL(args=[page-1])}}\"></a>\n{{else:}}\n<a id=\"prev\" class=\"inactive\" href=\"\"></a>\n{{pass}}\n{{if len(divs)>items_per_page:}}\n<a id=\"next\" href=\"{{=URL(args=[page+1])}}\"></a>\n{{else:}}\n<a id=\"next\" class=\"inactive\" href=\"\"></a>\n{{pass}}\n</div>\n\n<script type=\"text/javascript\">\n	$(function(){\n		$(\"img.prj-img\").hover(\n  			function () {$(this).parent(\"a.galerie\").siblings(\".overlay\").slideDown(\"fast\");}, \n  			function () {$(this).parent(\"a.galerie\").siblings(\".overlay\").slideUp(\"fast\");}\n		);	\n		$(\"#home-link\").addClass('current');\n	});\n</script>\n",
 			"file": "views/default/index.html",
+			"file_size": 796,
+			"file_write_time": 1320411433000000,
 			"settings":
 			{
-				"buffer_size": 796,
+				"buffer_size": 799,
 				"line_ending": "Unix"
 			}
 		},
@@ -59,7 +62,7 @@
 			"file": "views/default/galerie.html",
 			"settings":
 			{
-				"buffer_size": 2402,
+				"buffer_size": 2510,
 				"line_ending": "Unix"
 			}
 		},
@@ -67,7 +70,7 @@
 			"file": "views/default/panou.html",
 			"settings":
 			{
-				"buffer_size": 649,
+				"buffer_size": 820,
 				"line_ending": "Unix"
 			}
 		},
@@ -75,7 +78,7 @@
 			"file": "controllers/default.py",
 			"settings":
 			{
-				"buffer_size": 4726,
+				"buffer_size": 5111,
 				"line_ending": "Unix"
 			}
 		},
@@ -91,7 +94,7 @@
 			"file": "views/default/access.html",
 			"settings":
 			{
-				"buffer_size": 826,
+				"buffer_size": 836,
 				"line_ending": "Unix"
 			}
 		},
@@ -99,7 +102,7 @@
 			"file": "models/db.py",
 			"settings":
 			{
-				"buffer_size": 4725,
+				"buffer_size": 5327,
 				"line_ending": "Unix"
 			}
 		}
@@ -192,11 +195,8 @@
 	},
 	"find_in_files":
 	{
-		"height": 88.0,
-		"include_history":
-		[
-		],
-		"location_history":
+		"height": 0.0,
+		"where_history":
 		[
 		]
 	},
@@ -243,7 +243,7 @@
 		],
 		"reverse": false,
 		"show_context": true,
-		"use_buffer": true,
+		"use_buffer2": true,
 		"whole_word": false,
 		"wrap": true
 	},
@@ -258,7 +258,7 @@
 					"file": "static/sass/screen.sass",
 					"settings":
 					{
-						"buffer_size": 10021,
+						"buffer_size": 10364,
 						"regions":
 						{
 						},
@@ -272,7 +272,7 @@
 						"settings":
 						{
 							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
-							"tab_size": 4.0,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -286,7 +286,7 @@
 					"file": "views/default/contact.html",
 					"settings":
 					{
-						"buffer_size": 1483,
+						"buffer_size": 1585,
 						"regions":
 						{
 						},
@@ -300,7 +300,7 @@
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2.0,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -314,7 +314,7 @@
 					"file": "views/layout.html",
 					"settings":
 					{
-						"buffer_size": 6004,
+						"buffer_size": 6420,
 						"regions":
 						{
 						},
@@ -328,7 +328,7 @@
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2.0,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -342,15 +342,15 @@
 					"file": "views/default/index.html",
 					"settings":
 					{
-						"buffer_size": 796,
+						"buffer_size": 799,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								3,
+								3
 							]
 						],
 						"settings":
@@ -369,7 +369,7 @@
 					"file": "views/default/galerie.html",
 					"settings":
 					{
-						"buffer_size": 2402,
+						"buffer_size": 2510,
 						"regions":
 						{
 						},
@@ -396,7 +396,7 @@
 					"file": "views/default/panou.html",
 					"settings":
 					{
-						"buffer_size": 649,
+						"buffer_size": 820,
 						"regions":
 						{
 						},
@@ -422,7 +422,7 @@
 					"file": "controllers/default.py",
 					"settings":
 					{
-						"buffer_size": 4726,
+						"buffer_size": 5111,
 						"regions":
 						{
 						},
@@ -436,7 +436,7 @@
 						"settings":
 						{
 							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4.0,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -476,7 +476,7 @@
 					"file": "views/default/access.html",
 					"settings":
 					{
-						"buffer_size": 826,
+						"buffer_size": 836,
 						"regions":
 						{
 						},
@@ -503,7 +503,7 @@
 					"file": "models/db.py",
 					"settings":
 					{
-						"buffer_size": 4725,
+						"buffer_size": 5327,
 						"regions":
 						{
 						},
@@ -517,7 +517,7 @@
 						"settings":
 						{
 							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4.0,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
