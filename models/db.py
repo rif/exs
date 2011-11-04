@@ -15,6 +15,9 @@ else:                                         # else use a normal relational dat
 # none otherwise. a pattern can be 'controller/function.extension'
 response.generic_patterns = ['*'] if request.is_local else []
 
+T.set_current_languages('ro', 'ro-ro')
+T.force(session.lang)
+
 
 from gluon.tools import Mail, Auth, Crud, Service, PluginManager, prettydate
 mail = Mail()                                  # mailer
@@ -40,13 +43,16 @@ crud.settings.auth = None        # =auth to enforce authorization on crud
 
 db.define_table('tag',
     Field('name'),
+    Field('name_en'),
     Field('order_index', 'integer'),
     format='%(name)s'
  )
 
 db.define_table('project',
     Field('name'),
+    Field('name_en'),
     Field('description', 'text', represent=lambda d: MARKMIN(d)),
+    Field('description_en', 'text', represent=lambda d: MARKMIN(d)),
     Field('year', 'integer'),
     auth.signature,
     format='%(name)s'
@@ -58,7 +64,9 @@ db.define_table('picture',
     Field('thumb', 'upload', required=True, notnull=True, comment='Dimensiune 340x340'),
     Field('gray', 'upload', compute=lambda r: make_small_for_gray(r.thumb), comment='Autogenerat la 84x84'),
     Field('title'),
+    Field('title_en'),
     Field('description', 'text', represent=lambda d: MARKMIN(d)),
+    Field('description_en', 'text', represent=lambda d: MARKMIN(d)),
     Field('representative', 'boolean', comment='Will be display as cover for project'),
     Field('tags', 'list:reference tag'),
     auth.signature,
@@ -68,10 +76,12 @@ db.define_table('picture',
 db.define_table('about',
     Field('email', requires=IS_EMAIL()),
     Field('description', 'text', represent=lambda d: MARKMIN(d), length=2048, comment="You can use markmin syntax, see here: http://web2py.com/examples/static/markmin.html"),
+    Field('description_en', 'text', represent=lambda d: MARKMIN(d), length=2048, comment="You can use markmin syntax, see here: http://web2py.com/examples/static/markmin.html"),
     Field('address', 'text', represent=lambda d: MARKMIN(d), comment="You can use markmin syntax, see here: http://web2py.com/examples/static/markmin.html"),
     Field('claudiu', 'upload', required=True, comment='Dimensiune 340x340 maxim'),
     Field('tibi', 'upload', required=True),
     Field('news', 'text', represent=lambda d: MARKMIN(d), comment="You can use markmin syntax, see here: http://web2py.com/examples/static/markmin.html"),
+    Field('news_en', 'text', represent=lambda d: MARKMIN(d), comment="You can use markmin syntax, see here: http://web2py.com/examples/static/markmin.html"),
 )
 
 def make_small_for_gray(pictureImg):

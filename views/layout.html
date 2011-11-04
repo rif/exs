@@ -58,14 +58,23 @@
       <div id="page"> <!-- Here my central body -->
 
 	<div id="zona1">
-    <a href="{{=URL('index')}}"><img id="logo-img" src="{{=URL('static', 'images/logo_exs.png')}}" alt="logo exs"/></a>
+	<div id="unu-doi">
+    	<a id="logo" href="{{=URL('index')}}"><img src="{{=URL('static', 'images/logo_exs.png')}}" alt="logo exs"/></a>
+    </div>
 	  <!-- content -->
 	  <div id="content">
+	  	<div id="unu-unu">
+	  		<div id="langs">
+				<a href="{{=URL('force_language', args='en-us')}}">EN</a> / <a href="{{=URL('force_language', args='ro-ro')}}">RO</a>
+			</div>	  		
+	  	</div>
       <div id="doi-unu">
   <ul id="menu">
-      <li><a href="{{=URL('index')}}">toate proiectele</a></li>
+      <li><a href="{{=URL('index')}}">{{=T('toate proiectele')}}</a></li>
       {{for tag in db(db.tag).select(orderby=db.tag.order_index):}}
-      <li {{if str(tag.id)==request.vars.tag:}}class="active"{{pass}}><a href="{{=URL('index', vars={'tag':tag.id})}}">{{=tag.name}}</a></li>
+      <li {{if str(tag.id)==request.vars.tag:}}class="active"{{pass}}><a href="{{=URL('index', vars={'tag':tag.id})}}">      	
+      	{{if session.lang=='en-us' and tag.name_en:}}{{=tag.name_en}}{{else:}}{{=tag.name}}{{pass}}
+      	</a></li>
       {{pass}}
   </ul>
 </div>
@@ -76,7 +85,7 @@
 	  {{if abo.news:}}
 	  <div id="news" class="horizontal_scroller">
 	  	<div class="scrollingtext">
-	  		{{=MARKMIN(abo.news)}}
+	  		{{if session.lang=='en-us' and abo.news:}}{{=MARKMIN(abo.news_en)}}{{else:}}{{=MARKMIN(abo.news)}}{{pass}}
 	  	</div>
 	  	</div>
 	  {{pass}}

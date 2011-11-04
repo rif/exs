@@ -1,5 +1,8 @@
 {{=IMG(_src=URL('download', args=pic.image), _alt=pic.title or pic.description, _id='poza-mare')}}
-{{if pic.description or pic.title:}}
+{{if session.lang=='en-us' and (pic.description_en or pic.title_en):}}
+{{=DIV(pic.description_en or pic.title_en, _class='overlay')}}
+{{pass}}
+{{if session.lang=='ro-ro' and (pic.description or pic.title):}}
 {{=DIV(pic.description or pic.title, _class='overlay')}}
 {{pass}}
 <script type="text/javascript">

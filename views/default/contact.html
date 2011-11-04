@@ -8,7 +8,7 @@
 </div>
 
 <div id="descriere">
-{{=MARKMIN(abo.description)}}
+	{{if session.lang=='en-us' and abo.description_en:}}{{=MARKMIN(abo.description_en)}}{{else:}}{{=MARKMIN(abo.description)}}{{pass}}
 </div>
 
 <div id="doi-trei">
