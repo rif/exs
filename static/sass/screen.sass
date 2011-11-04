@@ -119,10 +119,12 @@ ul#links
     a
         +link-colors($color, $light-grey, $red, $color, $light-grey )
 
-#logo-img
-    position: absolute
-    top: $gutter_height - 43
-    left: $gutter_width
+#logo
+    width: 100px
+    width: 100px
+    z-index: 20    
+    img
+        padding-top: $gutter_height - 43    
 
 #ten-pixels-padder
     padding: 10px
@@ -157,11 +159,18 @@ div.address
     left: $left
     top: $top
 
+#unu-unu
+    +half_height_square(0px, 0px)
+    width: $gutter_width - 1
+
+#unu-doi
+    +half_height_square($gutter_width, 0px)
+
 #unu-trei
-    +half_height_square($gutter_width+ $square_side, 0px)
+    +half_height_square($gutter_width + $square_side, 0px)
 
 #unu-patru
-    +half_height_square($gutter_width+ $square_side*2, 0px)
+    +half_height_square($gutter_width + $square_side*2, 0px)
 
 #doi-unu
     +half_with_square(0px, $gutter_height)
@@ -452,4 +461,11 @@ div.scrollingtext
     white-space: nowrap
     font-family: $font-family
     font-size: 11px
-    
+
+#langs    
+    padding: 14px
+    a
+        font-family: $font-family
+        font-size: 11px
+        +link-colors($color, $light-grey, $red, $color, $light-grey)
+        text-decoration: None

@@ -27,7 +27,7 @@
 			"file": "static/sass/screen.sass",
 			"settings":
 			{
-				"buffer_size": 8693,
+				"buffer_size": 10021,
 				"line_ending": "Unix"
 			}
 		},
@@ -35,7 +35,7 @@
 			"file": "views/default/contact.html",
 			"settings":
 			{
-				"buffer_size": 1524,
+				"buffer_size": 1483,
 				"line_ending": "Unix"
 			}
 		},
@@ -43,7 +43,7 @@
 			"file": "views/layout.html",
 			"settings":
 			{
-				"buffer_size": 5696,
+				"buffer_size": 6004,
 				"line_ending": "Unix"
 			}
 		},
@@ -51,7 +51,7 @@
 			"file": "views/default/index.html",
 			"settings":
 			{
-				"buffer_size": 686,
+				"buffer_size": 796,
 				"line_ending": "Unix"
 			}
 		},
@@ -59,7 +59,7 @@
 			"file": "views/default/galerie.html",
 			"settings":
 			{
-				"buffer_size": 2424,
+				"buffer_size": 2402,
 				"line_ending": "Unix"
 			}
 		},
@@ -67,7 +67,7 @@
 			"file": "views/default/panou.html",
 			"settings":
 			{
-				"buffer_size": 432,
+				"buffer_size": 649,
 				"line_ending": "Unix"
 			}
 		},
@@ -75,7 +75,7 @@
 			"file": "controllers/default.py",
 			"settings":
 			{
-				"buffer_size": 4780,
+				"buffer_size": 4726,
 				"line_ending": "Unix"
 			}
 		},
@@ -91,7 +91,7 @@
 			"file": "views/default/access.html",
 			"settings":
 			{
-				"buffer_size": 612,
+				"buffer_size": 826,
 				"line_ending": "Unix"
 			}
 		},
@@ -99,7 +99,7 @@
 			"file": "models/db.py",
 			"settings":
 			{
-				"buffer_size": 4505,
+				"buffer_size": 4725,
 				"line_ending": "Unix"
 			}
 		}
@@ -258,15 +258,15 @@
 					"file": "static/sass/screen.sass",
 					"settings":
 					{
-						"buffer_size": 8693,
+						"buffer_size": 10021,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5331,
-								5336
+								0,
+								0
 							]
 						],
 						"settings":
@@ -286,15 +286,15 @@
 					"file": "views/default/contact.html",
 					"settings":
 					{
-						"buffer_size": 1524,
+						"buffer_size": 1483,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								842,
-								842
+								0,
+								0
 							]
 						],
 						"settings":
@@ -314,15 +314,15 @@
 					"file": "views/layout.html",
 					"settings":
 					{
-						"buffer_size": 5696,
+						"buffer_size": 6004,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5107,
-								5107
+								0,
+								0
 							]
 						],
 						"settings":
@@ -342,15 +342,15 @@
 					"file": "views/default/index.html",
 					"settings":
 					{
-						"buffer_size": 686,
+						"buffer_size": 796,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								686,
-								686
+								0,
+								0
 							]
 						],
 						"settings":
@@ -369,15 +369,15 @@
 					"file": "views/default/galerie.html",
 					"settings":
 					{
-						"buffer_size": 2424,
+						"buffer_size": 2402,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								875,
-								875
+								0,
+								0
 							]
 						],
 						"settings":
@@ -396,15 +396,15 @@
 					"file": "views/default/panou.html",
 					"settings":
 					{
-						"buffer_size": 432,
+						"buffer_size": 649,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								383,
-								383
+								0,
+								0
 							]
 						],
 						"settings":
@@ -422,15 +422,15 @@
 					"file": "controllers/default.py",
 					"settings":
 					{
-						"buffer_size": 4780,
+						"buffer_size": 4726,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1030,
-								1030
+								0,
+								0
 							]
 						],
 						"settings":
@@ -476,20 +476,21 @@
 					"file": "views/default/access.html",
 					"settings":
 					{
-						"buffer_size": 612,
+						"buffer_size": 826,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								612,
-								612
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -502,15 +503,15 @@
 					"file": "models/db.py",
 					"settings":
 					{
-						"buffer_size": 4505,
+						"buffer_size": 4725,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3201,
-								3201
+								0,
+								0
 							]
 						],
 						"settings":

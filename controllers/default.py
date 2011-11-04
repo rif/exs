@@ -34,24 +34,29 @@ def index():
         pic = db(query).select().first()
         if not pic: pic = db(db.picture.project==p.id).select().first() # get the first thumbnail
         if pic:
-            divs.append(DIV(A(IMG(_src=URL('download', args=pic.thumb), _alt=p.name +' picture', _class="prj-img"), _href=URL('galerie', args=p.id, vars={'tag': tag_id}),_class='galerie'),DIV(str(p.year) + ": " + p.description, _class="overlay"), _id=ids[i%items_per_page]))
+            print session.lang=='en-us' and p.description_en
+            if session.lang=='en-us' and p.description_en:                
+                description = p.description_en
+            else:
+                description = p.description            
+            divs.append(DIV(A(IMG(_src=URL('download', args=pic.thumb), _alt=p.name +' picture', _class="prj-img"), _href=URL('galerie', args=p.id, vars={'tag': tag_id}),_class='galerie'),DIV(str(p.year) + ": " + description, _class="overlay"), _id=ids[i%items_per_page]))
         else: # if project has no pictures
-            divs.append(DIV(A('No picture for project %s' % p.name, _href=URL('galerie', args=p.id, vars={'tag': tag_id}),_class='galerie'), _id=ids[i%items_per_page]))
+            divs.append(DIV(A(T('Nu exista imagini pentru proiectul %s' % (p.name,)), _href=URL('galerie', args=p.id, vars={'tag': tag_id}),_class='galerie'), _id=ids[i%items_per_page]))
     return dict(divs=divs, page=page,items_per_page=items_per_page, max_pages=max_pages)
 
 def contact():
     form = SQLFORM.factory(
-        Field('nume', requires=IS_NOT_EMPTY(), default='Nume'),
-        Field('companie', default='Companie (optional)'),
-        Field('email', requires=IS_EMAIL(error_message=T('adresa de email invalida!')), default='Adresa ta de email'),
-        Field('mesaj', 'text', requires=IS_NOT_EMPTY(), default='Mesaj'),
-        submit_button='Trimite')
+        Field('nume', requires=IS_NOT_EMPTY(), default=T('Nume')),
+        Field('companie', default=T('Companie (optional)')),
+        Field('email', requires=IS_EMAIL(error_message=T('adresa de email invalida!')), default=T('Adresa ta de email')),
+        Field('mesaj', 'text', requires=IS_NOT_EMPTY(), default=T('Mesaj')),
+        submit_button=T('Trimite'))
     if form.accepts(request.vars, session):
-        response.flash = 'multumim! mesaj trimis!'        
+        response.flash = T('multumim! mesaj trimis!')        
         email_to = abo.email if abo else 'exs@mailinator.com'
-        mail.send(email_to, 'Message de la %s(%s)'%(form.vars.nume, form.vars.companie), form.vars.mesaj + "\nreplay-to: " + form.vars.email)
+        mail.send(email_to, T('Message de la %s(%s)'%(form.vars.nume, form.vars.companie)), form.vars.mesaj + "\nreplay-to: " + form.vars.email)
     elif form.errors:
-        response.flash = 'formularul contine erori'
+        response.flash = T('formularul contine erori')
     return locals()
 
 def galerie():
@@ -74,6 +79,10 @@ def user():
 
 def download():
     return response.download(request,db)
+
+def force_language():    
+    session.lang = a0
+    redirect(request.env.http_referer)
 
 def access():
     import os, hashlib

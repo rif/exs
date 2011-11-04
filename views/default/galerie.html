@@ -14,7 +14,7 @@
 </div>
 <div id="trei-trei">
 	<div id="progress">
-		<img src="{{=URL('static', 'images/progress.gif')}}" alt="progress"/>
+		<img src="{{=URL('static', 'images/progress.gif')}}" alt="{{=T('progress')}}"/>
 	</div>
 </div>
 <div id="unu-patru">
@@ -23,7 +23,9 @@
 <div id="unu-trei">  
   <span class="current-thing">
   	{{=T('Proiect')}}:<br/>
-    <a href="{{=URL('galerie', args=project.id)}}">{{=project.name}}</a>
+    <a href="{{=URL('galerie', args=project.id)}}">
+    	{{if session.lang=='en-us' and project.name_en:}}{{=project.name_en}}{{else:}}{{=project.name}}{{pass}}
+    	</a>
   </span>  
 </div>
 
