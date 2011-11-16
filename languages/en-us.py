@@ -66,6 +66,7 @@
 'db': 'db',
 'design': 'design',
 'done!': 'done!',
+'enter a value': 'enter a value',
 'enter an integer between %(min)g and %(max)g': '',
 'export as csv file': 'export as csv file',
 'formularul contine erori': 'the form contains errors',
@@ -86,4 +87,5 @@
 'table': 'table',
 'toate proiectele': 'all projects',
 'unable to parse csv file': 'unable to parse csv file',
+'value not in database': 'value not in database',
 }

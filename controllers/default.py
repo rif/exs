@@ -33,12 +33,9 @@ def index():
           query &= db.picture.representative==True
         pic = db(query).select().first()
         if not pic: pic = db(db.picture.project==p.id).select().first() # get the first thumbnail
-        if pic:
-            print session.lang=='en-us' and p.description_en
-            if session.lang=='en-us' and p.description_en:                
-                description = p.description_en
-            else:
-                description = p.description            
+        if pic:            
+            if session.lang=='en-us' and p.description_en: description = p.description_en
+            else: description = p.description            
             divs.append(DIV(A(IMG(_src=URL('download', args=pic.thumb), _alt=p.name +' picture', _class="prj-img"), _href=URL('galerie', args=p.id, vars={'tag': tag_id}),_class='galerie'),DIV(str(p.year) + ": " + description, _class="overlay"), _id=ids[i%items_per_page]))
         else: # if project has no pictures
             divs.append(DIV(A(T('Nu exista imagini pentru proiectul %s' % (p.name,)), _href=URL('galerie', args=p.id, vars={'tag': tag_id}),_class='galerie'), _id=ids[i%items_per_page]))
