@@ -248,7 +248,7 @@ def download():
 def user():
     return dict(form=auth())
 
-
+"""
 def create_roles():
     for role in plugins.instant_admin.roles:
         group = get_or_create_group(role, plugins.instant_admin.roles[role])
@@ -309,4 +309,4 @@ def welcome():
 
     session.flash = "Welcome to Web2py Instant Admin"
     redirect(URL('index'))
-
+"""
