@@ -16,18 +16,18 @@ def push():
     local('hg push')
 
 @task
-@hosts('rif@avocadosoft.ro:22011')
+@hosts('exserver@www.exstudio.ro:22011')
 def deploy():
     'triggers hg pul on the server'
     print(green('deploying...'))
     push()
     'Deploy the app to the target environment'
-    with cd('../www-data/web2py/applications/exs/'):
+    with cd('web2py/applications/init/'):
         run('hg pul -uv')
 
 @task
-@hosts('rif@avocadosoft.ro:22011')
+@hosts('exserver@www.exstudio.ro:22011')
 def reload():
     'fires an apache graceful reload'
     print(green('reloading...'))
-    sudo('service uwsgi-python reload')
+    sudo('apachectl graceful')
