@@ -4,8 +4,8 @@
 ## Customize your APP title, subtitle and menus here
 #########################################################################
 
-response.title = request.application
-response.subtitle = T('EXStudio')
+response.title = 'exs'
+response.subtitle = 'EXStudio'
 
 #http://dev.w3.org/html5/markup/meta.name.html
 response.meta.author = 'Radu Fericean'
