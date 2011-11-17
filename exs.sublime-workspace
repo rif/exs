@@ -27,7 +27,7 @@
 			"file": "static/sass/screen.sass",
 			"settings":
 			{
-				"buffer_size": 10364,
+				"buffer_size": 10630,
 				"line_ending": "Unix"
 			}
 		},
@@ -43,18 +43,15 @@
 			"file": "views/layout.html",
 			"settings":
 			{
-				"buffer_size": 6420,
+				"buffer_size": 6665,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "hg {{extend 'layout.html'}}\n\n{{for i,div in enumerate(divs):}}\n{{if i==items_per_page: break}}\n{{=div}}\n{{pass}}\n\n<div id=\"unu-patru\">\n<div id=\"counter\">\n	<span id=\"text\">\n	{{=page+1}}/{{=max_pages}}\n	</span>\n</div>\n{{if page:}}\n<a id=\"prev\" href=\"{{=URL(args=[page-1])}}\"></a>\n{{else:}}\n<a id=\"prev\" class=\"inactive\" href=\"\"></a>\n{{pass}}\n{{if len(divs)>items_per_page:}}\n<a id=\"next\" href=\"{{=URL(args=[page+1])}}\"></a>\n{{else:}}\n<a id=\"next\" class=\"inactive\" href=\"\"></a>\n{{pass}}\n</div>\n\n<script type=\"text/javascript\">\n	$(function(){\n		$(\"img.prj-img\").hover(\n  			function () {$(this).parent(\"a.galerie\").siblings(\".overlay\").slideDown(\"fast\");}, \n  			function () {$(this).parent(\"a.galerie\").siblings(\".overlay\").slideUp(\"fast\");}\n		);	\n		$(\"#home-link\").addClass('current');\n	});\n</script>\n",
 			"file": "views/default/index.html",
-			"file_size": 796,
-			"file_write_time": 1320411433000000,
 			"settings":
 			{
-				"buffer_size": 799,
+				"buffer_size": 796,
 				"line_ending": "Unix"
 			}
 		},
@@ -62,7 +59,7 @@
 			"file": "views/default/galerie.html",
 			"settings":
 			{
-				"buffer_size": 2510,
+				"buffer_size": 2170,
 				"line_ending": "Unix"
 			}
 		},
@@ -78,7 +75,7 @@
 			"file": "controllers/default.py",
 			"settings":
 			{
-				"buffer_size": 5111,
+				"buffer_size": 5014,
 				"line_ending": "Unix"
 			}
 		},
@@ -102,7 +99,15 @@
 			"file": "models/db.py",
 			"settings":
 			{
-				"buffer_size": 5327,
+				"buffer_size": 5795,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "controllers/plugin_instant_admin.py",
+			"settings":
+			{
+				"buffer_size": 9708,
 				"line_ending": "Unix"
 			}
 		}
@@ -250,7 +255,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 10,
 			"sheets":
 			[
 				{
@@ -258,7 +263,7 @@
 					"file": "static/sass/screen.sass",
 					"settings":
 					{
-						"buffer_size": 10364,
+						"buffer_size": 10630,
 						"regions":
 						{
 						},
@@ -314,15 +319,15 @@
 					"file": "views/layout.html",
 					"settings":
 					{
-						"buffer_size": 6420,
+						"buffer_size": 6665,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								5699,
+								5977
 							]
 						],
 						"settings":
@@ -332,7 +337,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1320.0,
+						"translation.y": 1288.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -342,15 +347,15 @@
 					"file": "views/default/index.html",
 					"settings":
 					{
-						"buffer_size": 799,
+						"buffer_size": 796,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3,
-								3
+								0,
+								0
 							]
 						],
 						"settings":
@@ -369,7 +374,7 @@
 					"file": "views/default/galerie.html",
 					"settings":
 					{
-						"buffer_size": 2510,
+						"buffer_size": 2170,
 						"regions":
 						{
 						},
@@ -422,7 +427,7 @@
 					"file": "controllers/default.py",
 					"settings":
 					{
-						"buffer_size": 5111,
+						"buffer_size": 5014,
 						"regions":
 						{
 						},
@@ -503,7 +508,7 @@
 					"file": "models/db.py",
 					"settings":
 					{
-						"buffer_size": 5327,
+						"buffer_size": 5795,
 						"regions":
 						{
 						},
@@ -522,6 +527,34 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 384.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "controllers/plugin_instant_admin.py",
+					"settings":
+					{
+						"buffer_size": 9708,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9708,
+								9708
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3730.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
