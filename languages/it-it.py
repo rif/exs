@@ -10,6 +10,7 @@
 'Adresa ta de email': 'Adresa ta de email',
 'Are you sure you want to delete this object?': 'Are you sure you want to delete this object?',
 'Available databases and tables': 'Database e tabelle disponibili',
+'COD PROIECT': 'COD PROIECT',
 'Cannot be empty': 'Non può essere vuoto',
 'Check to delete': 'Seleziona per cancellare',
 'Client IP': 'Client IP',
@@ -97,6 +98,7 @@
 'edit profile': 'modifica profilo',
 'export as csv file': 'esporta come file CSV',
 'formularul contine erori': 'formularul contine erori',
+'galerie': 'galerie',
 'hello world': 'salve mondo',
 'insert new': 'inserisci nuovo',
 'insert new %s': 'inserisci nuovo %s',
@@ -119,5 +121,6 @@
 'selected': 'selezionato',
 'state': 'stato',
 'table': 'tabella',
+'toate proiectele': 'toate proiectele',
 'unable to parse csv file': 'non riesco a decodificare questo file CSV',
 }

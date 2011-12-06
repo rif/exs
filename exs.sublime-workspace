@@ -75,7 +75,7 @@
 			"file": "controllers/default.py",
 			"settings":
 			{
-				"buffer_size": 5014,
+				"buffer_size": 5138,
 				"line_ending": "Unix"
 			}
 		},
@@ -100,14 +100,6 @@
 			"settings":
 			{
 				"buffer_size": 5795,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "controllers/plugin_instant_admin.py",
-			"settings":
-			{
-				"buffer_size": 9708,
 				"line_ending": "Unix"
 			}
 		}
@@ -136,9 +128,10 @@
 	},
 	"file_history":
 	[
+		"/home/rif/Documents/webframeworks/web2py/applications/exs/models/menu.py",
+		"/home/rif/Documents/webframeworks/web2py/applications/exs/controllers/plugin_instant_admin.py",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/views/plugin_instant_admin/list.html",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/access.html",
-		"/home/rif/Documents/webframeworks/web2py/applications/exs/models/menu.py",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/models/db.py",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/index.html",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/views/layout.html",
@@ -255,7 +248,7 @@
 	"groups":
 	[
 		{
-			"selected": 10,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -381,8 +374,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								667,
+								643
 							]
 						],
 						"settings":
@@ -391,7 +384,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 160.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -427,15 +420,15 @@
 					"file": "controllers/default.py",
 					"settings":
 					{
-						"buffer_size": 5014,
+						"buffer_size": 5138,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2735,
+								2735
 							]
 						],
 						"settings":
@@ -445,7 +438,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 587.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -515,8 +508,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								1653,
+								1456
 							]
 						],
 						"settings":
@@ -526,35 +519,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 384.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "controllers/plugin_instant_admin.py",
-					"settings":
-					{
-						"buffer_size": 9708,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								9708,
-								9708
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3730.0,
+						"translation.y": 120.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

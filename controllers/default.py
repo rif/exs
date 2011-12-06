@@ -45,15 +45,16 @@ def contact():
     form = SQLFORM.factory(
         Field('nume', requires=IS_NOT_EMPTY(), default=T('Nume')),
         Field('companie', default=T('Companie (optional)')),
-        Field('email', requires=IS_EMAIL(error_message=T('adresa de email invalida!')), default=T('Adresa ta de email')),
+        Field('email', requires=[IS_NOT_EMPTY(), IS_EMAIL(error_message=T('adresa de email invalida!'))], default=T('Adresa ta de email')),
         Field('mesaj', 'text', requires=IS_NOT_EMPTY(), default=T('Mesaj')),
         submit_button=T('Trimite'))
     if form.accepts(request.vars, session):
         response.flash = T('multumim! mesaj trimis!')        
         email_to = abo.email if abo else 'exs@mailinator.com'
-        mail.send(email_to, T('Message de la %s(%s)'%(form.vars.nume, form.vars.companie)), form.vars.mesaj + "\nreplay-to: " + form.vars.email)
+        mail.send(email_to, T('Message de la %s(%s)'%(form.vars.nume, form.vars.companie)), message=form.vars.mesaj, reply_to=form.vars.email)
     elif form.errors:
         response.flash = T('formularul contine erori')
+    response.title = T('contact')
     return locals()
 
 def galerie():
@@ -62,6 +63,7 @@ def galerie():
     query = db.picture.project==a0
     if tagul: query &= db.picture.tags.contains(tagul.id)
     pics = db(query).select()
+    response.title = T('galerie')
     return locals()
 
 def panou():
@@ -101,6 +103,7 @@ def access():
             # sort by modification time in reverse order (latest first)
             files.sort(key=lambda x: os.path.getmtime(os.path.join(path,d,x)), reverse=True)
             files = [(f, __sizeof_fmt(os.path.getsize(os.path.join(path,d,f)))) for f in files]
+    response.title = T('acces clienti')
     return locals()
 
 def __sizeof_fmt(num):

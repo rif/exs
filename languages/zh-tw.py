@@ -25,6 +25,7 @@
 'Are you sure you want to uninstall application "%s"?': '確定要移除應用程式 "%s"',
 'Authentication': '驗證',
 'Available databases and tables': '可提供的資料庫和資料表',
+'COD PROIECT': 'COD PROIECT',
 'Cannot be empty': '不可空白',
 'Cannot compile: there are errors in your app.        Debug it, correct errors and try again.': '無法編譯:應用程式中含有錯誤，請除錯後再試一次.',
 'Change Password': '變更密碼',
@@ -162,6 +163,7 @@
 'edit profile': '編輯設定檔',
 'export as csv file': '以逗號分隔檔(csv)格式匯出',
 'formularul contine erori': 'formularul contine erori',
+'galerie': 'galerie',
 'insert new': '插入新資料',
 'insert new %s': '插入新資料 %s',
 'invalid request': '不合法的網路要求(request)',
@@ -180,5 +182,6 @@
 'selected': '已選擇',
 'state': '狀態',
 'table': '資料表',
+'toate proiectele': 'toate proiectele',
 'unable to parse csv file': '無法解析逗號分隔檔(csv)',
 }

@@ -10,6 +10,7 @@
 'Adresa ta de email': 'Adresa ta de email',
 'Are you sure you want to delete this object?': 'Are you sure you want to delete this object?',
 'Available databases and tables': 'उपलब्ध  डेटाबेस और तालिका',
+'COD PROIECT': 'COD PROIECT',
 'Cannot be empty': 'खाली नहीं हो सकता',
 'Change Password': 'पासवर्ड बदलें',
 'Check to delete': 'हटाने के लिए चुनें',
@@ -79,6 +80,7 @@
 'edit profile': 'edit profile',
 'export as csv file': 'csv फ़ाइल के रूप में निर्यात',
 'formularul contine erori': 'formularul contine erori',
+'galerie': 'galerie',
 'insert new': 'नया डालें',
 'insert new %s': 'नया   %s  डालें',
 'invalid request': 'अवैध अनुरोध',
@@ -97,5 +99,6 @@
 'selected': 'चुना हुआ',
 'state': 'स्थिति',
 'table': 'तालिका',
+'toate proiectele': 'toate proiectele',
 'unable to parse csv file': 'csv फ़ाइल पार्स करने में असमर्थ',
 }

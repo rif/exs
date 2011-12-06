@@ -10,6 +10,7 @@
 'Adresa ta de email': 'Adresa ta de email',
 'Are you sure you want to delete this object?': 'Are you sure you want to delete this object?',
 'Available databases and tables': 'Elérhető adatbázisok és táblák',
+'COD PROIECT': 'COD PROIECT',
 'Cannot be empty': 'Nem lehet üres',
 'Check to delete': 'Törléshez válaszd ki',
 'Client IP': 'Client IP',
@@ -89,6 +90,7 @@
 'edit profile': 'profil szerkesztése',
 'export as csv file': 'exportál csv fájlba',
 'formularul contine erori': 'formularul contine erori',
+'galerie': 'galerie',
 'insert new': 'új beillesztése',
 'insert new %s': 'új beillesztése %s',
 'invalid request': 'hibás kérés',
@@ -108,5 +110,6 @@
 'selected': 'kiválasztott',
 'state': 'állapot',
 'table': 'tábla',
+'toate proiectele': 'toate proiectele',
 'unable to parse csv file': 'nem lehet a csv fájlt beolvasni',
 }

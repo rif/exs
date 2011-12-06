@@ -10,6 +10,7 @@
 'Adresa ta de email': 'Adresa ta de email',
 'Are you sure you want to delete this object?': 'Are you sure you want to delete this object?',
 'Available databases and tables': 'Dostupné databázy a tabuľky',
+'COD PROIECT': 'COD PROIECT',
 'Cannot be empty': 'Nemôže byť prázdne',
 'Check to delete': 'Označiť na zmazanie',
 'Codul de acces': 'Codul de acces',
@@ -105,6 +106,7 @@
 'done!': 'hotovo!',
 'export as csv file': 'exportovať do csv súboru',
 'formularul contine erori': 'formularul contine erori',
+'galerie': 'galerie',
 'insert new': 'vložiť nový záznam ',
 'insert new %s': 'vložiť nový  záznam %s',
 'invalid request': 'Neplatná požiadavka',
@@ -126,5 +128,6 @@
 'selected': 'označených',
 'state': 'stav',
 'table': 'tabuľka',
+'toate proiectele': 'toate proiectele',
 'unable to parse csv file': 'nedá sa načítať csv súbor',
 }

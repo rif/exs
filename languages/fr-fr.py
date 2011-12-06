@@ -15,6 +15,7 @@
 'Authentication': 'Authentification',
 'Available databases and tables': 'Bases de données et tables disponibles',
 'Buy this book': 'Acheter ce livre',
+'COD PROIECT': 'COD PROIECT',
 'Cannot be empty': 'Ne peut pas être vide',
 'Check to delete': 'Cliquez pour supprimer',
 'Check to delete:': 'Cliquez pour supprimer:',
@@ -147,6 +148,7 @@
 'enter an integer between %(min)g and %(max)g': 'enter an integer between %(min)g and %(max)g',
 'export as csv file': 'exporter sous forme de fichier csv',
 'formularul contine erori': 'formularul contine erori',
+'galerie': 'galerie',
 'insert new': 'insérer un nouveau',
 'insert new %s': 'insérer un nouveau %s',
 'invalid request': 'requête invalide',
@@ -168,5 +170,6 @@
 'selected': 'sélectionné',
 'state': 'état',
 'table': 'tableau',
+'toate proiectele': 'toate proiectele',
 'unable to parse csv file': "incapable d'analyser le fichier cvs",
 }

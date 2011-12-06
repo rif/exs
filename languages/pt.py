@@ -13,6 +13,7 @@
 'Author Reference Auth User': 'Author Reference Auth User',
 'Author Reference Auth User.username': 'Author Reference Auth User.username',
 'Available databases and tables': 'bases de dados e tabelas disponíveis',
+'COD PROIECT': 'COD PROIECT',
 'Cannot be empty': 'não pode ser vazio',
 'Category Create': 'Category Create',
 'Category Select': 'Category Select',
@@ -104,6 +105,7 @@
 'edit profile': 'Editar perfil',
 'export as csv file': 'exportar como ficheiro csv',
 'formularul contine erori': 'formularul contine erori',
+'galerie': 'galerie',
 'insert new': 'inserir novo',
 'insert new %s': 'inserir novo %s',
 'invalid request': 'Pedido Inválido',
@@ -131,5 +133,6 @@
 'show post': 'show post',
 'state': 'estado',
 'table': 'tabela',
+'toate proiectele': 'toate proiectele',
 'unable to parse csv file': 'não foi possível carregar ficheiro csv',
 }

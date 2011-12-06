@@ -11,6 +11,7 @@
 'Are you sure you want to delete this object?': 'Are you sure you want to delete this object?',
 'Authentication': 'Uwierzytelnienie',
 'Available databases and tables': 'Dostępne bazy danych i tabele',
+'COD PROIECT': 'COD PROIECT',
 'Cannot be empty': 'Nie może być puste',
 'Change Password': 'Zmień hasło',
 'Check to delete': 'Zaznacz aby usunąć',
@@ -101,6 +102,7 @@
 'edit profile': 'edit profile',
 'export as csv file': 'eksportuj jako plik csv',
 'formularul contine erori': 'formularul contine erori',
+'galerie': 'galerie',
 'insert new': 'wstaw nowy rekord tabeli',
 'insert new %s': 'wstaw nowy rekord do tabeli %s',
 'invalid request': 'Błędne żądanie',
@@ -119,5 +121,6 @@
 'selected': 'wybranych',
 'state': 'stan',
 'table': 'tabela',
+'toate proiectele': 'toate proiectele',
 'unable to parse csv file': 'nie można sparsować pliku csv',
 }
