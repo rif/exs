@@ -14,6 +14,7 @@
 'Are you sure you want to delete this object?': 'Are you sure you want to delete this object?',
 'Available databases and tables': 'Bancos de dados e tabelas disponíveis',
 'Buy this book': 'Buy this book',
+'COD PROIECT': 'COD PROIECT',
 'Cannot be empty': 'Não pode ser vazio',
 'Check to delete': 'Marque para apagar',
 'Client IP': 'Client IP',
@@ -136,6 +137,7 @@
 'edit profile': 'editar perfil',
 'export as csv file': 'exportar como um arquivo csv',
 'formularul contine erori': 'formularul contine erori',
+'galerie': 'galerie',
 'insert new': 'inserir novo',
 'insert new %s': 'inserir novo %s',
 'invalid request': 'requisição inválida',
@@ -156,5 +158,6 @@
 'selected': 'selecionado',
 'state': 'estado',
 'table': 'tabela',
+'toate proiectele': 'toate proiectele',
 'unable to parse csv file': 'não foi possível analisar arquivo csv',
 }

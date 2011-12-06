@@ -10,6 +10,7 @@
 'Adresa ta de email': 'Adresa ta de email',
 'Are you sure you want to delete this object?': 'Are you sure you want to delete this object?',
 'Available databases and tables': 'Базы данных и таблицы',
+'COD PROIECT': 'COD PROIECT',
 'Cannot be empty': 'Пустое значение недопустимо',
 'Change Password': 'Смените пароль',
 'Check to delete': 'Удалить',
@@ -95,6 +96,7 @@
 'done!': 'готово!',
 'export as csv file': 'экспорт в  csv-файл',
 'formularul contine erori': 'formularul contine erori',
+'galerie': 'galerie',
 'insert new': 'добавить',
 'insert new %s': 'добавить %s',
 'invalid request': 'неверный запрос',
@@ -114,5 +116,6 @@
 'selected': 'выбрано',
 'state': 'состояние',
 'table': 'таблица',
+'toate proiectele': 'toate proiectele',
 'unable to parse csv file': 'нечитаемый csv-файл',
 }
