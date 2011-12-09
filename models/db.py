@@ -1,15 +1,6 @@
 # -*- coding: utf-8 -*-
 
-if request.env.web2py_runtime_gae:            # if running on Google App Engine
-    db = DAL('google:datastore')              # connect to Google BigTable
-                                              # optional DAL('gae://namespace')
-    session.connect(request, response, db = db) # and store sessions and tickets there
-    ### or use the following lines to store sessions in Memcache
-    # from gluon.contrib.memdb import MEMDB
-    # from google.appengine.api.memcache import Client
-    # session.connect(request, response, db = MEMDB(Client()))
-else:                                         # else use a normal relational database
-    db = DAL('sqlite://storage.sqlite')       # if not, use SQLite or other DB
+db = DAL('sqlite://storage.sqlite', migrate_enabled=False)       # if not, use SQLite or other DB
 
 # by default give a view/generic.extension to all actions from localhost
 # none otherwise. a pattern can be 'controller/function.extension'
