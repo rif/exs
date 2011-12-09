@@ -26,9 +26,10 @@ crud = Crud(db)                                # for CRUD helpers using auth
 service = Service()                            # for json, xml, jsonrpc, xmlrpc, amfrpc
 plugins = PluginManager()                      # for configuring plugins
 
-mail.settings.server = 'smtp.gmail.com:587'  # your SMTP server
-mail.settings.sender = 'ustest@gmail.com'         # your email
-mail.settings.login = 'ustest:greta.1'      # your credentials or None
+mail.settings.server = 'exserver.exstudio.ro:465'  # your SMTP server
+mail.settings.sender = 'comentariuwebsite@exstudio.ro'         # your email
+mail.settings.login = 'comentariuwebsite:3x53rv3r'      # your credentials or None
+mail.settings.ssl = True
 
 auth.settings.hmac_key = 'sha512:e68b4107-4595-4284-9cd1-ef04a2ed3205'   # before define_tables()
 auth.define_tables()                           # creates all needed tables

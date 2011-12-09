@@ -72,6 +72,14 @@
 			}
 		},
 		{
+			"file": "models/db.py",
+			"settings":
+			{
+				"buffer_size": 5851,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "controllers/default.py",
 			"settings":
 			{
@@ -92,14 +100,6 @@
 			"settings":
 			{
 				"buffer_size": 836,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "models/db.py",
-			"settings":
-			{
-				"buffer_size": 5795,
 				"line_ending": "Unix"
 			}
 		}
@@ -274,7 +274,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5858.0,
+						"translation.y": 278.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -417,6 +417,34 @@
 				},
 				{
 					"buffer": 6,
+					"file": "models/db.py",
+					"settings":
+					{
+						"buffer_size": 5851,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1651,
+								1651
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 30.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
 					"file": "controllers/default.py",
 					"settings":
 					{
@@ -438,13 +466,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 587.0,
+						"translation.y": 317.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "static/projects/generate_link.py",
 					"settings":
 					{
@@ -470,7 +498,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "views/default/access.html",
 					"settings":
 					{
@@ -492,34 +520,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "models/db.py",
-					"settings":
-					{
-						"buffer_size": 5795,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1653,
-								1456
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 120.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
