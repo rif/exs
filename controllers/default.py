@@ -43,10 +43,10 @@ def index():
 
 def contact():
     form = SQLFORM.factory(
-        Field('nume', requires=IS_NOT_EMPTY(), default=T('Nume')),
+        Field('nume', requires=[IS_NOT_EMPTY(), IS_MATCH('^((?!Nume|Name).*)$', error_message=T('Numele dumneavoastra'))], default=T('Nume')),
         Field('companie', default=T('Companie (optional)')),
-        Field('email', requires=[IS_NOT_EMPTY(), IS_EMAIL(error_message=T('adresa de email invalida!'))], default=T('Adresa ta de email')),
-        Field('mesaj', 'text', requires=IS_NOT_EMPTY(), default=T('Mesaj')),
+        Field('email', requires=[IS_NOT_EMPTY(), IS_EMAIL(error_message=T('adresa de email invalida!'))], default=T('Adresa dumneavoastra de email')),
+        Field('mesaj', 'text', requires=[IS_NOT_EMPTY(), IS_MATCH('^((?!Mesaj|Message).*)$', error_message=T('Mesajul dumneavoastra'))], default=T('Mesaj')),
         submit_button=T('Trimite'))
     if form.accepts(request.vars, session):
         response.flash = T('multumim! mesaj trimis!')        
