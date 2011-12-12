@@ -9,7 +9,10 @@ response.subtitle = 'EXStudio'
 
 #http://dev.w3.org/html5/markup/meta.name.html
 response.meta.author = 'Radu Fericean pentru emem.ro'
-response.meta.description = 'EXStudio website'
+if session.lang=='en-us':
+	response.meta.description = 'Architectural design office, object, furniture and interior design, 3D CAD modeling, photorealistic architectural layout and representations.'
+else:
+	response.meta.description = 'Birou de proiectare de arhitectura, design si amenajari interioare, modelare 3D, machetare si reprezentari fotorealiste de arhitectura.'
 if session.lang=='en-us':
 	response.meta.keywords = 'ambient,architect,architecture,bathroom,office,kitchen,room,house,building,commercial building,concept,construction,civil building,drawing,design,detail,exact,exterior design,factory,façade,fences,warehouse,idea,industrial,interior design,line,model,measurement,layout,blueprint,designing,projects,rendering,remodeling,residential,stairs,hall,living room,dinning room'
 else:
