@@ -64,18 +64,10 @@
 			}
 		},
 		{
-			"file": "views/default/panou.html",
-			"settings":
-			{
-				"buffer_size": 820,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "models/db.py",
 			"settings":
 			{
-				"buffer_size": 5232,
+				"buffer_size": 5203,
 				"line_ending": "Unix"
 			}
 		},
@@ -83,7 +75,7 @@
 			"file": "controllers/default.py",
 			"settings":
 			{
-				"buffer_size": 5138,
+				"buffer_size": 5306,
 				"line_ending": "Unix"
 			}
 		},
@@ -100,6 +92,14 @@
 			"settings":
 			{
 				"buffer_size": 836,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/menu.py",
+			"settings":
+			{
+				"buffer_size": 1678,
 				"line_ending": "Unix"
 			}
 		}
@@ -128,6 +128,7 @@
 	},
 	"file_history":
 	[
+		"/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/panou.html",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/models/menu.py",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/controllers/plugin_instant_admin.py",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/views/plugin_instant_admin/list.html",
@@ -138,7 +139,6 @@
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/proiecte.html",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/static/sass/_base.sass",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/static/css/fancybox_corrections.css",
-		"/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/panou.html",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/galerie.html",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/controllers/default.py",
 		"/home/rif/Documents/webframeworks/web2py/applications/exs/views/default/contact.html",
@@ -203,6 +203,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"pass",
 			"sha",
 			"display: none",
 			"text-area",
@@ -248,7 +249,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -263,8 +264,8 @@
 						"selection":
 						[
 							[
-								1483,
-								1483
+								1128,
+								1128
 							]
 						],
 						"settings":
@@ -274,7 +275,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 55.0,
+						"translation.y": 760.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -391,10 +392,10 @@
 				},
 				{
 					"buffer": 5,
-					"file": "views/default/panou.html",
+					"file": "models/db.py",
 					"settings":
 					{
-						"buffer_size": 820,
+						"buffer_size": 5203,
 						"regions":
 						{
 						},
@@ -407,28 +408,30 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "models/db.py",
+					"file": "controllers/default.py",
 					"settings":
 					{
-						"buffer_size": 5232,
+						"buffer_size": 5306,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								883,
-								883
+								1450,
+								1450
 							]
 						],
 						"settings":
@@ -437,42 +440,14 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": 35.0,
+						"translation.y": 540.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "controllers/default.py",
-					"settings":
-					{
-						"buffer_size": 5138,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2735,
-								2735
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 317.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
 					"file": "static/projects/generate_link.py",
 					"settings":
 					{
@@ -498,7 +473,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 8,
 					"file": "views/default/access.html",
 					"settings":
 					{
@@ -517,6 +492,32 @@
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "models/menu.py",
+					"settings":
+					{
+						"buffer_size": 1678,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								488,
+								488
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
