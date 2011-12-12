@@ -14,10 +14,10 @@ from gluon.tools import Mail, Auth, Crud, Service, PluginManager, prettydate
 mail = Mail()                                  # mailer
 auth = Auth(db)                                # authentication/authorization
 crud = Crud(db)                                # for CRUD helpers using auth
-service = Service()                            # for json, xml, jsonrpc, xmlrpc, amfrpc
+#service = Service()                            # for json, xml, jsonrpc, xmlrpc, amfrpc
 plugins = PluginManager()                      # for configuring plugins
 
-mail.settings.server = 'exserver.exstudio.ro:465'  # your SMTP server
+mail.settings.server = 'smtp.gmail.com:587'  # your SMTP server
 mail.settings.sender = 'comentariuwebsite@exstudio.ro'         # your email
 mail.settings.login = 'comentariuwebsite:3x53rv3r'      # your credentials or None
 mail.settings.ssl = True
