@@ -24,12 +24,15 @@ def deploy():
     'Deploy the app to the target environment'
     with cd('web2py/applications/init/'):
         run('hg pul -uv')
+    recompile()
+
+@task
+@hosts('exserver@www.exstudio.ro:22011')
+def recompile():
     'recompile application'
+    print(green('recompiling...'))
     with cd('web2py'):
-        sys.path.append('.')
-        import gluon.compileapp
-        gluon.compileapp.remove_compiled_application('applications/init')
-        gluon.compileapp.compile_application('applications/init')
+        run('python recompile.py')
 
 @task
 @hosts('exserver@www.exstudio.ro:22011')
