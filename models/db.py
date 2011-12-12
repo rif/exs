@@ -19,7 +19,7 @@ plugins = PluginManager()                      # for configuring plugins
 
 mail.settings.server = 'smtp.gmail.com:587'  # your SMTP server
 mail.settings.sender = 'comentariuwebsite@exstudio.ro'         # your email
-mail.settings.login = 'comentariuwebsite:3x53rv3r'      # your credentials or None
+mail.settings.login = 'comentariuweb:3x53rv3r'      # your credentials or None
 
 auth.settings.hmac_key = 'sha512:e68b4107-4595-4284-9cd1-ef04a2ed3205'   # before define_tables()
 auth.define_tables()                           # creates all needed tables
