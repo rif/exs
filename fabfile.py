@@ -32,7 +32,7 @@ def recompile():
     'recompile application'
     print(green('recompiling...'))
     with cd('web2py'):
-        run('python recompile.py')
+        run('python -c "import gluon.compileapp; gluon.compileapp.compile_application(\'applications/init\')"')
 
 @task
 @hosts('exserver@www.exstudio.ro:22011')
